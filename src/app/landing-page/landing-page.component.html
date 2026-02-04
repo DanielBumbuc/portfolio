@@ -1,5 +1,3 @@
-
-
 <div class="main-container">
     <h2>Frontend Developer</h2>
     <h1>Daniel Bumbuc</h1>
@@ -8,18 +6,22 @@
         <button class="nav-btn">Contact me</button>
     </div>
 
-    <div class="info-banner">
-        <p>Available for remote work</p>
-        <span>•</span>
-        <p>Frontend Developer</p>
-        <span>•</span>
-
-        <p>Based in Sindelfingen</p>
-        <span>•</span>
-
-        <p>Open to relocate</p>
+    <div class="marquee">
+        <div #marqueeContent class="marquee-content">
+            @for (repeat of repeats; track $index) {
+            <span>
+                Available for remote work
+                <span class="separator">•</span>
+                Frontend Developer
+                <span class="separator">•</span>
+                Based in Sindelfingen
+                <span class="separator">•</span>
+                Open to relocate
+                <span class="separator">•</span>
+            </span>
+        }
+        </div>
     </div>
 </div>
 
 <app-navbar></app-navbar>
-

@@ -9,6 +9,7 @@
     background-position: center;
     background-repeat: no-repeat;
     gap: 24px;
+    overflow: hidden;
 
     h1 {
         font-size: 96px;
@@ -38,18 +39,43 @@
     font-size: 16px;
 }
 
-.info-banner {
+// .marquee-container {
+
+// }
+
+.marquee {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 110%;
     bottom: 78px;
-    color: #3DCFB6;
+    width: 100vw;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 16px 32px;
-    font-size: 24px;
-    gap: 128px;
-    transform: rotate(-5deg);
+    color: #3DCFB6;
+    padding: 16px 0;
+    transform: skewY(-3deg);
     overflow: hidden;
+    white-space: nowrap;
+    
 }
+
+.marquee-content {
+    display: flex;
+    // animation: marquee 10s linear infinite;
+}
+
+.marquee-content span {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.separator {
+    margin: 0 24px !important; // Abstand um alle Punkte
+    padding: 0 !important;
+}
+
+// @keyframes marquee {
+//     0% {
+//         transform: translateX(0);
+//     }
+//     100% {
+//         transform: translateX(-50%); // Nur 50%, da wir 2 identische spans haben
+//     }
+// }
