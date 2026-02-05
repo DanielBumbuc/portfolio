@@ -1,3 +1,5 @@
+@import '../../../fonts';
+
 nav {
     position: absolute;
     top: 0;
@@ -19,8 +21,9 @@ nav {
     gap: 32px;
     padding: 16px 0;
     list-style: none;
-    
+
     a {
+        @include font-fira-code(400);
         text-decoration: none;
         color: #D9D9D9;
     }
@@ -32,6 +35,7 @@ nav {
 }
 
 .language-btn {
+    @include font-fira-code(400);
     background: none;
     background-color: #3DCFB6;
     border: none;

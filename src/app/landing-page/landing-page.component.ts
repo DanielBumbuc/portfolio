@@ -13,7 +13,7 @@ export class LandingPageComponent implements OnInit, OnDestroy, AfterViewInit {
 
   private animationId?: number;
   private currentPosition: number = 0;
-  private speed: number = 1;
+  private speed: number = 0.5;
   private resizeTimeout?: number;
   repeats: number[] = [];
 
