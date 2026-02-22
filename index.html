@@ -10,7 +10,7 @@
     <title>Daniel Bumbuc</title>
 </head>
 
-<body>
+<body onload="init()">
     <header class="landing-page">
         <nav class="navbar">
             <div class="left-container">
@@ -36,17 +36,19 @@
             </div>
         </div>
 
-        <div class="lower-container">
-            <span class="info-marquee">
-                <span class="info-item">Frontend Developer</span>
-                <span>•</span>
-                <span class="info-item">Based in Sindelfingen</span>
-                <span>•</span>
-                <span class="info-item">Open to work</span>
-                <span>•</span>
-                <span class="info-item">Available for remote work</span>
-                <span>•</span>
-            </span>
+        <div class="marquee">
+            <div #marqueeContent class="marquee-content">
+                <span>
+                    Available for remote work
+                    <span class="separator">•</span>
+                    Frontend Developer
+                    <span class="separator">•</span>
+                    Based in Sindelfingen
+                    <span class="separator">•</span>
+                    Open to relocate
+                    <span class="separator">•</span>
+                </span>
+            </div>
         </div>
     </header>
 
