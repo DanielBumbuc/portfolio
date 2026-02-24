@@ -43,6 +43,32 @@ a {
     cursor: pointer;
 }
 
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    display: block;
+}
+
+.nav-links li .highlighter {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.nav-links li:hover .highlighter {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%); 
+    color: #3DCFB6;
+    display: block;
+
+}
+
 .landing-page {
     display: flex;
     height: 100vh;
@@ -113,7 +139,26 @@ a {
     padding: 0 !important;
 }
 
-.marquee-btn-content {
+/* Präzise Keyframes mit CSS Custom Properties */
+@keyframes marqueeScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(var(--translate-distance, -50%));
+    }
+}
+
+/* @keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+} */
+
+/* .marquee-btn-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,9 +181,9 @@ a {
     animation: none; 
     transform: translateX(0);  
     transition: transform 2s ease-out; 
-}
+} */
 
-@keyframes buttonMarquee {
+/* @keyframes buttonMarquee {
     0% {
         transform: translateX(0);  
     }
@@ -150,5 +195,5 @@ a {
     }
     100% {
         transform: translateX(0);
-    }
-}
+    } */
+/* } */
