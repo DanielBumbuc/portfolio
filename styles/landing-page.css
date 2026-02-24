@@ -18,22 +18,58 @@
 
 .language-switcher {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
     border: 1px solid #3DCFB6;
     border-radius: 48px;
-    color: white;
-    padding: 8px 24px;
-    gap: 16px;
+    color: rgba(61, 207, 182, 0.5);
+    height: 32px;
+    width: 100px;
     cursor: pointer;
 }
 
+.language-switcher:hover {
+    color: rgba(61, 207, 182, 1);
+    border: 1px solid #D9D9D9;
+    transition: color 0.2s ease-in;
+}
 
+.language-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 0 16px;
+    border-radius: 48px;
+    height: 100%;
+    width: 70%;
+}
+
+.language-btn:last-child {
+    margin-left: -12px;
+    z-index: 1;
+}
+
+.language-btn.active-language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    color: #D9D9D9;
+    background-color: #3DCFB6;
+    border-radius: 48px;
+    height: 100%;
+    width: 70%;
+    z-index: 3;
+}
 
 .nav-links {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
+    font-size: 18px;
     gap: 16px;
 }
 
@@ -98,6 +134,14 @@ a {
     font-size: 48px;
 }
 
+.marquee-btn-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    transform: translateX(0); 
+}
+
 .nav-btn-container {
     display: flex;
     gap: 24px;
@@ -106,64 +150,14 @@ a {
 .nav-btn {
     background-color: transparent;
     border: 1px solid #D9D9D9;
-    border-radius: 48px;
-    color: white;
-    padding: 8px 24px;
+    border-radius: 25px;
+    color: #D9D9D9;
+    width: 170px;
+    height: 44px;
+    padding: 8px 16px;
     cursor: pointer;
-}
-
-.marquee {
-    position: absolute;
-    bottom: 78px;
-    width: 100vw;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #3DCFB6;
-    padding: 16px 0;
-    transform: skewY(-3deg);
+    font-size: 20px;
     overflow: hidden;
-    white-space: nowrap;
-}
-
-.marquee-content {
-    display: flex;
-    
-}
-
-.marquee-content span {
-    font-size: 24px;
-    flex-shrink: 0;
-}
-
-.separator {
-    margin: 0 24px !important; 
-    padding: 0 !important;
-}
-
-/* Präzise Keyframes mit CSS Custom Properties */
-@keyframes marqueeScroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(var(--translate-distance, -50%));
-    }
-}
-
-/* @keyframes marqueeScroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-} */
-
-/* .marquee-btn-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    transform: translateX(0); 
 }
 
 .nav-btn:hover {
@@ -181,9 +175,9 @@ a {
     animation: none; 
     transform: translateX(0);  
     transition: transform 2s ease-out; 
-} */
+}
 
-/* @keyframes buttonMarquee {
+@keyframes buttonMarquee {
     0% {
         transform: translateX(0);  
     }
@@ -195,5 +189,48 @@ a {
     }
     100% {
         transform: translateX(0);
-    } */
-/* } */
+    }
+}
+
+.marquee {
+    position: absolute;
+    bottom: 78px;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #3DCFB6;
+    padding: 16px 0;
+    transform: skewY(-3deg);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: flex;
+}
+
+.marquee-content span {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.separator {
+    margin: 0 24px !important; 
+    padding: 0 !important;
+}
+/* 
+@keyframes buttonSlideLoop {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-150%); }
+    26% { transform: translateX(150%); }
+    50% { transform: translateX(0); }
+    100% { transform: translateX(0); }
+} */
+
+@keyframes marqueeScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(var(--translate-distance, -50%));
+    }
+}
