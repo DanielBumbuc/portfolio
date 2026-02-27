@@ -4,3 +4,11 @@
     box-sizing: border-box;
     font-family: var(--font-fira-code), var(--font-karla), sans-serif;
 }
+
+.main-container {
+    background-color: #1c1c1c;
+}
+
+.d-none {
+    display: none;
+}
