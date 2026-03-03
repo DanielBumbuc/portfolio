@@ -1,0 +1,96 @@
+.skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills-title {
+    margin-top: 48px;
+}
+
+.skill-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0 0 0 140px;
+}
+
+.skill-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: rgba(61, 207, 182, 0.1);
+    margin-top: 24px;
+    padding: 48px 24px;
+    border: 1px solid #3DCFB6;
+    border-radius: 40px;
+    width: 720px;
+    height: 720px;
+    color: #FFFFFF;
+}
+
+.upper-skill-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.main-skill-info {
+    margin: 32px 0;
+    font-size: 20px;
+}
+
+.contact-text {
+    font-size: 20px;
+    margin-top: 32px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.contact-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 48px;
+}
+
+.skill-collection {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 48px;
+    width: 720px;
+    height: 720px;
+    margin: 0 140px 0 0;
+
+}
+
+.skill-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 120px;
+    height: 100px;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-align: center;
+
+}
+
+.skill-icons {
+    width: 100px;
+    margin-bottom: 20px;
+
+}

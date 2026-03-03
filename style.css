@@ -5,6 +5,16 @@
     font-family: var(--font-fira-code), var(--font-karla), sans-serif;
 }
 
+h2 {
+    font-size: 60px;
+    color: #3DCFB6;
+}
+
+h3 {
+    font-size: 32px;
+    color: #3DCFB6;
+}
+
 .main-container {
     background-color: #1c1c1c;
 }
