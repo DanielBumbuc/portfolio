@@ -1,0 +1,54 @@
+{
+  "EN": [
+    {
+      "name": "Join",
+      "technologies": ["Angular", "TypeScript", "HTML", "CSS", "Firebase"],
+      "image": "./assets/img/join_preview.png",
+      "description": "Task management application inspired by Kanban board systems",
+      "liveUrl": "https://join.example.com",
+      "githubUrl": "https://github.com/danielbumbuc/join"
+    },
+    {
+      "name": "El Pollo Loco",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "image": "./assets/img/el_pollo_loco_preview.png",
+      "description": "Jump and run game with object-oriented approach",
+      "liveUrl": "https://elpollo.example.com",
+      "githubUrl": "https://github.com/danielbumbuc/el-pollo-loco"
+    },
+    {
+      "name": "DA Bubble",
+      "technologies": ["Angular", "Firebase", "TypeScript"],
+      "image": "./assets/img/da_bubble_preview.png",
+      "description": "Real-time chat application with channels and direct messages",
+      "liveUrl": "https://dabubble.example.com",
+      "githubUrl": "https://github.com/danielbumbuc/da-bubble"
+    }
+  ],
+  "DE": [
+    {
+      "name": "Join",
+      "technologies": ["Angular", "TypeScript", "HTML", "CSS", "Firebase"],
+      "image": "./assets/img/join_preview.png",
+      "description": "Aufgabenverwaltungsanwendung inspiriert von Kanban-Board-Systemen",
+      "liveUrl": "https://join.example.com",
+      "githubUrl": "https://github.com/danielbumbuc/join"
+    },
+    {
+      "name": "El Pollo Loco",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "image": "./assets/img/el_pollo_loco_preview.png",
+      "description": "Jump-and-Run-Spiel mit objektorientiertem Ansatz",
+      "liveUrl": "https://elpollo.example.com",
+      "githubUrl": "https://github.com/danielbumbuc/el-pollo-loco"
+    },
+    {
+      "name": "DA Bubble",
+      "technologies": ["Angular", "Firebase", "TypeScript"],
+      "image": "./assets/img/da_bubble_preview.png",
+      "description": "Echtzeit-Chat-Anwendung mit Kanälen und direkten Nachrichten",
+      "liveUrl": "https://dabubble.example.com",
+      "githubUrl": "https://github.com/danielbumbuc/da-bubble"
+    }
+  ]
+}

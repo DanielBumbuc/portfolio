@@ -15,7 +15,7 @@
 }
 
 .project-content {
-    margin: 48px 0 0 0;
+    margin: 48px 0;
     color: #FFFFFF;
     gap: 48px;
 }
@@ -46,6 +46,10 @@
     align-items: flex-start;
     font-size: 20px;
     cursor: pointer;
+}
+
+.left-project-side:first-child {
+    border-bottom: 1px solid #3DCFB6;
 }
 
 .left-project-side:last-child {
@@ -94,18 +98,16 @@
 
 .single-project-container:first-child .project-preview-img {
     top: 0;
-    /* background-color: red; */
 }
 
 .single-project-container:last-child .project-preview-img {
     top: -82px;
-    background-color: blue;
 }
 
 .preview-img-bg {
     position: absolute;
     right: -24px;
-    top: 18px;
+    top: 0px;
     width: 350px;
     height: 200px;
     border-radius: 16px;

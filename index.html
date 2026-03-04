@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="./styles/about-me.css">
     <link rel="stylesheet" href="./styles/skill.css">
     <link rel="stylesheet" href="./styles/project.css">
+    <link rel="stylesheet" href="./styles/project-modal.css">
     <script src="script.js"></script>
+    <script src="./scripts/project.js"></script>
     <title>Daniel Bumbuc</title>
 </head>
 
 <body onload="init()">
+    <div class="modal-overlay d-none" onclick="closeModal()"></div>
     <header class="landing-page">
         <nav class="navbar">
             <div class="left-container">
@@ -74,6 +77,7 @@
         </div>
 
     </header>
+    
 
     <main class="main-container">
 
@@ -206,46 +210,12 @@
                         Explore a selection of my work here - Interact with projects to see my skills in action.
                     </p>
 
-                    <div class="project-collection">
-                        <span class="single-project-container">
-                            <div class="left-project-side">
-                                <p class="project-name">Join <img class="arrow-icon d-none"
-                                        src="./assets/img/arrow_outward.svg" alt=""></p>
-                                <p class="project-info">
-                                    Angular | TypeScript | HTML | CSS | Firebase
-                                </p>
-                            </div>
-
-                            <img class="project-preview-img" src="./assets/img/el_pollo_loco_preview.png" alt="">
-                            <img class="preview-img-bg" src="./assets/img/preview-img_bg.svg" alt="">
+                    <div class="project-collection"></div>
 
 
 
 
-                        </span>
-                        <span class="single-project-container">
-                            <div class="left-project-side">
-                                <p class="project-name">El Pollo Loco <img class="arrow-icon d-none"
-                                        src="./assets/img/arrow_outward.svg" alt=""></p>
-                                <p class="project-info">
-                                    HTML | CSS | JavaScript
-                                </p>
-                            </div>
-                            <img class="project-preview-img d-none" src="#" alt="">
 
-                        </span>
-                        <span class="single-project-container">
-                            <div class="left-project-side">
-                                <p class="project-name">DA Bubble <img class="arrow-icon d-none"
-                                        src="./assets/img/arrow_outward.svg" alt=""></p>
-                                <p class="project-info">
-                                    Angular | Firebase | TypeScript
-                                </p>
-                            </div>
-                            <img class="project-preview-img d-none" src="#" alt="">
-
-                        </span>
-                    </div>
 
                 </div>
             </div>
@@ -260,6 +230,8 @@
     <footer>
 
     </footer>
+    
+
 </body>
 
 </html>

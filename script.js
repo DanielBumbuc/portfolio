@@ -24,6 +24,11 @@ function startMarqueeAnimation(element) {
     });
 }
 
+// function switchLanguage(language) {
+//     currentLanguage = language;
+//     loadProjects();
+// }
+
 document.addEventListener('DOMContentLoaded', initMarquee);
 window.addEventListener('resize', initMarquee);
 

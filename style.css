@@ -5,6 +5,11 @@
     font-family: var(--font-fira-code), var(--font-karla), sans-serif;
 }
 
+body.modal-open {
+    overflow: hidden;
+    height: 100vh;
+}
+
 h2 {
     font-size: 60px;
     color: #3DCFB6;
@@ -20,5 +25,5 @@ h3 {
 }
 
 .d-none {
-    display: none;
+    display: none !important;
 }
