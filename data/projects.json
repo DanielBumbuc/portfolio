@@ -136,5 +136,17 @@
       "liveUrl": "https://dabubble.example.com",
       "githubUrl": "https://github.com/danielbumbuc/da-bubble"
     }
+  ],
+  "ref": [
+    {
+        "name": "Oli",
+        "reference": "Daniel is a great team player and always willing to help others. He has a strong work ethic and is very reliable. I highly recommend him for any project.",
+        "role": "Team Partner"
+    },
+    {
+        "name": "Kevin",
+        "reference": "Daniel is a talented developer with a great eye for detail. He is always willing to go the extra mile to ensure that the project is successful. I have enjoyed working with him and would recommend him to anyone.",
+        "role": "Team Partner"
+    }
   ]
 }

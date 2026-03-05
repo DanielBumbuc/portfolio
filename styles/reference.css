@@ -1,0 +1,58 @@
+.references {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 96px;
+}
+
+.reference-collection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    gap: 32px;
+    margin: 48px 0;
+}
+
+.single-reference {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    height: 100%;
+    background-color: rgba(61, 207, 182, 0.3);
+    padding: 48px 48px;
+    border: 1px solid #3DCFB6;
+    border-radius: 40px;
+    color: #FFFFFF;
+}
+
+.reference-text {
+    font-size: 18px;
+}
+
+.reference-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 32px;
+}
+
+.horizontal-line {
+    width: 300px;
+    height: 1px;
+    border: solid 1px #FFFFFF;
+    margin: 16px 0;
+}
+
+.quotes-icon {
+    width: 96px;
+    position: absolute;
+    top: -32px;
+    left: -48px;
+}
