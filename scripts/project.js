@@ -25,7 +25,7 @@ function renderProjects() {
                         <img class="arrow-icon d-none" src="./assets/img/arrow_outward.svg" alt="">
                     </p>
                     <p class="project-info">
-                        ${project.technologies.join(' | ')}
+                        ${project.technologies.map(tech => tech.name).join(' | ')}
                     </p>
                 </div>
                 <img class="project-preview-img d-none" src="${project.image}" alt="${project.name} Preview">
@@ -34,6 +34,7 @@ function renderProjects() {
         `;
         projectCollection.innerHTML += projectHTML;
     });
+
 
     addProjectEventListeners();
 }
@@ -62,7 +63,7 @@ function addProjectEventListeners() {
             const projectHTML = `
             <div class="project-modal">
                 <div class="left-modal-side">
-                            <h2 class="project-index">${index + 1}</h2>
+                            <h2 class="project-index">0${index + 1}</h2>
                             <h3 class="project-modal-name">${projects[index].name}</h3>
                             <span class="modal-project-info">
                                 <h3 class="title">What is this project about?</h3>
@@ -71,14 +72,22 @@ function addProjectEventListeners() {
                                 </p>
                             </span>
                             <span class="used-technologies">
-                                <img class="technologie-icon" src="#" alt="">
-                                <p class="technologie-name">${projects[index].technologies.join(' | ')}</p>
+                                ${projects[index].technologies.map(tech => `
+                                    <img class="technologie-icon" src="${tech.icon}" alt="${tech.name}">
+                                    <p class="technologie-name">${tech.name}</p>
+                                `).join('')}
                             </span>
                             <div class="project-btn-container">
-                                <span class="project-btn">GitHub<img class="arrow-icon" src="./assets/img/arrow_outward.svg" alt="GitHub"></span>
-                                <span class="project-btn">Live Test<img class="arrow-icon" src="./assets/img/arrow_outward.svg" alt="Live Test"></span>
+                                <span class="project-btn">GitHub<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="GitHub"></span>
+                                <span class="project-btn">Live Test<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="Live Test"></span>
                             </div>
                         </div>
+                    <div class="modal-right-side">
+                        <img class="close-btn" src="./assets/img/icons/default_icon.svg" alt="close icon" onclick="closeModal()" onmouseenter="this.src='./assets/img/icons/default_hover_icon.svg'" onmouseleave="this.src='./assets/img/icons/default_icon.svg'">
+                        <img class="modal-preview-img" src="assets/img/el_pollo_loco_preview_modal.png" alt="preview image">
+                        <span class="next-project">Next project<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
+                    </div>
+
                 </div>`;
             projectSection.innerHTML += projectHTML;
             modalOverlay.classList.remove('d-none');

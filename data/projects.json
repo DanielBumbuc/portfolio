@@ -2,25 +2,64 @@
   "EN": [
     {
       "name": "Join",
-      "technologies": ["Angular", "TypeScript", "HTML", "CSS", "Firebase"],
+      "technologies": [
+        {
+          "name": "Angular",
+          "icon": "./assets/img/icons/angular_green.svg"
+        },
+        {
+          "name": "TypeScript", 
+          "icon": "./assets/img/icons/typescript_green.svg"
+        },
+        {
+          "name": "Firebase",
+          "icon": "./assets/img/icons/firebase_green.svg"
+        }
+      ],
       "image": "./assets/img/join_preview.png",
-      "description": "Task management application inspired by Kanban board systems",
+      "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
       "liveUrl": "https://join.example.com",
       "githubUrl": "https://github.com/danielbumbuc/join"
     },
     {
       "name": "El Pollo Loco",
-      "technologies": ["HTML", "CSS", "JavaScript"],
+      "technologies": [
+        {
+          "name": "HTML",
+          "icon": "./assets/img/icons/html_green.svg"
+        },
+        {
+          "name": "CSS",
+          "icon": "./assets/img/icons/css_green.svg"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "./assets/img/icons/javascript_green.svg"
+        }
+      ],
       "image": "./assets/img/el_pollo_loco_preview.png",
-      "description": "Jump and run game with object-oriented approach",
+      "description": "Jump and run game with object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
       "liveUrl": "https://elpollo.example.com",
       "githubUrl": "https://github.com/danielbumbuc/el-pollo-loco"
     },
     {
       "name": "DA Bubble",
-      "technologies": ["Angular", "Firebase", "TypeScript"],
+      "technologies": [
+        {
+          "name": "Angular",
+          "icon": "./assets/img/icons/angular_green.svg"
+        },
+        {
+          "name": "Firebase",
+          "icon": "./assets/img/icons/firebase_green.svg"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "./assets/img/icons/typescript_green.svg"
+        }
+      ],
       "image": "./assets/img/da_bubble_preview.png",
-      "description": "Real-time chat application with channels and direct messages",
+      "description": "Jump and run game with object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
       "liveUrl": "https://dabubble.example.com",
       "githubUrl": "https://github.com/danielbumbuc/da-bubble"
     }
@@ -28,25 +67,72 @@
   "DE": [
     {
       "name": "Join",
-      "technologies": ["Angular", "TypeScript", "HTML", "CSS", "Firebase"],
+      "technologies": [
+        {
+          "name": "Angular",
+          "icon": "./assets/img/icons/angular_green.svg"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "./assets/img/icons/typescript_green.svg"
+        },
+        {
+          "name": "HTML",
+          "icon": "./assets/img/icons/html_green.svg"
+        },
+        {
+          "name": "CSS",
+          "icon": "./assets/img/icons/css_green.svg"
+        },
+        {
+          "name": "Firebase",
+          "icon": "./assets/img/icons/firebase_green.svg"
+        }
+      ],
       "image": "./assets/img/join_preview.png",
-      "description": "Aufgabenverwaltungsanwendung inspiriert von Kanban-Board-Systemen",
+      "description": "Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
       "liveUrl": "https://join.example.com",
       "githubUrl": "https://github.com/danielbumbuc/join"
     },
     {
       "name": "El Pollo Loco",
-      "technologies": ["HTML", "CSS", "JavaScript"],
+      "technologies": [
+        {
+          "name": "HTML",
+          "icon": "./assets/img/icons/html_green.svg"
+        },
+        {
+          "name": "CSS",
+          "icon": "./assets/img/icons/css_green.svg"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "./assets/img/icons/javascript_green.svg"
+        }
+      ],
       "image": "./assets/img/el_pollo_loco_preview.png",
-      "description": "Jump-and-Run-Spiel mit objektorientiertem Ansatz",
+      "description": "Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
       "liveUrl": "https://elpollo.example.com",
       "githubUrl": "https://github.com/danielbumbuc/el-pollo-loco"
     },
     {
       "name": "DA Bubble",
-      "technologies": ["Angular", "Firebase", "TypeScript"],
+      "technologies": [
+        {
+          "name": "Angular",
+          "icon": "./assets/img/icons/angular_green.svg"
+        },
+        {
+          "name": "Firebase",
+          "icon": "./assets/img/icons/firebase_green.svg"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "./assets/img/icons/typescript_green.svg"
+        }
+      ],
       "image": "./assets/img/da_bubble_preview.png",
-      "description": "Echtzeit-Chat-Anwendung mit Kanälen und direkten Nachrichten",
+      "description": "Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
       "liveUrl": "https://dabubble.example.com",
       "githubUrl": "https://github.com/danielbumbuc/da-bubble"
     }
