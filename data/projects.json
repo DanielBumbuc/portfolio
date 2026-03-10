@@ -16,7 +16,7 @@
           "icon": "./assets/img/icons/firebase_green.svg"
         }
       ],
-      "image": "./assets/img/join_preview.png",
+      "image": "./assets/img/el_pollo_loco_preview.png",
       "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
       "liveUrl": "https://join.example.com",
       "githubUrl": "https://github.com/danielbumbuc/join"
@@ -58,7 +58,7 @@
           "icon": "./assets/img/icons/typescript_green.svg"
         }
       ],
-      "image": "./assets/img/da_bubble_preview.png",
+      "image": "./assets/img/el_pollo_loco_preview.png",
       "description": "Jump and run game with object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
       "liveUrl": "https://dabubble.example.com",
       "githubUrl": "https://github.com/danielbumbuc/da-bubble"

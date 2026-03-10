@@ -92,19 +92,8 @@ function addProjectEventListeners() {
             projectSection.innerHTML += projectHTML;
             modalOverlay.classList.remove('d-none');
         });
-        initProjectTechnologies(index);
     });
 }
-
-// function initProjectTechnologies(index) {
-//     const technologyElements = document.getElementById(`technologie-name-${index}`);
-//     technologyElements.innerHTML += index
-            
- 
-
-// console.log(technologyElements.innerHTML);
-
-// }
 
 function closeModal() {
     const modal = document.querySelector('.project-modal');
