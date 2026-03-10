@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./styles/project.css">
     <link rel="stylesheet" href="./styles/project-modal.css">
     <link rel="stylesheet" href="./styles/reference.css">
+    <link rel="stylesheet" href="./styles/contact.css">
     <script src="script.js"></script>
     <script src="./scripts/project.js"></script>
     <script src="./scripts/reference.js"></script>
@@ -139,7 +140,7 @@
                             how
                             important it is for you to keep up with the rapid changes in web development.
                         </p>
-                        <span class="contact-container">
+                        <span class="contact-request-container">
                             <h3 class="contact-headline">You need another skill?</h3>
                             <p class="contact-text">
                                 Feel free to contact me. I look forward to expanding on my previous knowledge
@@ -149,7 +150,7 @@
                     </div>
 
 
-                    <button class="nav-btn"><span class="marquee-btn-content">Let's Talk</span></button>
+                    <button class="nav-btn contact-request-btn"><span class="marquee-btn-content">Let's Talk</span></button>
 
                 </div>
 
@@ -258,19 +259,55 @@
                     </div>
                 </div>
             </div>
+
+            <div class="content-slider">
+                <img class="prev-slider" src="./assets/img/icons/left_arrow.svg" alt="prev slider">
+                <span class="slider-indicator">
+                    <span class="indicator active">•</span>
+                    <span class="indicator">•</span>
+                    <span class="indicator">•</span>
+                </span>
+                <img class="next-slider" src="./assets/img/icons/right_arrow.svg" alt="next slider">
+            </div>
         </section>
 
-        <div class="content-slider">
-            <img class="prev-slider" src="./assets/img/icons/left_arrow.svg" alt="prev slider">
-            <span class="slider-indicator">
-                <span class="indicator active">•</span>
-                <span class="indicator">•</span>
-                <span class="indicator">•</span>
-            </span>
-            <img class="next-slider" src="./assets/img/icons/right_arrow.svg" alt="next slider">
-        </div>
+        <section class="contact">
+            <div class="contact-container">
+                <h3 class="contact-title">Technologies</h3>
+                <div class="contact-content">
+                    <h2>Let´s work together</h2>
+                    <h3>Got a problem to solve?</h3>
+                    <p class="main-contact-info">
+                        Encourage people to contact you and describe what role you are interested in. Show that you will
+                        add value to their projects through your work. <span class="green-text">Let´s talk!</span>
+                    </p>
+                </div>
+            </div>
+
+            <form class="contact-form" action="">
+                <div class="form-group border-style">
+                    <label class="main-label" for="name">What's your name?</label>
+                    <input class="main-input" type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group border-style">
+                    <label class="main-label" for="email">What's your e-mail?</label>
+                    <input class="main-input" type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group border-style">
+                    <label class="main-label" for="message">How can I help you?</label>
+                    <input class="main-input" type="text" id="message" name="message" rows="5" required>
+                </div>
+                
+                <div class="form-group checkbox-container">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label class="checkbox-text" for="privacy">I´ve read the privacy policy and agree to the processing of my data as outlined.</label>
+                </div>
+                
+                <button type="submit" class="contact-btn nav-btn"><span class="marquee-btn-content">Say Hello ;)</span></button>
+            </form>
         </section>
-        <section class="contact"></section>
 
     </main>
 
