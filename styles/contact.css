@@ -10,12 +10,20 @@
 
 .contact-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     width: 720px;
     height: 720px;
     margin: 0 0 0 140px;
+}
+
+.contact-content {
+    margin-top: 48px;
+}
+
+.main-contact-headline {
+    margin: 32px 0 16px 0;
 }
 
 .main-contact-info {
@@ -29,7 +37,7 @@
 .contact-form {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
 }
 
@@ -67,11 +75,14 @@
     padding-bottom: 24px;
     font-size: 18px;
     color: #FFFFFF;
-
 }
 
 .main-input:focus {
     outline: none;
+}
+
+.main-input::placeholder {
+    color: #FFFFFF;
 }
 
 .checkbox-container {
@@ -80,7 +91,7 @@
     align-items: center;
     flex-direction: row;
     gap: 8px;
-    margin-bottom: 32px;
+    margin: 48px 0 48px 0;
 }
 
 .checkbox-text {
@@ -88,6 +99,58 @@
     color: #3DCFB6;
 }
 
+/* Verstecke die Standard-Checkbox */
+.checkbox-container input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Standard Checkbox (nicht aktiviert) */
+.checkbox-container input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url('../assets/img/icons/checkbox.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.2s ease;
+}
+
+/* Hover-Zustand (nicht aktiviert) */
+.checkbox-container input[type="checkbox"]:hover::before {
+    background-image: url('../assets/img/icons/checkbox_hover.svg');
+}
+
+/* Aktivierte Checkbox */
+.checkbox-container input[type="checkbox"]:checked::before {
+    background-image: url('../assets/img/icons/checkbox_checked.svg');
+}
+
+/* Aktivierte Checkbox + Hover */
+.checkbox-container input[type="checkbox"]:checked:hover::before {
+    background-image: url('../assets/img/icons/checkbox_checked_hover.svg');
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+}
+
 .contact-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     margin: 0 140px 0 0;
 }

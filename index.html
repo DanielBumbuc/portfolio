@@ -273,10 +273,10 @@
 
         <section class="contact">
             <div class="contact-container">
-                <h3 class="contact-title">Technologies</h3>
+                <h3 class="contact-title">Contact me</h3>
                 <div class="contact-content">
                     <h2>Let´s work together</h2>
-                    <h3>Got a problem to solve?</h3>
+                    <h3 class="main-contact-headline">Got a problem to solve?</h3>
                     <p class="main-contact-info">
                         Encourage people to contact you and describe what role you are interested in. Show that you will
                         add value to their projects through your work. <span class="green-text">Let´s talk!</span>
@@ -287,25 +287,27 @@
             <form class="contact-form" action="">
                 <div class="form-group border-style">
                     <label class="main-label" for="name">What's your name?</label>
-                    <input class="main-input" type="text" id="name" name="name" required>
+                    <input class="main-input" type="text" id="name" name="name" placeholder="Your name goes here" onfocus="this.placeholder=''" onblur="this.placeholder='Your name goes here'" rows="5" required>
                 </div>
                 
                 <div class="form-group border-style">
                     <label class="main-label" for="email">What's your e-mail?</label>
-                    <input class="main-input" type="email" id="email" name="email" required>
+                    <input class="main-input" type="email" id="email" name="email"  placeholder="yourmail@mail.com" onfocus="this.placeholder=''" onblur="this.placeholder='yourmail@mail.com'" rows="5" required>
                 </div>
                 
                 <div class="form-group border-style">
                     <label class="main-label" for="message">How can I help you?</label>
-                    <input class="main-input" type="text" id="message" name="message" rows="5" required>
+                    <input class="main-input" type="text" id="message" name="message" placeholder="Hi Daniel, I am interested in..." onfocus="this.placeholder=''" onblur="this.placeholder='Hi Daniel, I am interested in...'" rows="5" required>
                 </div>
                 
                 <div class="form-group checkbox-container">
                     <input type="checkbox" id="privacy" name="privacy" required>
                     <label class="checkbox-text" for="privacy">I´ve read the privacy policy and agree to the processing of my data as outlined.</label>
                 </div>
+                <div class="btn-container">
+                    <button type="submit" class="contact-btn nav-btn"><span class="marquee-btn-content">Say Hello ;)</span></button>
+                </div>
                 
-                <button type="submit" class="contact-btn nav-btn"><span class="marquee-btn-content">Say Hello ;)</span></button>
             </form>
         </section>
 
