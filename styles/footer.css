@@ -1,0 +1,38 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    color: #FFFFFF;
+    padding: 48px 140px;
+}
+
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 16px 0 0 0;
+}
+
+.copy-right {
+    font-size: 18px;
+    color: #3DCFB6;
+}
+
+.footer-links {
+    cursor: pointer;
+    list-style: none;
+}
+
+.footer-links li:hover {
+    list-style: disc;
+}
+
+.footer-links li:hover::marker {
+    color: #3DCFB6;
+}
+
+.footer-links a:hover {
+    color: #3DCFB6;
+}

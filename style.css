@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font-fira-code), var(--font-karla), sans-serif;
+    scroll-behavior: smooth;
 }
 
 body.modal-open {
@@ -20,7 +21,8 @@ h3 {
     color: #3DCFB6;
 }
 
-.main-container {
+.main-container,
+footer {
     background-color: #1c1c1c;
 }
 

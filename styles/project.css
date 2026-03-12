@@ -106,11 +106,19 @@
 
 .preview-img-bg {
     position: absolute;
+    top: -17px;
     right: -24px;
-    top: 0px;
     width: 350px;
     height: 200px;
     border-radius: 16px;
     z-index: 1;
     object-fit: cover;
+}
+
+.single-project-container:first-child .preview-img-bg {
+    top: 24px;
+}
+
+.single-project-container:last-child .preview-img-bg {
+    top: -58px;
 }

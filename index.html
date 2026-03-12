@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./styles/project-modal.css">
     <link rel="stylesheet" href="./styles/reference.css">
     <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <script src="script.js"></script>
     <script src="./scripts/project.js"></script>
     <script src="./scripts/reference.js"></script>
@@ -22,6 +23,7 @@
 
 <body onload="init()">
     <div class="modal-overlay d-none" onclick="closeModal()"></div>
+
     <header class="landing-page">
         <nav class="navbar">
             <div class="left-container">
@@ -35,15 +37,15 @@
                     <li><a href="#projects">Projects</a><span class="highlighter">•</span></li>
                 </ul>
             </div>
-            <img src="#" alt="Daniel Bumbuc Logo" class="logo">
+            <div class="logo" title="Daniel Bumbuc Logo"></div>
         </nav>
 
         <div class="headline-container">
             <h2 class="second-headline">Frontend Developer</h2>
             <h1 class="first-headline">Daniel Bumbuc</h1>
             <div class="nav-btn-container">
-                <button class="nav-btn"><span class="marquee-btn-content">Check my work</span></button>
-                <button class="nav-btn"><span class="marquee-btn-content">Contact me</span></button>
+                <a href="#projects" class="nav-btn"><span class="marquee-btn-content">Check my work</span></a>
+                <a href="#contact_section" class="nav-btn"><span class="marquee-btn-content">Contact me</span></a>
             </div>
         </div>
 
@@ -82,10 +84,9 @@
 
     </header>
 
-
     <main class="main-container">
 
-        <section class="about-me">
+        <section id="about_section" class="about-me">
             <div class="about-img-container">
 
                 <img class="about-img" src="./assets/img/about-placeholder.jpg" alt="Daniel Bumbuc Image">
@@ -128,7 +129,7 @@
             </div>
         </section>
 
-        <section class="skills">
+        <section id="skills_section" class="skills">
             <div class="skill-container">
                 <h3 class="skills-title">Technologies</h3>
                 <div class="skill-content">
@@ -150,11 +151,7 @@
                     </div>
 
 
-                    <button class="nav-btn contact-request-btn"><span class="marquee-btn-content">Let's Talk</span></button>
-
-                </div>
-
-
+                <a href="#contact_section" class="nav-btn contact-request-btn"><span class="marquee-btn-content">Let's Talk</span></a>
             </div>
 
             <div class="skill-collection">
@@ -205,7 +202,7 @@
             </div>
         </section>
 
-        <section class="projects">
+        <section id="projects" class="projects">
             <div class="project-container">
                 <h3 class="project-title">Portfolio</h3>
                 <div class="project-content">
@@ -222,7 +219,7 @@
 
         </section>
 
-        <section class="references">
+        <section id="references_section" class="references">
             <h2 class="reference-title">What my colleagues say about me</h2>
 
 
@@ -271,7 +268,7 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section id="contact_section" class="contact">
             <div class="contact-container">
                 <h3 class="contact-title">Contact me</h3>
                 <div class="contact-content">
@@ -314,7 +311,26 @@
     </main>
 
     <footer>
+        <div>
+            <div class="logo" title="Daniel Bumbuc Logo"></div>
+            <span class="footer-info">
+                <p>Web Developer</p>
+                <p>Sindelfingen Germany</p>
+            </span>
+        </div>
 
+        <div>
+            <p class="copy-right">© Daniel Bumbuc 2026</p>
+        </div>
+
+        <div>
+            <ul class="footer-links">
+                <li><a href="#">Github</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Email</a></li>
+                <li><a href="#">Legal Notice</a></li>
+            </ul>
+        </div>
     </footer>
 
 

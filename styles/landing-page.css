@@ -105,6 +105,21 @@ a {
 
 }
 
+.logo {
+    cursor: pointer;
+    width: 212px;
+    height: 96px;
+    background-image: url('../assets/img/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo:hover {
+    background-image: url('../assets/img/logo_hover.svg');
+    transition: background-image 0.2s ease;
+}
+
 .landing-page {
     display: flex;
     height: 100vh;
@@ -152,7 +167,7 @@ a {
     border: 1px solid #D9D9D9;
     border-radius: 25px;
     color: #D9D9D9;
-    width: 170px;
+    width: 200px;
     height: 44px;
     padding: 8px 16px;
     cursor: pointer;
@@ -207,7 +222,7 @@ a {
 
 .left-side-container {
     position: absolute;
-    bottom: -15px;
+    bottom: 0px;
     left: 96px;
     display: flex;
     justify-content: space-between;
@@ -219,7 +234,7 @@ a {
 
 .right-side-container {
     position: absolute;
-    bottom: -15px;
+    bottom: 0px;
     right: 96px;
     display: flex;
     justify-content: space-between;
