@@ -1,0 +1,41 @@
+{
+  "EN": [
+    {
+      "name": "Sarah Mueller",
+      "role": "Project Manager",
+      "reference": "Daniel consistently delivers high-quality code and has an excellent eye for detail. His problem-solving skills are outstanding, and he always finds creative solutions to complex frontend challenges. He's also a great team player who actively contributes to code reviews and mentors junior developers."
+    },
+    {
+      "name": "Marcus Weber",
+      "role": "Senior Frontend Developer",
+      "reference": "Working with Daniel has been fantastic. His knowledge of modern JavaScript frameworks, especially Angular and TypeScript, is impressive. He writes clean, maintainable code and always stays up-to-date with the latest web development trends. His collaboration skills make him a valuable team member."
+    },
+    {
+      "name": "Test",
+      "role": "UX Designer",
+      "reference": "Daniel has an excellent understanding of user experience and translates designs perfectly into responsive, interactive web applications. His attention to detail in implementing pixel-perfect layouts while maintaining performance is remarkable. Communication between design and development has never been smoother."
+    },
+    {
+      "name": "Test",
+      "role": "UX Designer",
+      "reference": "Daniel has an excellent understanding of user experience and translates designs perfectly into responsive, interactive web applications. His attention to detail in implementing pixel-perfect layouts while maintaining performance is remarkable. Communication between design and development has never been smoother."
+    }
+  ],
+  "DE": [
+    {
+      "name": "Sarah Mueller",
+      "role": "Projektmanagerin",
+      "reference": "Daniel liefert konstant hochwertigen Code und hat ein ausgezeichnetes Auge für Details. Seine Problemlösungsfähigkeiten sind herausragend, und er findet immer kreative Lösungen für komplexe Frontend-Herausforderungen. Er ist auch ein großartiger Teamplayer, der aktiv zu Code-Reviews beiträgt und Junior-Entwickler mentort."
+    },
+    {
+      "name": "Marcus Weber",
+      "role": "Senior Frontend-Entwickler", 
+      "reference": "Die Zusammenarbeit mit Daniel war fantastisch. Seine Kenntnisse moderner JavaScript-Frameworks, besonders Angular und TypeScript, sind beeindruckend. Er schreibt sauberen, wartbaren Code und bleibt immer auf dem neuesten Stand der Webentwicklungstrends. Seine Zusammenarbeitsfähigkeiten machen ihn zu einem wertvollen Teammitglied."
+    },
+    {
+      "name": "Lisa Hoffmann",
+      "role": "UX-Designerin",
+      "reference": "Daniel hat ein ausgezeichnetes Verständnis für User Experience und setzt Designs perfekt in responsive, interaktive Webanwendungen um. Seine Detailgenauigkeit bei der Implementierung pixelperfekter Layouts unter Beibehaltung der Performance ist bemerkenswert. Die Kommunikation zwischen Design und Entwicklung war noch nie so reibungslos."
+    }
+  ]
+}

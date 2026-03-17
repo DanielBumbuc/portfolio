@@ -1,6 +1,5 @@
 
 let projects = [];
-let currentLanguage = 'EN';
 
 async function loadProjects() {
     try {
@@ -85,11 +84,12 @@ function addProjectEventListeners() {
                     <div class="modal-right-side">
                         <img class="close-btn" src="./assets/img/icons/default_icon.svg" alt="close icon" onclick="closeModal()" onmouseenter="this.src='./assets/img/icons/default_hover_icon.svg'" onmouseleave="this.src='./assets/img/icons/default_icon.svg'">
                         <img class="modal-preview-img" src="assets/img/el_pollo_loco_preview_modal.png" alt="preview image">
-                        <span class="next-project">Next project<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
+                        <span class="next-project" onclick="nextProject(${index})">Next project<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
                     </div>
 
                 </div>`;
             projectSection.innerHTML += projectHTML;
+            
             modalOverlay.classList.remove('d-none');
         });
     });
@@ -98,14 +98,57 @@ function addProjectEventListeners() {
 function closeModal() {
     const modal = document.querySelector('.project-modal');
     const modalOverlay = document.querySelector('.modal-overlay');
+    const allPreviewImages = document.querySelectorAll('.project-preview-img, .preview-img-bg');
+    allPreviewImages.forEach(img => {
+        img.classList.add('d-none');
+    });
     if (modal) {
         modal.remove();
     }
     if (modalOverlay) {
         modalOverlay.classList.add('d-none');
     }
-    addProjectEventListeners();
     document.body.classList.remove('modal-open');
+}
+
+function nextProject(index) {
+    const modal = document.querySelector('.project-modal');
+    let nextIndex = index + 1;
+    if (nextIndex >= projects.length) {
+        nextIndex = 0;
+    }
+    const projectHTML = `
+            <div class="project-modal">
+                <div class="left-modal-side">
+                            <h2 class="project-index">0${nextIndex + 1}</h2>
+                            <h3 class="project-modal-name">${projects[nextIndex].name}</h3>
+                            <span class="modal-project-info">
+                                <h3 class="title">What is this project about?</h3>
+                                <p class="description">
+                                    ${projects[nextIndex].description}
+                                </p>
+                            </span>
+                            <span class="used-technologies">
+                                ${projects[nextIndex].technologies.map(tech => `
+                                    <img class="technologie-icon" src="${tech.icon}" alt="${tech.name}">
+                                    <p class="technologie-name">${tech.name}</p>
+                                `).join('')}
+                            </span>
+                            <div class="project-btn-container">
+                                <span class="project-btn">GitHub<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="GitHub"></span>
+                                <span class="project-btn">Live Test<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="Live Test"></span>
+                            </div>
+                        </div>
+                    <div class="modal-right-side">
+                        <img class="close-btn" src="./assets/img/icons/default_icon.svg" alt="close icon" onclick="closeModal()" onmouseenter="this.src='./assets/img/icons/default_hover_icon.svg'" onmouseleave="this.src='./assets/img/icons/default_icon.svg'">
+                        <img class="modal-preview-img" src="assets/img/el_pollo_loco_preview_modal.png" alt="preview image">
+                        <span class="next-project" onclick="nextProject(${nextIndex})">Next project<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
+                    </div>
+
+                </div>`;
+
+    modal.innerHTML = projectHTML;
+
 }
 
 document.addEventListener('DOMContentLoaded', loadProjects);

@@ -1,6 +1,7 @@
 {
   "EN": [
     {
+      "id": 1,
       "name": "Join",
       "technologies": [
         {
@@ -22,6 +23,7 @@
       "githubUrl": "https://github.com/danielbumbuc/join"
     },
     {
+      "id": 2,
       "name": "El Pollo Loco",
       "technologies": [
         {
@@ -43,6 +45,7 @@
       "githubUrl": "https://github.com/danielbumbuc/el-pollo-loco"
     },
     {
+      "id": 3,
       "name": "DA Bubble",
       "technologies": [
         {
@@ -66,6 +69,7 @@
   ],
   "DE": [
     {
+      "id": 1,
       "name": "Join",
       "technologies": [
         {
@@ -89,12 +93,13 @@
           "icon": "./assets/img/icons/firebase_green.svg"
         }
       ],
-      "image": "./assets/img/join_preview.png",
+      "image": "./assets/img/el_pollo_loco_preview.png",
       "description": "Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
       "liveUrl": "https://join.example.com",
       "githubUrl": "https://github.com/danielbumbuc/join"
     },
     {
+      "id": 2,
       "name": "El Pollo Loco",
       "technologies": [
         {
@@ -116,6 +121,7 @@
       "githubUrl": "https://github.com/danielbumbuc/el-pollo-loco"
     },
     {
+      "id": 3,
       "name": "DA Bubble",
       "technologies": [
         {
@@ -131,22 +137,10 @@
           "icon": "./assets/img/icons/typescript_green.svg"
         }
       ],
-      "image": "./assets/img/da_bubble_preview.png",
+      "image": "./assets/img/el_pollo_loco_preview.png",
       "description": "Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
       "liveUrl": "https://dabubble.example.com",
       "githubUrl": "https://github.com/danielbumbuc/da-bubble"
-    }
-  ],
-  "ref": [
-    {
-        "name": "Oli",
-        "reference": "Daniel is a great team player and always willing to help others. He has a strong work ethic and is very reliable. I highly recommend him for any project.",
-        "role": "Team Partner"
-    },
-    {
-        "name": "Kevin",
-        "reference": "Daniel is a talented developer with a great eye for detail. He is always willing to go the extra mile to ensure that the project is successful. I have enjoyed working with him and would recommend him to anyone.",
-        "role": "Team Partner"
     }
   ]
 }

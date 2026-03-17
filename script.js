@@ -1,5 +1,32 @@
+let currentLanguage = 'EN';
+
 function init() {
+    loadCurrentLanguage();
     initMarquee();
+}
+
+function setLanguage() {
+    let englishBtn = document.getElementById('english-btn');
+    let germanBtn = document.getElementById('german-btn');
+    localStorage.getItem('language', currentLanguage);
+    if (currentLanguage === 'EN') {
+        currentLanguage = 'DE';
+        englishBtn.classList.remove('active-language');
+        germanBtn.classList.add('active-language');
+    } else {
+        currentLanguage = 'EN';
+        germanBtn.classList.remove('active-language');
+        englishBtn.classList.add('active-language');
+    }
+    loadCurrentLanguage();
+}
+
+function loadCurrentLanguage() {
+    localStorage.setItem('language', currentLanguage);
+    loadProjects();
+    loadReferences();
+    console.log(currentLanguage);
+    
 }
 
 function initMarquee() {
