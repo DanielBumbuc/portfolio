@@ -109,6 +109,7 @@ function closeModal() {
         modalOverlay.classList.add('d-none');
     }
     document.body.classList.remove('modal-open');
+    addProjectEventListeners();
 }
 
 function nextProject(index) {
