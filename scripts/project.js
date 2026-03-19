@@ -65,7 +65,7 @@ function addProjectEventListeners() {
                             <h2 class="project-index">0${index + 1}</h2>
                             <h3 class="project-modal-name">${projects[index].name}</h3>
                             <span class="modal-project-info">
-                                <h3 class="title">What is this project about?</h3>
+                                <h3 class="title">${translate ? translate('projects.modal.about') : 'What is this project about?'}</h3>
                                 <p class="description">
                                     ${projects[index].description}
                                 </p>
@@ -77,14 +77,14 @@ function addProjectEventListeners() {
                                 `).join('')}
                             </span>
                             <div class="project-btn-container">
-                                <span class="project-btn">GitHub<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="GitHub"></span>
-                                <span class="project-btn">Live Test<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="Live Test"></span>
+                                <span class="project-btn">${translate ? translate('projects.modal.github') : 'GitHub'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="GitHub"></span>
+                                <span class="project-btn">${translate ? translate('projects.modal.liveTest') : 'Live Test'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="Live Test"></span>
                             </div>
                         </div>
                     <div class="modal-right-side">
                         <img class="close-btn" src="./assets/img/icons/default_icon.svg" alt="close icon" onclick="closeModal()" onmouseenter="this.src='./assets/img/icons/default_hover_icon.svg'" onmouseleave="this.src='./assets/img/icons/default_icon.svg'">
                         <img class="modal-preview-img" src="assets/img/el_pollo_loco_preview_modal.png" alt="preview image">
-                        <span class="next-project" onclick="nextProject(${index})">Next project<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
+                        <span class="next-project" onclick="nextProject(${index})">${translate ? translate('projects.modal.nextProject') : 'Next project'}<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
                     </div>
 
                 </div>`;
@@ -124,7 +124,7 @@ function nextProject(index) {
                             <h2 class="project-index">0${nextIndex + 1}</h2>
                             <h3 class="project-modal-name">${projects[nextIndex].name}</h3>
                             <span class="modal-project-info">
-                                <h3 class="title">What is this project about?</h3>
+                                <h3 class="title">${translate ? translate('projects.modal.about') : 'What is this project about?'}</h3>
                                 <p class="description">
                                     ${projects[nextIndex].description}
                                 </p>
@@ -136,14 +136,14 @@ function nextProject(index) {
                                 `).join('')}
                             </span>
                             <div class="project-btn-container">
-                                <span class="project-btn">GitHub<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="GitHub"></span>
-                                <span class="project-btn">Live Test<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="Live Test"></span>
+                                <span class="project-btn">${translate ? translate('projects.modal.github') : 'GitHub'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="GitHub"></span>
+                                <span class="project-btn">${translate ? translate('projects.modal.liveTest') : 'Live Test'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="Live Test"></span>
                             </div>
                         </div>
                     <div class="modal-right-side">
                         <img class="close-btn" src="./assets/img/icons/default_icon.svg" alt="close icon" onclick="closeModal()" onmouseenter="this.src='./assets/img/icons/default_hover_icon.svg'" onmouseleave="this.src='./assets/img/icons/default_icon.svg'">
                         <img class="modal-preview-img" src="assets/img/el_pollo_loco_preview_modal.png" alt="preview image">
-                        <span class="next-project" onclick="nextProject(${nextIndex})">Next project<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
+                        <span class="next-project" onclick="nextProject(${nextIndex})">${translate ? translate('projects.modal.nextProject') : 'Next project'}<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
                     </div>
 
                 </div>`;
