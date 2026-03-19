@@ -29,3 +29,7 @@ footer {
 .d-none {
     display: none !important;
 }
+
+.error-text {
+    color: rgba(236, 123, 123, 0.8);
+}
