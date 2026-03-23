@@ -95,13 +95,21 @@
     align-items: center;
     flex-direction: row;
     gap: 8px;
-    margin: 48px 0 48px 0;
+    margin: 48px 0 0 0;
 }
 
 .checkbox-text {
     font-size: 16px;
+    padding: 0  16px;
     color: #3DCFB6;
 }
+
+.unchecked-error {
+    opacity: 0;
+    margin: 24px 0 48px 0;
+    color: rgba(236, 123, 123, 0.8);
+}
+
 
 /* Verstecke die Standard-Checkbox */
 .checkbox-container input[type="checkbox"] {

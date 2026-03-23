@@ -268,31 +268,31 @@
                     <label class="main-label" for="name">What's your name?</label>
                     <input class="main-input" type="text" id="name_input" name="name" placeholder="Your name goes here"
                         onfocus="this.placeholder=''; clearError(this)"
-                        onblur="handleBlurWithError(this, 'Your name goes here', 'Please enter your name')"
+                        onblur="handleBlurWithError(this, 'Your name goes here', 'nameRequired')"
                         oninput="clearError(this)">
                 </div>
 
                 <div class="form-group border-style">
                     <label class="main-label" for="email">What's your e-mail?</label>
-                    <input class="main-input" type="email" id="email_input" name="email" placeholder="yourmail@mail.com"
-                        onfocus="this.placeholder=''; clearError(this)"
-                        onblur="handleBlurWithError(this, 'yourmail@mail.com', 'Please enter your email')"
-                        oninput="clearError(this)" rows="5">
+                    <input class="main-input" type="email" novalidate id="email_input" name="email"
+                        placeholder="yourmail@mail.com" onfocus="this.placeholder=''; clearError(this)"
+                        onblur="isValidEmail(this, 'yourmail@mail.com')" oninput="clearError(this)" rows="5">
                 </div>
 
                 <div class="form-group border-style">
                     <label class="main-label" for="message">How can I help you?</label>
                     <input class="main-input" type="text" id="message_input" name="message"
                         placeholder="Hi Daniel, I am interested in..." onfocus="this.placeholder=''; clearError(this)"
-                        onblur="handleBlurWithError(this, 'Hi Daniel, I am interested in...', 'Please enter your message')"
+                        onblur="handleBlurWithError(this, 'Hi Daniel, I am interested in...', 'messageRequired')"
                         oninput="clearError(this)" rows="5">
                 </div>
 
                 <div class="form-group checkbox-container">
-                    <input type="checkbox" id="privacy" name="privacy">
-                    <label class="checkbox-text" for="privacy">I´ve read the privacy policy and agree to the processing
-                        of my data as outlined.</label>
+                    <input type="checkbox" id="privacy_checkbox" name="privacy" onclick="clearErrorCheckbox()">
+                    <label class="checkbox-text" for="privacy_checkbox"></label>
                 </div>
+
+                <span class="unchecked-error"></span>
                 <div class="btn-container">
                     <button type="submit" class="contact-btn nav-btn"><span class="marquee-btn-content">Say Hello
                             ;)</span></button>

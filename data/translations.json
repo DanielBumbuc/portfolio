@@ -1,172 +1,185 @@
 {
-  "EN": {
-    "navigation": {
-      "about": "About me",
-      "skills": "Skills",  
-      "projects": "Projects"
+    "EN": {
+        "navigation": {
+            "about": "About me",
+            "skills": "Skills",
+            "projects": "Projects"
+        },
+        "landing": {
+            "role": "Frontend Developer",
+            "checkWork": "Check my work",
+            "contactMe": "Contact me",
+            "available": "Available for remote work",
+            "developer": "Frontend Developer",
+            "based": "Based in Sindelfingen",
+            "relocate": "Open to relocate"
+        },
+        "about": {
+            "title": "Who I Am",
+            "heading": "About me",
+            "intro": "Hey there, I'm Daniel! I'm a passionate frontend developer with a keen eye for detail and a love for creating intuitive, responsive web applications. My journey in web development started with curiosity and has grown into a dedication to crafting digital experiences that users love.",
+            "location": {
+                "title": "Where are you based?",
+                "text": "I'm currently based in Sindelfingen, Germany. I'm open to working remotely and would be excited about the possibility of relocating for the right opportunity."
+            },
+            "mindset": {
+                "title": "Open-minded approach",
+                "text": "I'm enthusiastic about learning new technologies and continually improving my skills. I believe in staying curious and embracing challenges as opportunities to grow."
+            },
+            "approach": {
+                "title": "Problem-solving philosophy",
+                "text": "I approach each challenge with analytical thinking, creativity, and persistence. I believe in collaborative solutions and learning from each project to find the most efficient and elegant approach."
+            }
+        },
+        "skills": {
+            "title": "Technologies",
+            "heading": "Skill Set",
+            "intro": "I specialize in modern frontend technologies with a focus on creating responsive, accessible, and performant web applications. I'm passionate about staying current with web development trends and continuously expanding my technical toolkit.",
+            "contact": {
+                "headline": "You need another skill?",
+                "text": "Feel free to contact me. I look forward to expanding on my previous knowledge",
+                "button": "Let's Talk"
+            }
+        },
+        "projects": {
+            "title": "Portfolio",
+            "heading": "Featured Projects",
+            "intro": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+            "modal": {
+                "about": "What is this project about?",
+                "github": "GitHub",
+                "liveTest": "Live Test",
+                "nextProject": "Next project"
+            }
+        },
+        "references": {
+            "heading": "What my colleagues say about me"
+        },
+        "contact": {
+            "title": "Contact me",
+            "heading": "Let´s work together",
+            "subheading": "Got a problem to solve?",
+            "intro": "I'm passionate about creating digital solutions that make a difference. Whether you're looking to build a new web application, optimize an existing project, or need a reliable developer for your team, I'm excited to collaborate and bring your ideas to life.",
+            "highlight": "Let´s talk!",
+            "form": {
+                "nameLabel": "What's your name?",
+                "namePlaceholder": "Your name goes here",
+                "emailLabel": "What's your e-mail?",
+                "emailPlaceholder": "yourmail@mail.com",
+                "messageLabel": "How can I help you?",
+                "messagePlaceholder": "Hi Daniel, I am interested in...",
+                "privacy": "I´ve read the privacy policy and agree to the processing of my data as outlined.","submit": "Say Hello ;)"
+            },
+            "validation": {
+                "nameRequired": "Bitte geben Sie Ihren Namen ein",
+                "emailRequired": "Bitte geben Sie Ihre E-Mail ein",
+                "emailInvalid": "Bitte geben Sie eine gültige E-Mail ein",
+                "messageRequired": "Bitte geben Sie Ihre Nachricht ein",
+                "privacyRequired": "Please accept the privacy policy."
+            }
+        },
+        "footer": {
+            "role": "Web Developer",
+            "location": "Sindelfingen Germany",
+            "copyright": "© Daniel Bumbuc 2026",
+            "links": {
+                "github": "Github",
+                "linkedin": "LinkedIn",
+                "email": "Email",
+                "legal": "Legal Notice"
+            }
+        }
     },
-    "landing": {
-      "role": "Frontend Developer",
-      "checkWork": "Check my work",
-      "contactMe": "Contact me",
-      "available": "Available for remote work",
-      "developer": "Frontend Developer",
-      "based": "Based in Sindelfingen",
-      "relocate": "Open to relocate"
-    },
-    "about": {
-      "title": "Who I Am",
-      "heading": "About me",
-      "intro": "Hey there, I'm Daniel! I'm a passionate frontend developer with a keen eye for detail and a love for creating intuitive, responsive web applications. My journey in web development started with curiosity and has grown into a dedication to crafting digital experiences that users love.",
-      "location": {
-        "title": "Where are you based?",
-        "text": "I'm currently based in Sindelfingen, Germany. I'm open to working remotely and would be excited about the possibility of relocating for the right opportunity."
-      },
-      "mindset": {
-        "title": "Open-minded approach",
-        "text": "I'm enthusiastic about learning new technologies and continually improving my skills. I believe in staying curious and embracing challenges as opportunities to grow."
-      },
-      "approach": {
-        "title": "Problem-solving philosophy",
-        "text": "I approach each challenge with analytical thinking, creativity, and persistence. I believe in collaborative solutions and learning from each project to find the most efficient and elegant approach."
-      }
-    },
-    "skills": {
-      "title": "Technologies",
-      "heading": "Skill Set",
-      "intro": "I specialize in modern frontend technologies with a focus on creating responsive, accessible, and performant web applications. I'm passionate about staying current with web development trends and continuously expanding my technical toolkit.",
-      "contact": {
-        "headline": "You need another skill?",
-        "text": "Feel free to contact me. I look forward to expanding on my previous knowledge",
-        "button": "Let's Talk"
-      }
-    },
-    "projects": {
-      "title": "Portfolio", 
-      "heading": "Featured Projects",
-      "intro": "Explore a selection of my work here - Interact with projects to see my skills in action.",
-      "modal": {
-        "about": "What is this project about?",
-        "github": "GitHub",
-        "liveTest": "Live Test",
-        "nextProject": "Next project"
-      }
-    },
-    "references": {
-      "heading": "What my colleagues say about me"
-    },
-    "contact": {
-      "title": "Contact me",
-      "heading": "Let´s work together",
-      "subheading": "Got a problem to solve?",
-      "intro": "I'm passionate about creating digital solutions that make a difference. Whether you're looking to build a new web application, optimize an existing project, or need a reliable developer for your team, I'm excited to collaborate and bring your ideas to life.",
-      "highlight": "Let´s talk!",
-      "form": {
-        "nameLabel": "What's your name?",
-        "namePlaceholder": "Your name goes here",
-        "emailLabel": "What's your e-mail?", 
-        "emailPlaceholder": "yourmail@mail.com",
-        "messageLabel": "How can I help you?",
-        "messagePlaceholder": "Hi Daniel, I am interested in...",
-        "privacy": "I´ve read the privacy policy and agree to the processing of my data as outlined.",
-        "submit": "Say Hello ;)"
-      }
-    },
-    "footer": {
-      "role": "Web Developer",
-      "location": "Sindelfingen Germany",
-      "copyright": "© Daniel Bumbuc 2026",
-      "links": {
-        "github": "Github",
-        "linkedin": "LinkedIn", 
-        "email": "Email",
-        "legal": "Legal Notice"
-      }
+    "DE": {
+        "navigation": {
+            "about": "Über mich",
+            "skills": "Fähigkeiten",
+            "projects": "Projekte"
+        },
+        "landing": {
+            "role": "Frontend Entwickler",
+            "checkWork": "Schau dir meine Arbeit an",
+            "contactMe": "Kontaktiere mich",
+            "available": "Verfügbar für Remote-Arbeit",
+            "developer": "Frontend Entwickler",
+            "based": "Ansässig in Sindelfingen",
+            "relocate": "Offen für Umzug"
+        },
+        "about": {
+            "title": "Wer ich bin",
+            "heading": "Über mich",
+            "intro": "Hallo! Ich bin Daniel, ein leidenschaftlicher Frontend-Entwickler mit einem Auge für Details und der Liebe zur Entwicklung intuitiver, responsiver Webanwendungen. Meine Reise in der Webentwicklung begann mit Neugier und ist zu einer Hingabe gewachsen, digitale Erfahrungen zu schaffen, die Nutzer lieben.",
+            "location": {
+                "title": "Wo bin ich ansässig?",
+                "text": "Ich bin derzeit in Sindelfingen, Deutschland ansässig. Ich bin offen für Remote-Arbeit und würde mich über die Möglichkeit eines Standortwechsels für die richtige Gelegenheit freuen."
+            },
+            "mindset": {
+                "title": "Aufgeschlossener Ansatz",
+                "text": "Ich bin begeistert davon, neue Technologien zu erlernen und meine Fähigkeiten kontinuierlich zu verbessern. Ich glaube daran, neugierig zu bleiben und Herausforderungen als Wachstumschancen zu begreifen."
+            },
+            "approach": {
+                "title": "Problemlösungsphilosophie",
+                "text": "Ich gehe jede Herausforderung mit analytischem Denken, Kreativität und Ausdauer an. Ich glaube an gemeinschaftliche Lösungen und das Lernen aus jedem Projekt, um den effizientesten und elegantesten Ansatz zu finden."
+            }
+        },
+        "skills": {
+            "title": "Technologien",
+            "heading": "Fähigkeiten",
+            "intro": "Ich spezialisiere mich auf moderne Frontend-Technologien mit Fokus auf responsive, zugängliche und performante Webanwendungen. Ich bin leidenschaftlich daran interessiert, mit Webentwicklungstrends auf dem neuesten Stand zu bleiben und mein technisches Toolkit kontinuierlich zu erweitern.",
+            "contact": {
+                "headline": "Du brauchst eine andere Fähigkeit?",
+                "text": "Kontaktiere mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern",
+                "button": "Lass uns sprechen"
+            }
+        },
+        "projects": {
+            "title": "Portfolio",
+            "heading": "Ausgewählte Projekte",
+            "intro": "Entdecke hier eine Auswahl meiner Arbeit - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+            "modal": {
+                "about": "Worum geht es in diesem Projekt?",
+                "github": "GitHub",
+                "liveTest": "Live Test",
+                "nextProject": "Nächstes Projekt"
+            }
+        },
+        "references": {
+            "heading": "Was meine Kollegen über mich sagen"
+        },
+        "contact": {
+            "title": "Kontaktiere mich",
+            "heading": "Lass uns zusammenarbeiten",
+            "subheading": "Hast du ein Problem zu lösen?",
+            "intro": "Ich bin leidenschaftlich daran interessiert, digitale Lösungen zu schaffen, die einen Unterschied machen. Ob du eine neue Webanwendung entwickeln, ein bestehendes Projekt optimieren oder einen zuverlässigen Entwickler für dein Team benötigst – ich freue mich auf die Zusammenarbeit und darauf, deine Ideen zum Leben zu erwecken.",
+            "highlight": "Lass uns sprechen!",
+            "form": {
+                "nameLabel": "Wie ist dein Name?",
+                "namePlaceholder": "Dein Name kommt hier hin",
+                "emailLabel": "Wie ist deine E-Mail?",
+                "emailPlaceholder": "deinemail@mail.com",
+                "messageLabel": "Wie kann ich dir helfen?",
+                "messagePlaceholder": "Hallo Daniel, ich interessiere mich für...",
+                "privacy": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+                "submit": "Sag Hallo ;)"
+            },
+            "validation": {
+                "nameRequired": "Bitte geben Sie Ihren Namen ein",
+                "emailRequired": "Bitte geben Sie Ihre E-Mail ein",
+                "emailInvalid": "Bitte geben Sie eine gültige E-Mail ein",
+                "messageRequired": "Bitte geben Sie Ihre Nachricht ein",
+                "privacyRequired": "Bitte akzeptieren Sie die Datenschutzerklärung"
+            }
+        },
+        "footer": {
+            "role": "Web-Entwickler",
+            "location": "Sindelfingen Deutschland",
+            "copyright": "© Daniel Bumbuc 2026",
+            "links": {
+                "github": "Github",
+                "linkedin": "LinkedIn",
+                "email": "E-Mail",
+                "legal": "Impressum"
+            }
+        }
     }
-  },
-  "DE": {
-    "navigation": {
-      "about": "Über mich",
-      "skills": "Fähigkeiten",
-      "projects": "Projekte"
-    },
-    "landing": {
-      "role": "Frontend Entwickler",
-      "checkWork": "Schau dir meine Arbeit an",
-      "contactMe": "Kontaktiere mich", 
-      "available": "Verfügbar für Remote-Arbeit",
-      "developer": "Frontend Entwickler", 
-      "based": "Ansässig in Sindelfingen",
-      "relocate": "Offen für Umzug"
-    },
-    "about": {
-      "title": "Wer ich bin",
-      "heading": "Über mich",
-      "intro": "Hallo! Ich bin Daniel, ein leidenschaftlicher Frontend-Entwickler mit einem Auge für Details und der Liebe zur Entwicklung intuitiver, responsiver Webanwendungen. Meine Reise in der Webentwicklung begann mit Neugier und ist zu einer Hingabe gewachsen, digitale Erfahrungen zu schaffen, die Nutzer lieben.",
-      "location": {
-        "title": "Wo bin ich ansässig?",
-        "text": "Ich bin derzeit in Sindelfingen, Deutschland ansässig. Ich bin offen für Remote-Arbeit und würde mich über die Möglichkeit eines Standortwechsels für die richtige Gelegenheit freuen."
-      },
-      "mindset": {
-        "title": "Aufgeschlossener Ansatz", 
-        "text": "Ich bin begeistert davon, neue Technologien zu erlernen und meine Fähigkeiten kontinuierlich zu verbessern. Ich glaube daran, neugierig zu bleiben und Herausforderungen als Wachstumschancen zu begreifen."
-      },
-      "approach": {
-        "title": "Problemlösungsphilosophie",
-        "text": "Ich gehe jede Herausforderung mit analytischem Denken, Kreativität und Ausdauer an. Ich glaube an gemeinschaftliche Lösungen und das Lernen aus jedem Projekt, um den effizientesten und elegantesten Ansatz zu finden."
-      }
-    },
-    "skills": {
-      "title": "Technologien", 
-      "heading": "Fähigkeiten",
-      "intro": "Ich spezialisiere mich auf moderne Frontend-Technologien mit Fokus auf responsive, zugängliche und performante Webanwendungen. Ich bin leidenschaftlich daran interessiert, mit Webentwicklungstrends auf dem neuesten Stand zu bleiben und mein technisches Toolkit kontinuierlich zu erweitern.",
-      "contact": {
-        "headline": "Du brauchst eine andere Fähigkeit?",
-        "text": "Kontaktiere mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern",
-        "button": "Lass uns sprechen"
-      }
-    },
-    "projects": {
-      "title": "Portfolio",
-      "heading": "Ausgewählte Projekte", 
-      "intro": "Entdecke hier eine Auswahl meiner Arbeit - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
-      "modal": {
-        "about": "Worum geht es in diesem Projekt?",
-        "github": "GitHub",
-        "liveTest": "Live Test", 
-        "nextProject": "Nächstes Projekt"
-      }
-    },
-    "references": {
-      "heading": "Was meine Kollegen über mich sagen"
-    },
-    "contact": {
-      "title": "Kontaktiere mich",
-      "heading": "Lass uns zusammenarbeiten",
-      "subheading": "Hast du ein Problem zu lösen?",
-      "intro": "Ich bin leidenschaftlich daran interessiert, digitale Lösungen zu schaffen, die einen Unterschied machen. Ob du eine neue Webanwendung entwickeln, ein bestehendes Projekt optimieren oder einen zuverlässigen Entwickler für dein Team benötigst – ich freue mich auf die Zusammenarbeit und darauf, deine Ideen zum Leben zu erwecken.",
-      "highlight": "Lass uns sprechen!",
-      "form": {
-        "nameLabel": "Wie ist dein Name?",
-        "namePlaceholder": "Dein Name kommt hier hin",
-        "emailLabel": "Wie ist deine E-Mail?",
-        "emailPlaceholder": "deinemail@mail.com", 
-        "messageLabel": "Wie kann ich dir helfen?",
-        "messagePlaceholder": "Hallo Daniel, ich interessiere mich für...",
-        "privacy": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
-        "submit": "Sag Hallo ;)"
-      }
-    },
-    "footer": {
-      "role": "Web-Entwickler",
-      "location": "Sindelfingen Deutschland", 
-      "copyright": "© Daniel Bumbuc 2026",
-      "links": {
-        "github": "Github",
-        "linkedin": "LinkedIn",
-        "email": "E-Mail", 
-        "legal": "Impressum"
-      }
-    }
-  }
 }

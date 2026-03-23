@@ -142,11 +142,12 @@ function updatePageTexts() {
     updateElementText('label[for="message"]', 'contact.form.messageLabel');
     updateElementText('.checkbox-text', 'contact.form.privacy');
     updateElementText('.contact-btn .marquee-btn-content', 'contact.form.submit');
+    updateElementText('.unchecked-error', 'contact.validation.privacyRequired');
     
     // Update placeholders
-    updatePlaceholder('#name', 'contact.form.namePlaceholder');
-    updatePlaceholder('#email', 'contact.form.emailPlaceholder');
-    updatePlaceholder('#message', 'contact.form.messagePlaceholder');
+    updatePlaceholder('#name_input', 'contact.form.namePlaceholder');
+    updatePlaceholder('#email_input', 'contact.form.emailPlaceholder');
+    updatePlaceholder('#message_input', 'contact.form.messagePlaceholder');
     
     // Update footer
     updateElementText('.footer-info p:nth-child(1)', 'footer.role');
