@@ -20,6 +20,13 @@
     <script src="./scripts/project.js"></script>
     <script src="./scripts/reference.js"></script>
     <script src="./scripts/contact.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // EmailJS initialisieren (nach Registrierung erhalten)
+        (function () {
+            emailjs.init("A9E5cKxmNVDxC9HoY"); // Später ersetzen
+        })();
+    </script>
     <title>Daniel Bumbuc</title>
 </head>
 
@@ -294,11 +301,13 @@
 
                 <span class="unchecked-error"></span>
                 <div class="btn-container">
-                    <button type="submit" class="contact-btn nav-btn"><span class="marquee-btn-content">Say Hello
-                            ;)</span></button>
+                    <button type="submit" class="contact-btn nav-btn"><span class="marquee-btn-content"></span></button>
                 </div>
 
+                <div id="message_container" class="message-container"></div>
+
             </form>
+
         </section>
 
     </main>

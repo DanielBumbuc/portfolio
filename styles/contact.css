@@ -48,7 +48,7 @@
     flex-direction: column;
     width: 820px;
     gap: 16px;
-    
+
     margin: 0 140px 0 0px;
     padding-top: 32px;
 }
@@ -100,7 +100,7 @@
 
 .checkbox-text {
     font-size: 16px;
-    padding: 0  16px;
+    padding: 0 16px;
     color: #3DCFB6;
 }
 
@@ -167,9 +167,39 @@
     margin: 0 140px 0 0;
 }
 
+.message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.send-message {
+    color: #3DCFB6;
+    text-align: center;
+    margin: 48px 140px 0 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.success-message {
+    border: 1px solid #3DCFB6;
+    background: rgba(61, 207, 182, 0.1);
+}
+
+/* .error-message {
+    color: #ec7b7b; 
+    text-align: center; 
+    margin: 20px 0; 
+    padding: 15px; 
+    border: 1px solid #ec7b7b; 
+    border-radius: 5px; 
+    background: rgba(236, 123, 123, 0.1);
+} */
+
 /* =====  AUTOFILL OVERRIDE ===== */
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px #1c1c1c inset !important;
