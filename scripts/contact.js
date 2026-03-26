@@ -144,12 +144,12 @@ async function submitContactForm(form) {
         );
 
         // console.log('Email sent successfully:', result);
-        showSuccessMessage('Thank you! Your message has been sent successfully.');
+        showMessageStatus('Thank you! Your message has been sent successfully.', 'success');
         resetContactForm();
 
     } catch (error) {
         console.error('Error sending email:', error);
-        showErrorMessage('Sorry, there was an error sending your message. Please try again later.');
+        showMessageStatus('Sorry, there was an error sending your message. Please try again later.', 'error');
     } finally {
         // Button zurücksetzen
         btnContent.textContent = originalText || 'Say Hello ;)';
@@ -157,46 +157,25 @@ async function submitContactForm(form) {
     }
 }
 
-function showSuccessMessage(message) {
-    const contactSection = document.getElementById('contact_section');
-
-    // Entferne bestehende Nachrichten
-    const existingMessages = contactSection.querySelectorAll('.success-message, .error-message');
-    existingMessages.forEach(msg => msg.remove());
-
+async function showMessageStatus(message, type) {
     const successDiv = document.getElementById('message_container');
-    
-    console.log(successDiv);
-    
-    
-    successDiv.innerHTML += `
-        <p id="send_message" class="send-message success-message">
-                        Success Message!
+    successDiv.classList.remove('slide-right-animation');
+    successDiv.style.transform = 'translateX(-200px)';
+    successDiv.style.opacity = '0';
+    successDiv.innerHTML = ''; 
+    successDiv.innerHTML = `
+        <p id="send_message" class="send-message ${type}-message">
+                        ${message}
                     </p>
     `;
-
-    // contactSection.appendChild(successDiv);
-
-    // setTimeout(() => successDiv.remove(), 5000);
-}
-
-function showErrorMessage(message) {
-    const contactSection = document.getElementById('contact_section');
-
-    const existingMessages = contactSection.querySelectorAll('.success-message, .error-message');
-    existingMessages.forEach(msg => msg.remove());
-
-    const errorDiv = document.getElementById('error_message');
-    errorDiv.className = 'error-message';
-    errorDiv.innerHTML = `
-        <p>
-            ❌ ${message}
-        </p>
-    `;
-
-    contactSection.appendChild(errorDiv);
-
-    // setTimeout(() => errorDiv.remove(), 5000);
+    await new Promise(resolve => setTimeout(resolve, 50));
+    successDiv.classList.add('slide-right-animation');
+    setTimeout(() => {
+        successDiv.innerHTML = '';
+        successDiv.classList.remove('slide-right-animation');
+        successDiv.style.transform = 'translateX(-200px)';
+        successDiv.style.opacity = '0';
+    }, 5000);
 }
 
 function resetContactForm() {
@@ -213,7 +192,3 @@ function resetContactForm() {
     const uncheckedError = document.querySelector('.unchecked-error');
     if (uncheckedError) uncheckedError.style.opacity = 0;
 }
-
-
-// service_7rmzd54
-// template_twndl2f

@@ -39,6 +39,7 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .form-group {
@@ -175,7 +176,6 @@
 }
 
 .send-message {
-    color: #3DCFB6;
     text-align: center;
     margin: 48px 140px 0 0;
     padding: 15px;
@@ -183,19 +183,47 @@
 }
 
 .success-message {
+    color: #3DCFB6;
     border: 1px solid #3DCFB6;
     background: rgba(61, 207, 182, 0.1);
 }
 
-/* .error-message {
-    color: #ec7b7b; 
-    text-align: center; 
-    margin: 20px 0; 
-    padding: 15px; 
+.error-message {
+    color: #ec7b7b;
     border: 1px solid #ec7b7b; 
-    border-radius: 5px; 
     background: rgba(236, 123, 123, 0.1);
-} */
+}
+
+.slide-right-animation {
+    animation: slideRight 5s ease-in-out forwards;
+}
+
+@keyframes slideRight {
+    /* Schneller Einstieg */
+    0% {
+        transform: translateX(-150px);
+        opacity: 0;
+        animation-timing-function: ease-out; /* Schnell starten, langsam enden */
+    }
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+        animation-timing-function: linear; /* Konstant während Wartezeit */
+    }
+    
+    /* Wartezeit */
+    90% {
+        transform: translateX(0);
+        opacity: 1;
+        animation-timing-function: ease-out; /* Schnell starten, langsam enden */
+    }
+    
+    /* Schneller Ausgang */
+    100% {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+}
 
 /* =====  AUTOFILL OVERRIDE ===== */
 input:-webkit-autofill,
