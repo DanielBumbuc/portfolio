@@ -172,7 +172,7 @@ a {
     padding: 8px 16px;
     cursor: pointer;
     font-size: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .nav-btn:hover {
