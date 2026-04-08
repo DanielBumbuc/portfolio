@@ -2,6 +2,7 @@ let currentLanguage = localStorage.getItem('language') || 'EN';
 let translations = {};
 
 async function init() {
+    await includeHTML();
     await loadTranslations();
     setInitialLanguageState();
     loadCurrentLanguage();

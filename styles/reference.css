@@ -21,6 +21,7 @@
     align-items: center;
     margin: 96px 0 60px 0;
     gap: 60px;
+    height: 350px;
 }
 
 .single-reference {
@@ -44,25 +45,15 @@
         /* height 0.2s ease-in-out; */
 }
 
-
-
-.single-reference.far-left {
-    transform: translateX(-120%);
-    pointer-events: none;
-    opacity: 0;
-}
-
-.single-reference.left {
-    height: 300px;
-    opacity: 0.7;
-}
-
 .single-reference.center {
     transform: translateX(0) scale(1);
     opacity: 1;
     height: 350px;
 }
 
+.single-reference.outer-left,
+.single-reference.left,
+.single-reference.outer-right,
 .single-reference.right {
     height: 300px;
     opacity: 0.7;

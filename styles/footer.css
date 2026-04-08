@@ -1,7 +1,9 @@
-footer {
+.footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;    
+    /* flex-direction: row; */
+    /* width: 100%; */
     color: #FFFFFF;
     padding: 48px 140px;
 }

@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: grey;
+    background-image: url('../assets/img/background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.legal-footer {
+    width: 100%;
+    background-color: transparent;
+}
+
+.legal-notice-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    padding: 140px 140px 0 140px;
+}
