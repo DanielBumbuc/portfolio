@@ -139,3 +139,36 @@
     margin-bottom: 20px;
     cursor: pointer;
 }
+
+@media (max-width: 1900px) {
+    .about-img-container {
+        width: 620px;
+        height: 620px;
+    }
+
+    .about-content {
+        width: 620px;
+    }
+
+
+}
+
+@media (max-width: 1660px) {
+    
+}
+
+@media (max-width: 1350px) {
+    
+}
+
+@media (max-width: 648px) {
+    
+}
+
+@media (max-width: 520px) {
+    
+}
+
+@media (max-width: 400px) {
+   
+}
