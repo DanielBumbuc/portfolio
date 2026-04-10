@@ -194,6 +194,11 @@ function updateMarqueeTexts() {
 
 // ===== END TRANSLATION SYSTEM =====
 
-document.addEventListener('DOMContentLoaded', initMarquee);
-window.addEventListener('resize', initMarquee);
+const debouncedInitMarquee = debounce(() => {
+  requestAnimationFrame(() => {
+    initMarquee();
+  });
+}, 200);
 
+document.addEventListener('DOMContentLoaded', initMarquee);
+window.addEventListener('resize', debouncedInitMarquee);

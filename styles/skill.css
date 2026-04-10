@@ -17,6 +17,25 @@
     margin: 0 0 0 140px;
 }
 
+.mid-background {
+    position: relative;
+    /* Background ohne Halbkreis oder vereinfacht */
+}
+
+.mid-background::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 25%;
+    transform: translateX(-50%);
+    filter: blur(100px) brightness(0.5);
+    width: 700px;
+    height: 600px;
+    background: linear-gradient(90deg, #3DCFB6 0%, transparent 100%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
 .skill-content {
     display: flex;
     justify-content: space-between;
