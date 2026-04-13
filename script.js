@@ -194,11 +194,20 @@ function updateMarqueeTexts() {
 
 // ===== END TRANSLATION SYSTEM =====
 
-const debouncedInitMarquee = debounce(() => {
-  requestAnimationFrame(() => {
-    initMarquee();
-  });
-}, 200);
+// Debounce utility function
+// function debounce(func, delay) {
+//     let timeoutId;
+//     return function (...args) {
+//         clearTimeout(timeoutId);
+//         timeoutId = setTimeout(() => func.apply(this, args), delay);
+//     };
+// }
 
-document.addEventListener('DOMContentLoaded', initMarquee);
-window.addEventListener('resize', debouncedInitMarquee);
+// const debouncedInitMarquee = debounce(() => {
+//   requestAnimationFrame(() => {
+//     initMarquee();
+//   });
+// },1000);
+
+// document.addEventListener('DOMContentLoaded', initMarquee);
+// window.addEventListener('resize', debouncedInitMarquee);
