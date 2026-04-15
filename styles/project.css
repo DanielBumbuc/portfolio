@@ -21,9 +21,9 @@
 }
 
 .main-project-info {
-    margin: 32px 0;
+    margin: 32px 400px 32px 0;
     font-size: 20px;
-    width: 1100px;
+    width: 100%;
 }
 
 .project-collection {
@@ -38,6 +38,7 @@
     width: 1100px;
     border-top: 1px solid #3DCFB6;
     padding: 40px;
+    margin-right: 400px;
 }
 
 .single-project-container {
@@ -125,10 +126,25 @@
 }
 
 @media (max-width: 1660px) {
-    
+    .projects {
+    margin: 0 48px 0 48px;
+
+}
+}
+
+@media (max-width: 1435px) {
+    .left-project-side {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
 }
 
 @media (max-width: 1350px) {
+    
+}
+
+@media (max-width: 1075px) {
     
 }
 

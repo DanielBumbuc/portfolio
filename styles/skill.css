@@ -147,7 +147,6 @@
 
     .skill-collection {
         width: 620px;
-        height: 620px;
     }
 }
 
@@ -162,8 +161,8 @@
 
     .skill-collection {
         width: 520px;
-        height: 520px;
-        margin: 48px 0 0 0;
+        margin: 0 0 48px 0;
+        padding: 48px 0 0 0;
     }
 }
 
@@ -183,8 +182,47 @@
     }
 }
 
-@media (max-width: 648px) {}
+@media (max-width: 648px) {
+    .skill-content {
+        width: 420px;
+    }
 
-@media (max-width: 520px) {}
+    .skill-collection {
+        width: 420px;
+        padding: 48px 0 0 0;
 
-@media (max-width: 400px) {}
+    }
+}
+
+@media (max-width: 520px) {
+    .skill-content {
+        width: 320px;
+        height: auto;
+    }
+
+    .skill-collection {
+        width: 320px;
+        padding: 48px 0 0 0;
+
+    }
+}
+
+@media (max-width: 400px) {
+    .skill-content {
+        width: 280px;
+    }
+
+    .skill-collection {
+        width: 280px;
+    }
+
+    .skill-box {
+        width: 80px;
+        height: 70px;
+        font-size: 16px;
+    }
+
+    .skill-icons {
+        width: 30px;
+    }
+}

@@ -89,7 +89,7 @@ function addProjectEventListeners() {
 
                 </div>`;
             projectSection.innerHTML += projectHTML;
-            
+
             modalOverlay.classList.remove('d-none');
         });
     });
@@ -149,7 +149,22 @@ function nextProject(index) {
                 </div>`;
 
     modal.innerHTML = projectHTML;
+}
 
+function deletePreviewImages() {
+    const allPreviewImages = document.querySelectorAll('.project-preview-img, .preview-img-bg');
+    const leftSides = document.querySelectorAll('.left-project-side');
+    if (window.innerWidth < 1075) {
+        allPreviewImages.forEach(img => {
+            img.remove();
+        });
+        leftSides.forEach(side => {
+            side.style.marginRight = '0';
+        });
+    } else {
+        renderProjects();
+    }
 }
 
 document.addEventListener('DOMContentLoaded', loadProjects);
+window.addEventListener('resize', deletePreviewImages);
