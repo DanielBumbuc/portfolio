@@ -25,7 +25,7 @@
 }
 
 .single-reference {
-    flex: 1;
+    flex: 0 0 800px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,7 +60,7 @@
 }
 
 .single-reference {
-    transition: 
+    transition:
         transform 0.4s ease-in-out,
         opacity 0.4s ease-in-out,
         height 0.4s ease-in-out;
@@ -135,21 +135,109 @@
 }
 
 @media (max-width: 1660px) {
-    
+
+    .single-reference.right,
+    .single-reference.left,
+    .single-reference.center {
+        flex-basis: 720px;
+    }
 }
 
 @media (max-width: 1350px) {
-    
+
+    .single-reference.right,
+    .single-reference.left,
+    .single-reference.center {
+        flex-basis: 680px;
+    }
+}
+
+@media (max-width: 835px) {
+    .reference-collection {
+        height: auto;
+        margin: 96px 0;
+        gap: 40px;
+    }
+
+    .single-reference.right,
+    .single-reference.left,
+    .single-reference.center {
+        flex-basis: 530px;
+        height: auto !important;
+    }
+
+    .single-reference.center {
+        transform: scaleY(1.2); /* Nur Y-Achse (Höhe) */
+    }
+
+    .quotes-icon {
+        transform: scaleX(1.2); /* Nur Y-Achse (Höhe) */
+
+        width: 54px;
+        top: -14px;
+        left: -20px;
+    }
+
 }
 
 @media (max-width: 648px) {
+    .reference-collection {
+        gap: 24px;
+    }
+
+    .single-reference.right,
+    .single-reference.left,
+    .single-reference.center {
+        flex-basis: 400px;
+        padding: 24px;
+
+    }
+
     
+
+    .reference-text {
+        font-size: 16px;
+        margin: 0 0 8px 0;
+    }
+
+    .reference-name {
+        font-size: 16px;
+        flex-shrink: 0;
+        white-space: normal;
+        /* Erlaubt normales Umbrechen */
+        word-break: normal;
+        /* Bricht Wörter NICHT */
+        overflow-wrap: break-word;
+        /* Nur als Notfall bei sehr langen Wörtern */
+        max-width: 200px;
+        /* Definiere eine maximale Breite */
+    }
+
+    .horizontal-line {
+        display: none;
+    }
 }
 
 @media (max-width: 520px) {
-    
+    .reference-collection {
+        gap: 24px;
+    }
+
+    .single-reference.right,
+    .single-reference.left,
+    .single-reference.center {
+        flex-basis: 300px;
+    }
 }
 
 @media (max-width: 400px) {
-   
+    .reference-collection {
+        gap: 12px;
+    }
+
+    .single-reference.right,
+    .single-reference.left,
+    .single-reference.center {
+        flex-basis: 280px;
+    }
 }
