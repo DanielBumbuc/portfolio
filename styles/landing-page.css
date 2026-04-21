@@ -16,6 +16,37 @@
     gap: 16px;
 }
 
+.burger-menu-icon {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    background-image: url('../assets/img/burger_menu.svg');
+}
+
+.active {
+    background-image: url('../assets/img/burger_menu_press.svg');
+}
+
+.burger-menu {
+    display: flex;
+    position: absolute;
+    top: 96px;
+    right: 96px;
+    flex-direction: column-reverse;
+    border: 1px solid #3DCFB6;
+    border-radius: 24px;
+    padding: 24px;
+    gap: 24px;
+    background-image: url('../assets/img/background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 20;
+}
+
 .language-switcher {
     display: flex;
     justify-content: center;
@@ -106,6 +137,7 @@ a {
 }
 
 .logo {
+    display: flex;
     cursor: pointer;
     width: 212px;
     height: 96px;
@@ -119,6 +151,17 @@ a {
     background-image: url('../assets/img/logo_hover.svg');
     transition: background-image 0.2s ease;
 }
+
+/* .logo-responsive {
+    display: none;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    background-image: url('../assets/img/logo_responsive.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
 
 .landing-page {
     display: flex;
@@ -137,7 +180,7 @@ a {
     flex-direction: column;
     width: 100%;
     gap: 16px;
-    padding-left: 24px;
+    /* padding-left: 24px; */
     color: #D9D9D9;
 }
 
@@ -147,6 +190,8 @@ a {
 
 .second-headline {
     font-size: 48px;
+    color: inherit;
+    font-weight: normal;
 }
 
 .marquee-btn-content {
@@ -229,7 +274,7 @@ a {
     align-items: center;
     flex-direction: column;
     gap: 16px;
-    width: 20px; 
+    width: 20px;
 }
 
 .right-side-container {
@@ -241,7 +286,7 @@ a {
     align-items: center;
     flex-direction: column;
     gap: 16px;
-    width: 20px; 
+    width: 20px;
 }
 
 
@@ -274,6 +319,7 @@ a {
     transition: color 0.2s ease-in;
 }
 
+.mailto-icon,
 .github-icon,
 .linkedin-icon {
     width: 32px;
@@ -282,6 +328,17 @@ a {
     background-repeat: no-repeat;
     cursor: pointer;
     transition: background-image 0.2s ease;
+}
+
+.mailto-icon {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/img/mail.svg');
+}
+
+.mailto-icon:hover {
+    background-image: url('../assets/img/mail_hover.svg');
 }
 
 .github-icon {
@@ -319,9 +376,10 @@ a {
     opacity: 1;
 }
 
+.mailto-icon:hover .icon-highlighter,
 .linkedin-icon:hover .icon-highlighter,
 .github-icon:hover .icon-highlighter {
-    
+
     visibility: visible;
     opacity: 1;
 }
@@ -395,22 +453,117 @@ a {
     }
 }
 
-@media (max-width: 1660px) {
-    
-}
+@media (max-width: 1660px) {}
 
 @media (max-width: 1350px) {
-    
+    .first-headline {
+        font-size: 72px;
+    }
+
+    .second-headline {
+        font-size: 36px;
+    }
+
+    .navbar {
+        padding: 24px 96px;
+    }
+}
+
+@media (max-width: 900px) {
+    .first-headline {
+        font-size: 60px;
+    }
+
+    .second-headline {
+        font-size: 30px;
+    }
+
+    .headline-container {
+        justify-content: flex-start;
+        margin: 140px 0;
+    }
+
+    .navbar {
+        flex-direction: row-reverse;
+    }
+
+    .left-container {
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 24px;
+        padding: 16px;
+    }
+
+
+    .logo-responsive {
+        display: flex;
+    }
 }
 
 @media (max-width: 648px) {
-    
+    .left-side-container {
+        left: 48px;
+    }
+
+    .right-side-container {
+        right: 48px;
+    }
+
+    .mailto-link {
+        display: none;
+        /* Text verstecken */
+    }
+
+    .mailto-icon {
+        display: flex;
+    }
+
+    .navbar {
+        padding: 24px;
+    }
 }
 
 @media (max-width: 520px) {
-    
+    .first-headline {
+        font-size: 44px;
+    }
+
+    .second-headline {
+        font-size: 24px;
+    }
+
+    .nav-btn-container {
+        gap: 16px;
+    }
+
+    .nav-btn {
+        width: 150px;
+        height: 44px;
+        padding: 8px 14px;
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 400px) {
-   
+    .first-headline {
+        font-size: 36px;
+    }
+
+    .second-headline {
+        font-size: 24px;
+    }
+
+    .nav-btn-container {
+        gap: 8px;
+    }
+
+    .nav-btn {
+        width: 144px;
+        height: 40px;
+        padding: 8px 14px;
+        font-size: 16px;
+    }
 }

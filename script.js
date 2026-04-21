@@ -7,6 +7,7 @@ async function init() {
     setInitialLanguageState();
     loadCurrentLanguage();
     initMarquee();
+    setBurgerMenu();
 }
 
 async function setLanguage() {
@@ -191,6 +192,28 @@ function updateMarqueeTexts() {
         `;
     }
 }
+
+function setBurgerMenu() {
+    const burgerMenuIcon = document.querySelector('.burger-menu-icon');
+    setTimeout(() => {
+        if (window.innerWidth <= 900) {
+            burgerMenuIcon.classList.remove('d-none');
+        } else {
+            burgerMenuIcon.classList.add('d-none');
+        }
+    }, 200);
+}
+
+function toggleBurgerMenu() {
+    const leftContainer = document.getElementById('left_container');
+    const burgerMenuIcon = document.querySelector('.burger-menu-icon');
+    burgerMenuIcon.classList.toggle('active');
+    leftContainer.classList.toggle('left-container');
+    leftContainer.classList.toggle('burger-menu');
+}
+
+
+addEventListener('resize', setBurgerMenu);
 
 // ===== END TRANSLATION SYSTEM =====
 
