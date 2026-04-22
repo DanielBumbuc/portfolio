@@ -1,5 +1,6 @@
 let currentLanguage = localStorage.getItem('language') || 'EN';
 let translations = {};
+let burgerMenuOpen = false;
 
 async function init() {
     await includeHTML();
@@ -13,7 +14,7 @@ async function init() {
 async function setLanguage() {
     let englishBtn = document.getElementById('english-btn');
     let germanBtn = document.getElementById('german-btn');
-    
+
     if (currentLanguage === 'EN') {
         currentLanguage = 'DE';
         englishBtn.classList.remove('active-language');
@@ -23,7 +24,7 @@ async function setLanguage() {
         germanBtn.classList.remove('active-language');
         englishBtn.classList.add('active-language');
     }
-    
+
     await loadCurrentLanguage();
     initMarquee(); // Restart marquee with new content
 }
@@ -52,7 +53,7 @@ function startMarqueeAnimation(element) {
     const speed = 100;
     const duration = singleCopyWidth / speed;
     element.style.setProperty('--translate-distance', `-${singleCopyWidth}px`);
-    element.style.setProperty('--animation-duration', `${duration}s`);   
+    element.style.setProperty('--animation-duration', `${duration}s`);
     requestAnimationFrame(() => {
         element.style.animation = `marqueeScroll var(--animation-duration) linear infinite`;
     });
@@ -62,7 +63,7 @@ function startMarqueeAnimation(element) {
 function setInitialLanguageState() {
     let englishBtn = document.getElementById('english-btn');
     let germanBtn = document.getElementById('german-btn');
-    
+
     if (currentLanguage === 'DE') {
         englishBtn.classList.remove('active-language');
         germanBtn.classList.add('active-language');
@@ -98,15 +99,15 @@ function updatePageTexts() {
     updateElementText('.nav-links li:nth-child(1) a', 'navigation.about');
     updateElementText('.nav-links li:nth-child(2) a', 'navigation.skills');
     updateElementText('.nav-links li:nth-child(3) a', 'navigation.projects');
-    
+
     // Update landing page
     updateElementText('.second-headline', 'landing.role');
     updateElementText('.nav-btn:nth-child(1) .marquee-btn-content', 'landing.checkWork');
     updateElementText('.nav-btn:nth-child(2) .marquee-btn-content', 'landing.contactMe');
-    
+
     // Update marquee content
     updateMarqueeTexts();
-    
+
     // Update about section
     updateElementText('.about-title', 'about.title');
     updateElementText('.about-info h2', 'about.heading');
@@ -114,7 +115,7 @@ function updatePageTexts() {
     updateElementText('.single-info:nth-child(3) .info-text', 'about.location.text');
     updateElementText('.single-info:nth-child(4) .info-text', 'about.mindset.text');
     updateElementText('.single-info:nth-child(5) .info-text', 'about.approach.text');
-    
+
     // Update skills section
     updateElementText('.skills-title', 'skills.title');
     updateElementText('.skill-content h2', 'skills.heading');
@@ -122,22 +123,22 @@ function updatePageTexts() {
     updateElementText('.contact-headline', 'skills.contact.headline');
     updateElementText('.contact-text', 'skills.contact.text');
     updateElementText('.contact-request-btn .marquee-btn-content', 'skills.contact.button');
-    
+
     // Update projects section
     updateElementText('.project-title', 'projects.title');
     updateElementText('.project-content h2', 'projects.heading');
     updateElementText('.main-project-info', 'projects.intro');
-    
+
     // Update references section
     updateElementText('.reference-title', 'references.heading');
-    
+
     // Update contact section
     updateElementText('.contact-title', 'contact.title');
     updateElementText('.contact-content h2', 'contact.heading');
     updateElementText('.main-contact-headline', 'contact.subheading');
     updateElementText('.main-contact-info', 'contact.intro');
     updateElementText('.green-text', 'contact.highlight');
-    
+
     // Update contact form
     updateElementText('label[for="name"]', 'contact.form.nameLabel');
     updateElementText('label[for="email"]', 'contact.form.emailLabel');
@@ -145,12 +146,12 @@ function updatePageTexts() {
     updateElementText('.checkbox-text', 'contact.form.privacy');
     updateElementText('.contact-btn .marquee-btn-content', 'contact.form.submit');
     updateElementText('.unchecked-error', 'contact.validation.privacyRequired');
-    
+
     // Update placeholders
     updatePlaceholder('#name_input', 'contact.form.namePlaceholder');
     updatePlaceholder('#email_input', 'contact.form.emailPlaceholder');
     updatePlaceholder('#message_input', 'contact.form.messagePlaceholder');
-    
+
     // Update footer
     updateElementText('.footer-info p:nth-child(1)', 'footer.role');
     updateElementText('.footer-info p:nth-child(2)', 'footer.location');
@@ -204,12 +205,39 @@ function setBurgerMenu() {
     }, 200);
 }
 
-function toggleBurgerMenu() {
+function openBurgerMenu() {
+    const overlay = document.getElementById('overlay');
     const leftContainer = document.getElementById('left_container');
     const burgerMenuIcon = document.querySelector('.burger-menu-icon');
-    burgerMenuIcon.classList.toggle('active');
-    leftContainer.classList.toggle('left-container');
-    leftContainer.classList.toggle('burger-menu');
+    if (!burgerMenuOpen) {
+        overlay.classList.add('overlay');
+        overlay.classList.remove('modal-overlay');
+        overlay.classList.remove('d-none');
+        burgerMenuIcon.classList.add('active');
+        leftContainer.classList.remove('left-container');
+        leftContainer.classList.add('burger-menu');
+        burgerMenuOpen = true;
+    } else {
+        
+        closeBurgerMenu();
+
+    }
+
+
+
+}
+
+function closeBurgerMenu() {
+    const overlay = document.getElementById('overlay');
+    const leftContainer = document.getElementById('left_container');
+    const burgerMenuIcon = document.querySelector('.burger-menu-icon');
+    overlay.classList.remove('overlay');
+    overlay.classList.add('modal-overlay');
+    overlay.classList.add('d-none');
+    burgerMenuIcon.classList.remove('active');
+    leftContainer.classList.add('left-container');
+    leftContainer.classList.remove('burger-menu');
+    burgerMenuOpen = false;
 }
 
 

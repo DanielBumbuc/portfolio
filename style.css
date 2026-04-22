@@ -33,3 +33,18 @@ footer {
 .error-text {
     color: rgba(236, 123, 123, 0.8);
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Dunkler Overlay */
+
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

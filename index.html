@@ -34,7 +34,7 @@
 </head>
 
 <body onload="init()">
-    <div class="modal-overlay d-none" onclick="closeModal()"></div>
+    <div id="overlay" class="modal-overlay d-none" onclick="closeModal(), closeBurgerMenu()"></div>
     <header class="landing-page">
         <nav>
             <div w3-include-html="./navbar.html" class="navbar"></div>
