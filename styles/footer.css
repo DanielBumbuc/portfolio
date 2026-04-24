@@ -1,13 +1,30 @@
 .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;    
-    /* flex-direction: row; */
-    /* width: 100%; */
+    align-items: center;
     color: #FFFFFF;
     padding: 48px 140px;
 }
 
+
+
+
+
+.logo-footer {
+    display: flex;
+    cursor: pointer;
+    width: 212px;
+    height: 96px;
+    background-image: url('../assets/img/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo-footer:hover {
+    background-image: url('../assets/img/logo_hover.svg');
+    transition: background-image 0.2s ease;
+}
 
 .footer-info {
     display: flex;
@@ -39,22 +56,93 @@
     color: #3DCFB6;
 }
 
-@media (max-width: 1660px) {
-    
-}
+@media (max-width: 1660px) {}
 
 @media (max-width: 1350px) {
-    
+    .footer-container {
+        padding: 48px 96px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 48px;
+}
+
+.footer-container > *:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start; /* Logo links ausrichten */
+}
+
+.footer-container > *:nth-child(2) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center; /* Inhalt zentrieren */
+}
+
+.footer-container > *:nth-child(3) {
+    grid-column: 2 / -1;
+    grid-row: 1;
+    justify-self: end; /* Links rechts ausrichten */
+}
+
 }
 
 @media (max-width: 648px) {
-    
+    .footer-container {
+        padding: 48px 24px;
+    }
+
+    .logo-footer {
+        width: 160px;
+        height: 72px;
+    }
 }
 
-@media (max-width: 520px) {
-    
-}
+@media (max-width: 520px) {}
 
 @media (max-width: 400px) {
-   
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto; /* 3 Rows statt 2 */
+        row-gap: 48px; /* Kleinerer Gap für 3 Rows */
+    }
+
+    .footer-container > *:nth-child(1) {
+        grid-column: 1 / -1;
+        grid-row: 1; /* Bleibt in Row 1 */
+        justify-self: center;
+    }
+
+    .footer-container > *:nth-child(2) {
+        grid-column: 1 / -1;
+        grid-row: 3; /* Wird zu Row 3 */
+        justify-self: center;
+    }
+
+    .footer-container > *:nth-child(3) {
+        grid-column: 1 / -1; /* Oder 2 / -1, je nach Wunsch */
+        grid-row: 2; /* Neue Row 2 (zwischen 1 und ursprünglich 2) */
+        justify-self: center; /* Oder start/end */
+    }
+
+    .left-footer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .logo-footer {
+        margin: 0 0 0 24px;
+    }
+
+    .footer-info {
+        align-items: center;
+    }
 }
