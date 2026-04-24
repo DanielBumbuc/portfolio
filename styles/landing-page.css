@@ -27,7 +27,7 @@
     z-index: 40;
 }
 
-.active {
+.burger-menu-icon.active {
     background-image: url('../assets/img/burger_menu_press.svg');
 }
 
