@@ -55,11 +55,15 @@ body {
 }
 
 @media (max-width: 1350px) {
-    
+    .legal-notice-container {
+        padding: 140px 96px 0;
+    }
 }
 
 @media (max-width: 648px) {
-    
+    .legal-notice-container {
+        padding: 140px 24px 0;
+    }
 }
 
 @media (max-width: 520px) {
