@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-fira-code), var(--font-karla), sans-serif;
+    font-family: var(--font-karla), sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -11,14 +11,24 @@ body.modal-open {
     height: 100vh;
 }
 
+.fira-code-font {
+    font-family: var(--font-fira-code), sans-serif !important;
+}
+
+.karla-font {
+    font-family: var(--font-karla), sans-serif !important;
+}
+
 h2 {
     font-size: 60px;
     color: #3DCFB6;
+    font-family: var(--font-fira-code), sans-serif;
 }
 
 h3 {
     font-size: 32px;
     color: #3DCFB6;
+    font-family: var(--font-karla), sans-serif;
 }
 
 .main-container,
@@ -41,12 +51,28 @@ footer {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    /* Dunkler Overlay */
-
     z-index: 30;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 1350px) {
+   h2 {
+    font-size: 48px;
+   }
+}
+
+@media (max-width: 648px) {
+   h2 {
+    font-size: 48px;
+   }
+}
+
+@media (max-width: 520px) {
+   h2 {
+    font-size: 24px;
+   }
 }
 
 @media (max-width: 400px) {

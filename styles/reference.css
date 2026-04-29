@@ -150,6 +150,10 @@
     .single-reference.center {
         flex-basis: 680px;
     }
+
+    .reference-title {
+        font-size: 48px;
+    }
 }
 
 @media (max-width: 835px) {
@@ -215,6 +219,10 @@
 
     .horizontal-line {
         display: none;
+    }
+
+    .reference-title {
+        font-size: 24px;
     }
 }
 

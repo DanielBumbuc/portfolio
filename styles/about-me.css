@@ -157,6 +157,19 @@
         margin: 24px 0 96px 0;
 
     }
+
+    .main-about-info {
+        font-size: 16px;
+    }
+
+    .info-text {
+        font-size: 16px;
+        padding: 0 0 0 8px;
+    }
+
+    .about-icons {
+        width: 24px;
+    }
 }
 
 @media (max-width: 520px)  {

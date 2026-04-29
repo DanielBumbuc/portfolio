@@ -32,16 +32,19 @@
     align-items: flex-start;
     flex-direction: column;
     margin: 16px 0 0 0;
+    font-family: var(--font-karla), sans-serif;
 }
 
 .copy-right {
     font-size: 18px;
     color: #3DCFB6;
+    font-family: var(--font-fira-code), sans-serif;
 }
 
 .footer-links {
     cursor: pointer;
     list-style: none;
+    font-family: var(--font-karla), sans-serif;
 }
 
 .footer-links li:hover {

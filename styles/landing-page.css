@@ -76,6 +76,8 @@
     border-radius: 48px;
     height: 100%;
     width: 70%;
+    font-family: var(--font-fira-code), sans-serif;
+
 }
 
 .language-btn:last-child {
@@ -106,6 +108,7 @@
 }
 
 a {
+    font-family: var(--font-fira-code), sans-serif;
     text-decoration: none;
     color: #D9D9D9;
     cursor: pointer;
@@ -153,17 +156,6 @@ a {
     transition: background-image 0.2s ease;
 }
 
-/* .logo-responsive {
-    display: none;
-    cursor: pointer;
-    width: 48px;
-    height: 48px;
-    background-image: url('../assets/img/logo_responsive.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-} */
-
 .landing-page {
     display: flex;
     height: 100vh;
@@ -187,12 +179,14 @@ a {
 
 .first-headline {
     font-size: 96px;
+    font-family: var(--font-karla), sans-serif;
 }
 
 .second-headline {
     font-size: 48px;
     color: inherit;
     font-weight: normal;
+    font-family: var(--font-fira-code), sans-serif;
 }
 
 .marquee-btn-content {
@@ -201,6 +195,7 @@ a {
     align-items: center;
     white-space: nowrap;
     transform: translateX(0);
+    font-family: var(--font-karla), sans-serif;
 }
 
 .nav-btn-container {
@@ -218,7 +213,7 @@ a {
     padding: 8px 16px;
     cursor: pointer;
     font-size: 20px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .nav-btn:hover {
@@ -254,6 +249,7 @@ a {
 
 .marquee-content {
     display: flex;
+    font-family: var(--font-karla), sans-serif;
 }
 
 .marquee-content span {
@@ -313,6 +309,7 @@ a {
     transform: rotate(-90deg);
     margin-bottom: 78px;
     font-size: 18px;
+    font-family: var(--font-karla), sans-serif;
 }
 
 .mailto-link:hover {
