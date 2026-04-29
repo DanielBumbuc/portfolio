@@ -189,8 +189,19 @@
 
     .skill-collection {
         width: 420px;
-        padding: 48px 0 0 0;
+        height: auto;
+    }
 
+    .growth-skill {
+        margin-top: 48px;
+    }
+
+    .main-skill-info {
+        font-size: 16px;
+    }
+
+    .contact-text {
+        font-size: 16px;
     }
 }
 
@@ -203,7 +214,6 @@
     .skill-collection {
         width: 320px;
         padding: 48px 0 0 0;
-
     }
 }
 
@@ -224,5 +234,9 @@
 
     .skill-icons {
         width: 30px;
+    }
+
+    .growth-skill {
+        margin-top: 0;
     }
 }

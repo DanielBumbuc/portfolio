@@ -149,7 +149,9 @@
 }
 
 @media (max-width: 648px) {
-    
+    .main-project-info {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 520px) {

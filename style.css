@@ -67,6 +67,11 @@ footer {
    h2 {
     font-size: 48px;
    }
+   
+   h3 {
+    font-size: 24px;
+    font-weight: 500;
+   }
 }
 
 @media (max-width: 520px) {
