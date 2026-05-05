@@ -21,6 +21,11 @@ html {
     background-color: #1F2E2C;
 }
 
+/* Nur für das Project Modal */
+.project-modal {
+    scrollbar-width: none;    /* Scrollbar verstecken */
+}
+
 /* Fallback mit @supports für bessere Kontrolle */
 /* Nur Firefox */
 @supports (-moz-appearance: none) {

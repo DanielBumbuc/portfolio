@@ -72,14 +72,17 @@ function addProjectEventListeners() {
                             </span>
                             <span class="used-technologies">
                                 ${projects[index].technologies.map(tech => `
-                                    <img class="technologie-icon" src="${tech.icon}" alt="${tech.name}">
-                                    <p class="technologie-name">${tech.name}</p>
+                                    <span class="technologie-container">
+                                        <img class="technologie-icon" src="${tech.icon}" alt="${tech.name}">
+                                        <p class="technologie-name">${tech.name}</p>
+                                    </span>
                                 `).join('')}
                             </span>
                             <div class="project-btn-container">
                                 <span class="project-btn">${translate ? translate('projects.modal.github') : 'GitHub'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="GitHub"></span>
                                 <span class="project-btn">${translate ? translate('projects.modal.liveTest') : 'Live Test'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="Live Test"></span>
                             </div>
+                            <span class="next-project-responsive d-none" onclick="nextProject(${index})">${translate ? translate('projects.modal.nextProject') : 'Next project'}<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
                         </div>
                     <div class="modal-right-side">
                         <img class="close-btn" src="./assets/img/icons/default_icon.svg" alt="close icon" onclick="closeModal()" onmouseenter="this.src='./assets/img/icons/default_hover_icon.svg'" onmouseleave="this.src='./assets/img/icons/default_icon.svg'">
@@ -131,8 +134,10 @@ function nextProject(index) {
                             </span>
                             <span class="used-technologies">
                                 ${projects[nextIndex].technologies.map(tech => `
-                                    <img class="technologie-icon" src="${tech.icon}" alt="${tech.name}">
-                                    <p class="technologie-name">${tech.name}</p>
+                                    <span class="technologie-container">
+                                        <img class="technologie-icon" src="${tech.icon}" alt="${tech.name}">
+                                        <p class="technologie-name">${tech.name}</p>
+                                    </span>
                                 `).join('')}
                             </span>
                             <div class="project-btn-container">
