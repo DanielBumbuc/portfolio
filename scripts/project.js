@@ -92,7 +92,6 @@ function addProjectEventListeners() {
 
                 </div>`;
             projectSection.innerHTML += projectHTML;
-
             modalOverlay.classList.remove('d-none');
         });
     });
@@ -144,6 +143,7 @@ function nextProject(index) {
                                 <span class="project-btn">${translate ? translate('projects.modal.github') : 'GitHub'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="GitHub"></span>
                                 <span class="project-btn">${translate ? translate('projects.modal.liveTest') : 'Live Test'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="Live Test"></span>
                             </div>
+                            <span class="next-project-responsive d-none" onclick="nextProject(${nextIndex})">${translate ? translate('projects.modal.nextProject') : 'Next project'}<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
                         </div>
                     <div class="modal-right-side">
                         <img class="close-btn" src="./assets/img/icons/default_icon.svg" alt="close icon" onclick="closeModal()" onmouseenter="this.src='./assets/img/icons/default_hover_icon.svg'" onmouseleave="this.src='./assets/img/icons/default_icon.svg'">
@@ -152,8 +152,9 @@ function nextProject(index) {
                     </div>
 
                 </div>`;
-
-    modal.innerHTML = projectHTML;
+    modal.innerHTML = '';
+    // modal.innerHTML = projectHTML;
+    modal.outerHTML = projectHTML;
 }
 
 function deletePreviewImages() {
@@ -170,6 +171,10 @@ function deletePreviewImages() {
         renderProjects();
     }
 }
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', loadProjects);
 window.addEventListener('resize', deletePreviewImages);

@@ -34,7 +34,7 @@
 }
 
 .left-modal-side {
-    width: 620px;
+    width: 500px;
 }
 
 .project-index {
@@ -169,16 +169,25 @@
 
 @media (max-width: 1350px) {
     .project-modal {
-        flex-direction: column-reverse;
-        width: 860px;
+        flex-direction: column;
+        width: 700px;
         height: auto;
         max-height: 90vh;
         overflow-y: auto;
         padding: 24px;
     }
 
+    .modal-right-side {
+        order: -1;
+    }
+
     .next-project {
         display: none;
+    }
+
+    .modal-preview-img {
+        border-radius: 20px;
+        margin: 0 0 24px 0;
     }
 
     .next-project-responsive {
