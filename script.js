@@ -9,6 +9,7 @@ async function init() {
     loadCurrentLanguage();
     initMarquee();
     setBurgerMenu();
+    checkContactBtn();
 }
 
 async function setLanguage() {

@@ -1,5 +1,15 @@
 let validMail = false;
 
+function checkContactBtn() {
+    const privacyCheckbox = document.getElementById('privacy_checkbox');
+    const submitBtn = document.querySelector('.contact-btn');
+    if (!privacyCheckbox.checked) {
+        submitBtn.setAttribute('disabled', '');
+    } else {
+        submitBtn.removeAttribute('disabled');
+    }
+}
+
 async function validateForm(event) {
     const formData = new FormData(event.target);
     const name = formData.get('name').trim();
@@ -13,8 +23,7 @@ async function validateForm(event) {
         uncheckedError.style.opacity = 1;
         event.preventDefault();
         return false;
-    }
-
+    } 
 
     if (!name || !validMail || !message) {
         event.preventDefault();
@@ -110,6 +119,7 @@ function clearErrorCheckbox() {
     if (privacyCheckbox.checked) {
         uncheckedError.style.opacity = 0;
     }
+    checkContactBtn();
 }
 
 // EmailJS-basierte Lösung
@@ -162,7 +172,7 @@ async function showMessageStatus(message, type) {
     successDiv.classList.remove('slide-right-animation');
     successDiv.style.transform = 'translateX(-200px)';
     successDiv.style.opacity = '0';
-    successDiv.innerHTML = ''; 
+    successDiv.innerHTML = '';
     successDiv.innerHTML = `
         <p id="send_message" class="send-message ${type}-message">
                         ${message}
