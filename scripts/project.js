@@ -7,6 +7,7 @@ async function loadProjects() {
         const data = await response.json();
         projects = data[currentLanguage];
         renderProjects();
+        deletePreviewImages();
     } catch (error) {
         console.error('Error loading projects:', error);
     }

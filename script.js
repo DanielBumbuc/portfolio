@@ -9,7 +9,6 @@ async function init() {
     loadCurrentLanguage();
     initMarquee();
     setBurgerMenu();
-    deletePreviewImages();
 }
 
 async function setLanguage() {
@@ -202,6 +201,7 @@ function setBurgerMenu() {
             burgerMenuIcon.classList.remove('d-none');
         } else {
             burgerMenuIcon.classList.add('d-none');
+            closeBurgerMenu();
         }
     }, 200);
 }
@@ -219,13 +219,8 @@ function openBurgerMenu() {
         leftContainer.classList.add('burger-menu');
         burgerMenuOpen = true;
     } else {
-        
         closeBurgerMenu();
-
     }
-
-
-
 }
 
 function closeBurgerMenu() {
