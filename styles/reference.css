@@ -171,11 +171,13 @@
     }
 
     .single-reference.center {
-        transform: scaleY(1.2); /* Nur Y-Achse (Höhe) */
+        transform: scaleY(1.2);
+        /* Nur Y-Achse (Höhe) */
     }
 
     .quotes-icon {
-        transform: scaleX(1.2); /* Nur Y-Achse (Höhe) */
+        transform: scaleX(1.2);
+        /* Nur Y-Achse (Höhe) */
 
         width: 54px;
         top: -14px;
@@ -197,7 +199,7 @@
 
     }
 
-    
+
 
     .reference-text {
         font-size: 16px;
@@ -223,6 +225,8 @@
 
     .reference-title {
         font-size: 24px;
+        margin: 0 24px;
+        text-align: center;
     }
 }
 

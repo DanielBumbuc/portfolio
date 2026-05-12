@@ -9,6 +9,7 @@ async function init() {
     loadCurrentLanguage();
     initMarquee();
     setBurgerMenu();
+    deletePreviewImages();
 }
 
 async function setLanguage() {
