@@ -7,6 +7,7 @@
 }
 
 .about-img-container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,20 +23,30 @@
 }
 
 .about-bg-img {
+    position: absolute;
+    /* hinzufügen */
+    top: 4%;
+    /* statt margin-top: -8% */
+    left: -4%;
+    /* statt margin-left: -8% */
     width: 720px;
     height: 720px;
-    margin-bottom: -108%;
-    margin-left: -8%;
-    order: 1;
-    /* Hintergrundbild zuerst */
+    /* margin-bottom und order entfernen — werden nicht mehr gebraucht */
     z-index: 1;
     border-radius: 40px;
 }
 
+
 .about-img {
+    width: 720px;
+    height: 720px;
     order: 2;
     z-index: 2;
     border-radius: 40px;
+}
+
+.about-img-container:hover .about-bg-img {
+    display: block !important;
 }
 
 .about-info {
@@ -89,6 +100,11 @@
         height: 620px;
     }
 
+    .about-bg-img {
+        width: 620px;
+        height: 620px;
+    }
+
     .about-content {
         width: 620px;
     }
@@ -108,6 +124,11 @@
         height: 520px;
     }
 
+    .about-bg-img {
+        width: 520px;
+        height: 520px;
+    }
+
     .about-content {
         width: 520px;
         margin: 24px 96px 96px 0;
@@ -119,6 +140,7 @@
     .about-me {
         flex-direction: column;
     }
+
     .about-content {
         margin: 24px 0 96px 0;
         margin-left: 0;
@@ -128,6 +150,11 @@
         width: 520px;
         height: 520px;
         margin: 48px 0 0 0;
+    }
+
+    .about-bg-img {
+        width: 520px;
+        height: 520px;
     }
 
     .about-info {
@@ -152,6 +179,11 @@
         height: 420px;
     }
 
+    .about-bg-img {
+        width: 420px;
+        height: 420px;
+    }
+
     .about-content {
         width: 420px;
         margin: 24px 0 96px 0;
@@ -172,7 +204,7 @@
     }
 }
 
-@media (max-width: 520px)  {
+@media (max-width: 520px) {
 
 
     .about-img-container {
@@ -182,6 +214,11 @@
 
 
     .about-img {
+        width: 320px;
+        height: 320px;
+    }
+
+    .about-bg-img {
         width: 320px;
         height: 320px;
     }
@@ -200,6 +237,11 @@
     }
 
     .about-img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .about-bg-img {
         width: 280px;
         height: 280px;
     }
