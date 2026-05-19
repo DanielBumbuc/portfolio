@@ -42,9 +42,18 @@ function initMarquee() {
     const marquee = document.querySelector('.marquee');
     const marqueeContent = document.querySelector('.marquee-content');
     const originalContent = marqueeContent.innerHTML;
-    if (!marquee || !marqueeContent) return;
-    marqueeContent.innerHTML = originalContent + originalContent;
-    startMarqueeAnimation(marqueeContent);
+    let marqueeLength = 3;
+    let marqueeArr = [];
+    // for (let index = 0; index < marqueeLength; index++) {
+    //     marqueeArr.push(marqueeContent.innerHTML += 'test');
+        
+    // }
+    
+    console.log(marqueeArr);
+    // if (!marquee || !marqueeContent) return;
+    // marqueeContent.innerHTML = originalContent + originalContent;
+
+    // startMarqueeAnimation(marqueeContent);
 }
 
 function startMarqueeAnimation(element) {
