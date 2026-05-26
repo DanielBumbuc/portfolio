@@ -184,7 +184,7 @@ function updatePageTexts() {
     updateElementText('label[for="name"]', 'contact.form.nameLabel');
     updateElementText('label[for="email"]', 'contact.form.emailLabel');
     updateElementText('label[for="message"]', 'contact.form.messageLabel');
-    updateElementText('.checkbox-text', 'contact.form.privacy');
+    updatePrivacyText('.checkbox-text');
     updateElementText('.contact-btn .marquee-btn-content', 'contact.form.submit');
     updateElementText('.unchecked-error', 'contact.validation.privacyRequired');
 
@@ -201,6 +201,17 @@ function updatePageTexts() {
     updateElementText('.footer-links li:nth-child(2) a', 'footer.links.linkedin');
     updateElementText('.footer-links li:nth-child(3) a', 'footer.links.email');
     updateElementText('.footer-links li:nth-child(4) a', 'footer.links.legal');
+}
+
+function updatePrivacyText(selector) {
+    const element = document.querySelector(selector);
+    if (element) {
+        const before = translate('contact.form.privacyBefore');
+        const linkText = translate('contact.form.privacyLinkText');
+        const linkUrl = translate('contact.form.privacyLinkUrl');
+        const after = translate('contact.form.privacyAfter');
+        element.innerHTML = `${before}<a href="${linkUrl}" target="_blank" rel="noopener noreferrer">${linkText}</a>${after}`;
+    }
 }
 
 function updateElementText(selector, translationKey) {

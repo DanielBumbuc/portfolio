@@ -68,7 +68,11 @@
                 "emailPlaceholder": "yourmail@mail.com",
                 "messageLabel": "How can I help you?",
                 "messagePlaceholder": "Hi Daniel, I am interested in...",
-                "privacy": "I´ve read the privacy policy and agree to the processing of my data as outlined.","submit": "Say Hello ;)"
+                "privacyBefore": "I've read the ",
+                "privacyLinkText": "privacy policy",
+                "privacyLinkUrl": "./privacy.html",
+                "privacyAfter": " and agree to the processing of my data as outlined.",
+                "submit": "Say Hello ;)"
             },
             "validation": {
                 "nameRequired": "Bitte geben Sie Ihren Namen ein",
@@ -192,7 +196,10 @@
                 "emailPlaceholder": "deinemail@mail.com",
                 "messageLabel": "Wie kann ich dir helfen?",
                 "messagePlaceholder": "Hallo Daniel, ich interessiere mich für...",
-                "privacy": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+                "privacyBefore": "Ich habe die ",
+                "privacyLinkText": "Datenschutzerklärung",
+                "privacyLinkUrl": "./privacy.html",
+                "privacyAfter": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
                 "submit": "Sag Hallo ;)"
             },
             "validation": {

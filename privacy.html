@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/landing-page.css">
+    <link rel="stylesheet" href="./styles/legal-notice.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/scrollbar.css">
+    <script src="./scripts/includeHTML.js"></script>
+    <script src="script.js"></script>
+    <script src="./scripts/legal.js"></script>
+
+    <title>Legal Notice</title>
+</head>
+
+<body onload="initLegal()">
+    <div class="page-wrapper">
+    <nav style="position: relative;">
+        <div w3-include-html="./navbar.html" class="navbar"></div>
+
+    </nav>
+
+    <section class="legal-notice-container">
+        <h1 class="legal-main-headline">Legal Notice</h1>
+
+       
+        <div class="legal-section terms-section">
+            <h2 class="legal-headline">Acceptance of terms</h2>
+            <p class="legal-text">
+                By accessing and using <span class="white-text">Portfolio</span> (Product), you acknowledge and agree to
+                the following terms and
+                conditions,
+                and
+                any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the
+                listed
+                students, may update or change the terms and conditions from time to time without notice.
+            </p>
+        </div>
+
+       
+    </section>
+
+
+
+
+    <footer class="legal-footer">
+        <div w3-include-html="./footer.html" class="footer-container"></div>
+    </footer>
+    </div>
+
+</body>
+
+</html>
