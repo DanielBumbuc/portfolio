@@ -1,6 +1,8 @@
 let currentLanguage = localStorage.getItem('language') || 'EN';
 let translations = {};
 let burgerMenuOpen = false;
+let marqueeArr = [];
+
 
 async function init() {
     await includeHTML();
@@ -35,38 +37,67 @@ function loadCurrentLanguage() {
     loadProjects();
     loadReferences();
     updatePageTexts();
-    console.log(currentLanguage);
 }
 
 function initMarquee() {
     const marquee = document.querySelector('.marquee');
-    const marqueeContent = document.querySelector('.marquee-content');
-    const originalContent = marqueeContent.innerHTML;
+    const marqueeContainer = document.getElementById('marquee_container');
     let marqueeLength = 3;
-    let marqueeArr = [];
-    // for (let index = 0; index < marqueeLength; index++) {
-    //     marqueeArr.push(marqueeContent.innerHTML += 'test');
-        
-    // }
-    
-    console.log(marqueeArr);
-    // if (!marquee || !marqueeContent) return;
-    // marqueeContent.innerHTML = originalContent + originalContent;
+    marqueeContainer.innerHTML = '';
+    for (let index = 0; index < marqueeLength; index++) {
+        pushMarqueeContent();        
+    }
+    marqueeContainer.innerHTML = marqueeArr.join('');
+    startMarqueeAnimation(marqueeContainer);
+    watchFirstSpan(marqueeContainer);
+}
 
-    // startMarqueeAnimation(marqueeContent);
+function pushMarqueeContent() {
+    let marqueeContent = `<span>
+                    Available for remote work
+                    <span class="separator">•</span>
+                    Frontend Developer
+                    <span class="separator">•</span>
+                    Based in Sindelfingen
+                    <span class="separator">•</span>
+                    Open to relocate
+                    <span class="separator">•</span>
+                </span>`;
+    marqueeArr.push(marqueeContent);
 }
 
 function startMarqueeAnimation(element) {
     element.style.animation = 'none';
-    // element.offsetHeight;
-    const singleCopyWidth = element.scrollWidth / 2;
+    const totalWidth = element.scrollWidth;
     const speed = 100;
-    const duration = singleCopyWidth / speed;
-    element.style.setProperty('--translate-distance', `-${singleCopyWidth}px`);
+    const duration = totalWidth / speed;
+    element.style.setProperty('--translate-distance', `-${totalWidth}px`);
     element.style.setProperty('--animation-duration', `${duration}s`);
     requestAnimationFrame(() => {
-        element.style.animation = `marqueeScroll var(--animation-duration) linear infinite`;
+        element.style.animation = `marqueeScroll var(--animation-duration) linear 1 forwards`;
     });
+}
+
+function watchFirstSpan(container) {
+    const firstSpan = container.querySelector('span');
+    if (!firstSpan) return;
+    const marqueeWrapper = container.parentElement; // das äußere .marquee-Element
+
+    function check() {
+        const wrapperRect = marqueeWrapper.getBoundingClientRect();
+        const spanRect = firstSpan.getBoundingClientRect();
+
+        if (spanRect.right <= wrapperRect.left) {
+            marqueeArr.splice(0, 1); // Entfernt das erste Element
+            console.log(marqueeArr);
+            pushMarqueeContent(); // Fügt neuen Inhalt am Ende hinzu
+            startMarqueeAnimation(container);
+            watchFirstSpan(container);
+            return;
+        }
+        requestAnimationFrame(check);
+    }
+    requestAnimationFrame(check);
 }
 
 // ===== TRANSLATION SYSTEM =====

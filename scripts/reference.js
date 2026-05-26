@@ -30,10 +30,6 @@ function renderReferences() {
     allRefs.forEach((reference, index) => {
         let position;
         let isActive = false;
-        
-        
-        console.log(reference.id, index);
-        
 
         switch (index) {
             case 0: position = 'outer-left'; break;
