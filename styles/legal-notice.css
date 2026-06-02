@@ -61,6 +61,49 @@ body {
     font-family: var(--font-karla), sans-serif;
 }
 
+.legal-notice-container h2 {
+    margin: 24px 0 4px 0;
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    font-family: var(--font-karla), sans-serif;
+}
+
+.legal-notice-container h3 {
+    margin: 16px 0 4px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    font-family: var(--font-karla), sans-serif;
+}
+
+.legal-notice-container h4 {
+    margin: 10px 0 4px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    font-family: var(--font-karla), sans-serif;
+}
+
+.legal-notice-container p {
+    font-size: 18px;
+    color: #3DCFB6;
+    font-family: var(--font-karla), sans-serif;
+    margin: 8px 0;
+}
+
+.legal-notice-container ul,
+.legal-notice-container ol {
+    padding-left: 24px;
+}
+
+.legal-notice-container li {
+    font-size: 18px;
+    color: #3DCFB6;
+    font-family: var(--font-karla), sans-serif;
+    margin: 4px 0;
+}
+
 @media (max-width: 1660px) {}
 
 @media (max-width: 1350px) {

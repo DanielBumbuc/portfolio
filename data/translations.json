@@ -99,6 +99,9 @@
                 "title": "Imprint",
                 "contact": "Contact Information"
             },
+            "privacyPolicy": {
+                "title": "Privacy Policy"
+            }, 
             "terms": {
                 "title": "Acceptance of terms",
                 "text": "By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice."
@@ -227,6 +230,9 @@
                 "title": "Impressum",
                 "contact": "Kontaktinformationen"
             },
+            "privacyPolicy": {
+                "title": "Datenschutzerklärung"
+            }, 
             "terms": {
                 "title": "Nutzungsbedingungen",
                 "text": "Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erkennen Sie die folgenden Bedingungen und Konditionen sowie alle Richtlinien, Leitlinien oder Änderungen an, die Ihnen von Zeit zu Zeit präsentiert werden können. Wir, die aufgeführten Studenten, können die Bedingungen ohne Vorankündigung aktualisieren oder ändern."
