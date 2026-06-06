@@ -33,9 +33,12 @@
 
 .burger-menu {
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 96px;
     right: 96px;
+    width: 200px;
     flex-direction: column-reverse;
     border: 1px solid #3DCFB6;
     border-radius: 24px;
@@ -158,7 +161,7 @@ a {
 
 .landing-page {
     position: relative;
-    isolation: isolate;
+    /* isolation: isolate; */
     display: flex;
     height: 100vh;
     width: 100%;

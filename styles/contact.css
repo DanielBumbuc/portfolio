@@ -5,7 +5,7 @@
 }
 
 .contact-title {
-    margin-top: 48px;
+    margin-top: 96px;
 }
 
 .contact-container {
@@ -15,7 +15,7 @@
     flex-direction: column;
     width: 620px;
     height: 720px;
-    margin: 0 0 0 140px;
+    margin: 0 0 0 96px;
 }
 
 .contact-content {
@@ -40,7 +40,7 @@
     align-items: flex-start;
     flex-direction: column;
     width: 720px;
-    margin: 0 140px 0 0;
+    margin: 96px 96px 0 0;
     overflow: hidden;
 }
 

@@ -4,13 +4,13 @@ async function initLegal() {
     await loadTranslations();
     setInitialLanguageState();
     updateLegalPageTexts();
-    // updatePrivacyPolicyTexts();
+    updatePrivacyPolicyTexts();
 }
 
 function updateLegalPageTexts() {
     // Update page title
-    updateElementText('h1', 'legal.title');
-    updateElementText('h1', 'legal.privacyPolicy.title');
+    updateElementText('.imprint-headline', 'legal.title');
+    updateElementText('.privacy-headline', 'legal.privacyPolicy.title');
 
 
     // Update imprint section
@@ -60,25 +60,25 @@ function updatePrivacyPolicyTexts() {
 }
 
 
-// Override setLanguage function for legal page
-async function setLanguage() {
-    let englishBtn = document.getElementById('english-btn');
-    let germanBtn = document.getElementById('german-btn');
+// // Override setLanguage function for legal page
+// async function setLanguage() {
+//     let englishBtn = document.getElementById('english-btn');
+//     let germanBtn = document.getElementById('german-btn');
 
-    if (currentLanguage === 'EN') {
-        currentLanguage = 'DE';
-        englishBtn.classList.remove('active-language');
-        germanBtn.classList.add('active-language');
+//     if (currentLanguage === 'EN') {
+//         currentLanguage = 'DE';
+//         englishBtn.classList.remove('active-language');
+//         germanBtn.classList.add('active-language');
 
-    } else {
-        currentLanguage = 'EN';
-        germanBtn.classList.remove('active-language');
-        englishBtn.classList.add('active-language');
+//     } else {
+//         currentLanguage = 'EN';
+//         germanBtn.classList.remove('active-language');
+//         englishBtn.classList.add('active-language');
 
-    }
+//     }
 
-    localStorage.setItem('language', currentLanguage);
-    updateLegalPageTexts();
-    // updatePrivacyPolicyTexts();
-    console.log(currentLanguage);
-}
+//     localStorage.setItem('language', currentLanguage);
+//     updateLegalPageTexts();
+//     updatePrivacyPolicyTexts();
+//     await loadCurrentLanguage();
+// }

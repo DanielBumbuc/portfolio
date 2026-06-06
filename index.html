@@ -35,7 +35,7 @@
 </head>
 
 <body onload="init()">
-    <div id="overlay" class="modal-overlay d-none" onclick="closeModal()"></div>
+    <div id="overlay" class="modal-overlay d-none" onclick="closeModal(), closeBurgerMenu()"></div>
     <div class="page-wrapper">
     <header class="landing-page">
         <nav>
@@ -103,7 +103,7 @@
 
             </div>
 
-            <div class="about-info">
+            <div id="about_section" class="about-info">
                 <h3 class="about-title">Who I Am</h3>
                 <div class="about-content">
                     <h2>About me</h2>
@@ -221,7 +221,7 @@
                 </div>
         </section>
 
-        <section id="projects" class="projects">
+        <section id="projects_section" class="projects">
             <div class="project-container">
                 <h3 class="project-title">Portfolio</h3>
                 <div class="project-content">

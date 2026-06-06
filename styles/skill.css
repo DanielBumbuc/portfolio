@@ -5,10 +5,11 @@
 }
 
 .skills-title {
-    margin-top: 48px;
+    margin: 96px 0 0 96px;
 }
 
 .skill-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -18,7 +19,7 @@
 }
 
 .mid-background {
-    position: relative;
+    position: absolute;
     /* Background ohne Halbkreis oder vereinfacht */
 }
 
@@ -42,7 +43,7 @@
     align-items: flex-start;
     flex-direction: column;
     background-color: rgba(61, 207, 182, 0.1);
-    margin-top: 24px;
+    margin: 24px 0 0 96px;
     padding: 48px 24px;
     border: 1px solid #3DCFB6;
     border-radius: 40px;

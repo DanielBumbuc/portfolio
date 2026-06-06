@@ -14,6 +14,7 @@ async function init() {
     checkContactBtn();
 }
 
+// Override setLanguage function for legal page
 async function setLanguage() {
     let englishBtn = document.getElementById('english-btn');
     let germanBtn = document.getElementById('german-btn');
@@ -22,15 +23,37 @@ async function setLanguage() {
         currentLanguage = 'DE';
         englishBtn.classList.remove('active-language');
         germanBtn.classList.add('active-language');
+
     } else {
         currentLanguage = 'EN';
         germanBtn.classList.remove('active-language');
         englishBtn.classList.add('active-language');
+
     }
 
+    localStorage.setItem('language', currentLanguage);
+    updateLegalPageTexts();
+    updatePrivacyPolicyTexts();
     await loadCurrentLanguage();
-    initMarquee(); // Restart marquee with new content
 }
+
+// async function setLanguage() {
+//     let englishBtn = document.getElementById('english-btn');
+//     let germanBtn = document.getElementById('german-btn');
+
+//     if (currentLanguage === 'EN') {
+//         currentLanguage = 'DE';
+//         englishBtn.classList.remove('active-language');
+//         germanBtn.classList.add('active-language');
+//     } else {
+//         currentLanguage = 'EN';
+//         germanBtn.classList.remove('active-language');
+//         englishBtn.classList.add('active-language');
+//     }
+
+//     await loadCurrentLanguage();
+//     // initMarquee(); // Restart marquee with new content
+// }
 
 function loadCurrentLanguage() {
     localStorage.setItem('language', currentLanguage);
@@ -290,23 +313,3 @@ function closeBurgerMenu() {
 
 
 addEventListener('resize', setBurgerMenu);
-
-// ===== END TRANSLATION SYSTEM =====
-
-// Debounce utility function
-// function debounce(func, delay) {
-//     let timeoutId;
-//     return function (...args) {
-//         clearTimeout(timeoutId);
-//         timeoutId = setTimeout(() => func.apply(this, args), delay);
-//     };
-// }
-
-// const debouncedInitMarquee = debounce(() => {
-//   requestAnimationFrame(() => {
-//     initMarquee();
-//   });
-// },1000);
-
-// document.addEventListener('DOMContentLoaded', initMarquee);
-// window.addEventListener('resize', debouncedInitMarquee);
