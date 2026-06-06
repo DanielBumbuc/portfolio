@@ -108,7 +108,6 @@ function pushMarqueeContent() {
                 console.log(currentLanguage);
                 
                 currentLanguage === 'DE' ? marqueeArr.push(germanMarqueeContent) : marqueeArr.push(englishMarqueeContent);
-    // marqueeArr.push(englishMarqueeContent);
 }
 
 function startMarqueeAnimation(element) {
@@ -126,17 +125,16 @@ function startMarqueeAnimation(element) {
 function watchFirstSpan(container) {
     const firstSpan = container.querySelector('span');
     if (!firstSpan) return;
-    const marqueeWrapper = container.parentElement; // das äußere .marquee-Element
+    const marqueeWrapper = container.parentElement;
 
     function check() {
         const wrapperRect = marqueeWrapper.getBoundingClientRect();
         const spanRect = firstSpan.getBoundingClientRect();
 
         if (spanRect.right <= wrapperRect.left) {
-            marqueeArr.splice(0, 1); // Entfernt das erste Element
+            marqueeArr.splice(0, 1);
             console.log(marqueeArr);
-            pushMarqueeContent(); // Fügt neuen Inhalt am Ende hinzu
-            // container.innerHTML = marqueeArr.join('');
+            pushMarqueeContent();
             startMarqueeAnimation(container);
             watchFirstSpan(container);
             return;

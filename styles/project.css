@@ -103,7 +103,7 @@
 }
 
 .single-project-container:last-child .project-preview-img {
-    top: -82px;
+    top: -48px;
 }
 
 .preview-img-bg {
@@ -122,12 +122,12 @@
 }
 
 .single-project-container:last-child .preview-img-bg {
-    top: -58px;
+    top: -24px;
 }
 
 @media (max-width: 1660px) {
     .projects {
-    margin: 0 48px 0 48px;
+    margin: 0 96px 0 96px;
 
 }
 }

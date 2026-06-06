@@ -146,6 +146,7 @@
         width: 520px;
         height: 520px;
         margin: 48px 0 0 0;
+        align-self: center;
     }
 
     .about-bg-img {

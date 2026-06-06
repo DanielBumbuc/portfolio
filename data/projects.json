@@ -43,28 +43,6 @@
       "description": "Jump and run game with object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
       "liveUrl": "https://elpollo.example.com",
       "githubUrl": "https://github.com/danielbumbuc/el-pollo-loco"
-    },
-    {
-      "id": 3,
-      "name": "DA Bubble",
-      "technologies": [
-        {
-          "name": "Angular",
-          "icon": "./assets/img/icons/angular_green.svg"
-        },
-        {
-          "name": "Firebase",
-          "icon": "./assets/img/icons/firebase_green.svg"
-        },
-        {
-          "name": "TypeScript",
-          "icon": "./assets/img/icons/typescript_green.svg"
-        }
-      ],
-      "image": "./assets/img/el_pollo_loco_preview.png",
-      "description": "Jump and run game with object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-      "liveUrl": "https://dabubble.example.com",
-      "githubUrl": "https://github.com/danielbumbuc/da-bubble"
     }
   ],
   "DE": [
@@ -119,28 +97,6 @@
       "description": "Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
       "liveUrl": "https://elpollo.example.com",
       "githubUrl": "https://github.com/danielbumbuc/el-pollo-loco"
-    },
-    {
-      "id": 3,
-      "name": "DA Bubble",
-      "technologies": [
-        {
-          "name": "Angular",
-          "icon": "./assets/img/icons/angular_green.svg"
-        },
-        {
-          "name": "Firebase",
-          "icon": "./assets/img/icons/firebase_green.svg"
-        },
-        {
-          "name": "TypeScript",
-          "icon": "./assets/img/icons/typescript_green.svg"
-        }
-      ],
-      "image": "./assets/img/el_pollo_loco_preview.png",
-      "description": "Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
-      "liveUrl": "https://dabubble.example.com",
-      "githubUrl": "https://github.com/danielbumbuc/da-bubble"
     }
   ]
 }

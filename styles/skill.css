@@ -152,17 +152,12 @@
 }
 
 @media (max-width: 1660px) {
-    .skill-container {
-        margin: 0 0 0 -236px;
-    }
-
     .skill-content {
         width: 520px;
     }
 
     .skill-collection {
         width: 456px;
-        margin: 0 0 48px 0;
         padding: 48px 0 0 0;
     }
 }
@@ -176,6 +171,14 @@
 
     .skill-collection {
         justify-content: center;
+    }
+
+    .skills-title {
+        margin: 96px 0 0 0;
+    }
+
+    .skill-content {
+        margin: 24px 0 0 0;
     }
 
     .mid-background::before {

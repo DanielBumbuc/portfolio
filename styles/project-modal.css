@@ -102,8 +102,10 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
     gap: 16px;
     margin: 48px 0;
+    width: 500px;
 }
 
 .technologie-container {
