@@ -64,6 +64,12 @@ function loadCurrentLanguage() {
     updatePageTexts();
 }
 
+function scrollToTop() {
+    window.scrollTo({
+        top: 0
+    });
+}
+
 function initMarquee() {
     const marqueeContainer = document.getElementById('marquee_container');
     let marqueeLength = 3;

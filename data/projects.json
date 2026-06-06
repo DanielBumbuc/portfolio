@@ -5,12 +5,16 @@
       "name": "Join",
       "technologies": [
         {
-          "name": "Angular",
-          "icon": "./assets/img/icons/angular_green.svg"
+          "name": "HTML",
+          "icon": "./assets/img/icons/html_green.svg"
         },
         {
-          "name": "TypeScript", 
-          "icon": "./assets/img/icons/typescript_green.svg"
+          "name": "CSS", 
+          "icon": "./assets/img/icons/css_green.svg"
+        },
+        {
+          "name": "JavaScript", 
+          "icon": "./assets/img/icons/javascript_green.svg"
         },
         {
           "name": "Firebase",
@@ -18,7 +22,7 @@
         }
       ],
       "image": "./assets/img/el_pollo_loco_preview.png",
-      "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+      "description": "Join is a modern web application for task and project management that I developed as part of a team project during my software development training. The application helps organize tasks through features such as drag-and-drop functionality, status management, and contact assignment. The project was built using HTML, CSS, JavaScript and Firebase.",
       "liveUrl": "https://join.example.com",
       "githubUrl": "https://github.com/danielbumbuc/join"
     },
@@ -51,20 +55,16 @@
       "name": "Join",
       "technologies": [
         {
-          "name": "Angular",
-          "icon": "./assets/img/icons/angular_green.svg"
-        },
-        {
-          "name": "TypeScript",
-          "icon": "./assets/img/icons/typescript_green.svg"
-        },
-        {
           "name": "HTML",
           "icon": "./assets/img/icons/html_green.svg"
         },
         {
-          "name": "CSS",
+          "name": "CSS", 
           "icon": "./assets/img/icons/css_green.svg"
+        },
+        {
+          "name": "JavaScript", 
+          "icon": "./assets/img/icons/javascript_green.svg"
         },
         {
           "name": "Firebase",
@@ -72,7 +72,7 @@
         }
       ],
       "image": "./assets/img/el_pollo_loco_preview.png",
-      "description": "Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
+      "description": "Join ist eine moderne Webanwendung zur Aufgaben- und Projektverwaltung, die ich im Rahmen einer Teamarbeit während meiner Weiterbildung entwickelt habe. Die App unterstützt die Organisation von Aufgaben durch Funktionen wie Drag-and-Drop, Statusverwaltung und Kontaktzuordnung. Entwickelt wurde das Projekt mit HTML, CSS, JavaScript und Firebase.",
       "liveUrl": "https://join.example.com",
       "githubUrl": "https://github.com/danielbumbuc/join"
     },
