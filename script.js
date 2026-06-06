@@ -2,6 +2,7 @@ let currentLanguage = localStorage.getItem('language') || 'EN';
 let translations = {};
 let burgerMenuOpen = false;
 let marqueeArr = [];
+let marqueeFrameId = null;
 
 
 async function init() {
@@ -18,7 +19,6 @@ async function init() {
 async function setLanguage() {
     let englishBtn = document.getElementById('english-btn');
     let germanBtn = document.getElementById('german-btn');
-
     if (currentLanguage === 'EN') {
         currentLanguage = 'DE';
         englishBtn.classList.remove('active-language');
@@ -32,6 +32,8 @@ async function setLanguage() {
     }
 
     localStorage.setItem('language', currentLanguage);
+    initMarquee(); // Restart marquee with new content based on language
+
     updateLegalPageTexts();
     updatePrivacyPolicyTexts();
     await loadCurrentLanguage();
@@ -63,12 +65,18 @@ function loadCurrentLanguage() {
 }
 
 function initMarquee() {
-    const marquee = document.querySelector('.marquee');
     const marqueeContainer = document.getElementById('marquee_container');
     let marqueeLength = 3;
+
+    if (marqueeFrameId) {
+        cancelAnimationFrame(marqueeFrameId);
+        marqueeFrameId = null;
+    }
+
+    marqueeArr = [];
     marqueeContainer.innerHTML = '';
     for (let index = 0; index < marqueeLength; index++) {
-        pushMarqueeContent();        
+        pushMarqueeContent();
     }
     marqueeContainer.innerHTML = marqueeArr.join('');
     startMarqueeAnimation(marqueeContainer);
@@ -76,7 +84,7 @@ function initMarquee() {
 }
 
 function pushMarqueeContent() {
-    let marqueeContent = `<span>
+    let englishMarqueeContent = `<span class="marquee-content">
                     Available for remote work
                     <span class="separator">•</span>
                     Frontend Developer
@@ -86,7 +94,21 @@ function pushMarqueeContent() {
                     Open to relocate
                     <span class="separator">•</span>
                 </span>`;
-    marqueeArr.push(marqueeContent);
+    let germanMarqueeContent = `<span class="marquee-content">
+                    Verfügbar für Remote-Arbeit
+                    <span class="separator">•</span>
+                    Frontend Entwickler
+                    <span class="separator">•</span>
+                    Ansässig in Sindelfingen
+                    <span class="separator">•</span>
+                    Offen für Umzug
+                    <span class="separator">•</span>
+                </span>
+                `;
+                console.log(currentLanguage);
+                
+                currentLanguage === 'DE' ? marqueeArr.push(germanMarqueeContent) : marqueeArr.push(englishMarqueeContent);
+    // marqueeArr.push(englishMarqueeContent);
 }
 
 function startMarqueeAnimation(element) {
@@ -114,13 +136,15 @@ function watchFirstSpan(container) {
             marqueeArr.splice(0, 1); // Entfernt das erste Element
             console.log(marqueeArr);
             pushMarqueeContent(); // Fügt neuen Inhalt am Ende hinzu
+            // container.innerHTML = marqueeArr.join('');
             startMarqueeAnimation(container);
             watchFirstSpan(container);
             return;
         }
-        requestAnimationFrame(check);
+
+        marqueeFrameId = requestAnimationFrame(check);
     }
-    requestAnimationFrame(check);
+    marqueeFrameId = requestAnimationFrame(check);
 }
 
 // ===== TRANSLATION SYSTEM =====
@@ -170,7 +194,7 @@ function updatePageTexts() {
     updateElementText('.nav-btn:nth-child(2) .marquee-btn-content', 'landing.contactMe');
 
     // Update marquee content
-    updateMarqueeTexts();
+    // updateMarqueeTexts();
 
     // Update about section
     updateElementText('.about-title', 'about.title');
