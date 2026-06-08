@@ -1,4 +1,5 @@
-let validMail = false;
+let validMail;
+let emailState = null; // 'empty' | 'invalid' | 'valid'
 
 function checkContactBtn() {
     const privacyCheckbox = document.getElementById('privacy_checkbox');
@@ -23,19 +24,51 @@ async function validateForm(event) {
         uncheckedError.style.opacity = 1;
         event.preventDefault();
         return false;
-    } 
+    }
 
-    if (!name || !validMail || !message) {
-        event.preventDefault();
-        console.log('is not valid');
+
+    // if (!name || !validMail || !message) {
+    //     event.preventDefault();
+    //     console.log('is not valid');
+    //     if (!name) {
+    //         showFieldError('name_input', translate('contact.validation.nameRequired'));
+    //     }
+    //     if (email === '') {
+    //         console.log(email);
+
+    //         showFieldError('email_input', translate('contact.validation.emailRequired'));
+
+
+    //     } 
+    //     if (!isValidEmail) {
+    //         showFieldError('email_input', translate('contact.validation.emailInvalid'));
+    //     }
+    //     if (!message) {
+    //         showFieldError('message_input', translate('contact.validation.messageRequired'));
+    //     }
+    //     return false;
+    // }
+
+
+    if (!name || emailState !== 'valid' || !message) {
         if (!name) {
             showFieldError('name_input', translate('contact.validation.nameRequired'));
         }
+
+        if (emailState === null || emailState === 'empty') {
+            showFieldError('email_input', translate('contact.validation.emailRequired'));
+        } else if (emailState === 'invalid') {
+            showFieldError('email_input', translate('contact.validation.emailInvalid'));
+        }
+
         if (!message) {
             showFieldError('message_input', translate('contact.validation.messageRequired'));
         }
+        emailState = null; // Reset emailState für nächsten Versuch
         return false;
     }
+
+
     // ✅ NEU: EmailJS aufrufen statt normalen Submit
     await submitContactForm(event.target);
     return false; // Normalen Submit verhindern
@@ -90,21 +123,45 @@ function clearError(input) {
     input.classList.remove('error-state');
 }
 
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    console.log(email.value.trim());
+// function isValidEmail(email) {
+//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     console.log(email.value.trim());
 
-    // Leere Email
-    if (email.value.trim() === '') {
-        showFieldError('email_input', translate('contact.validation.emailRequired'));
-        return false;
-    } else if (!emailRegex.test(email.value.trim())) {
-        showFieldError('email_input', translate('contact.validation.emailInvalid'));
-        console.log(!emailRegex.test(email.value.trim()));
-        return false;
+//     // Leere Email
+//     if (email.value.trim() === '') {
+//         showFieldError('email_input', translate('contact.validation.emailRequired'));
+//         emptyMail = true;
+
+//         return false;
+//     } else if (!emailRegex.test(email.value.trim())) {
+//         showFieldError('email_input', translate('contact.validation.emailInvalid'));
+//         console.log(!emailRegex.test(email.value.trim()));
+//         return false;
+//     }
+//     validMail = true;
+//     emptyMail = false;
+
+// }
+
+
+
+function isValidEmail(email) {
+        validMail = false;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (email.value.trim() === '') {
+            emailState = 'empty';
+            showFieldError('email_input', translate('contact.validation.emailRequired'));
+            return false;
+        } else if (!emailRegex.test(email.value.trim())) {
+            emailState = 'invalid';
+            showFieldError('email_input', translate('contact.validation.emailInvalid'));
+            return false;
+        }
+
+        emailState = 'valid';
+        validMail = true;
     }
-    validMail = true;
-}
 
 function showFieldError(inputId, errorMessage) {
     const input = document.getElementById(inputId);
@@ -193,8 +250,8 @@ function resetContactForm() {
     document.getElementById('email_input').value = '';
     document.getElementById('message_input').value = '';
     document.getElementById('privacy_checkbox').checked = false;
+    emailState = null;
     validMail = false;
-
     // Error-States entfernen
     const inputs = document.querySelectorAll('.main-input');
     inputs.forEach(input => clearError(input));
