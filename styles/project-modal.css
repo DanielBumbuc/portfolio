@@ -237,6 +237,7 @@
 
     .used-technologies {
         flex-wrap: wrap;
+        width: 460px;
     }
 
     .description {
@@ -268,6 +269,10 @@
     .modal-preview-img {
         width: 340px;
     }
+
+    .used-technologies {
+        width: 340px;  
+    }
 }
 
 @media (max-width: 400px) {
@@ -285,5 +290,9 @@
 
     .project-btn-container {
         gap: 12px;
+    }
+
+    .used-technologies {
+        width: 340px;  
     }
 }

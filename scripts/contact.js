@@ -26,30 +26,6 @@ async function validateForm(event) {
         return false;
     }
 
-
-    // if (!name || !validMail || !message) {
-    //     event.preventDefault();
-    //     console.log('is not valid');
-    //     if (!name) {
-    //         showFieldError('name_input', translate('contact.validation.nameRequired'));
-    //     }
-    //     if (email === '') {
-    //         console.log(email);
-
-    //         showFieldError('email_input', translate('contact.validation.emailRequired'));
-
-
-    //     } 
-    //     if (!isValidEmail) {
-    //         showFieldError('email_input', translate('contact.validation.emailInvalid'));
-    //     }
-    //     if (!message) {
-    //         showFieldError('message_input', translate('contact.validation.messageRequired'));
-    //     }
-    //     return false;
-    // }
-
-
     if (!name || emailState !== 'valid' || !message) {
         if (!name) {
             showFieldError('name_input', translate('contact.validation.nameRequired'));

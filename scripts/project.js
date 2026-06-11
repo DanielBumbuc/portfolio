@@ -80,8 +80,17 @@ function addProjectEventListeners() {
                                 `).join('')}
                             </span>
                             <div class="project-btn-container">
-                                <span class="project-btn">${translate ? translate('projects.modal.github') : 'GitHub'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="GitHub"></span>
-                                <span class="project-btn">${translate ? translate('projects.modal.liveTest') : 'Live Test'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="Live Test"></span>
+                                <a href="${projects[index].githubUrl}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+                                <span class="project-btn">${translate ? translate('projects.modal.github') : 'GitHub'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="GitHub">
+                                </span>
+                                </a>
+
+                                <a href="${projects[index].liveUrl}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+                                <span class="project-btn">
+                                ${translate ? translate('projects.modal.liveTest') : 'Live Test'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="Live Test">
+                                </span>
+                                </a>
+                                
                             </div>
                             <span class="next-project-responsive d-none" onclick="nextProject(${index})">${translate ? translate('projects.modal.nextProject') : 'Next project'}<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
                         </div>
