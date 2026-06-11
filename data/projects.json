@@ -23,7 +23,7 @@
       ],
       "image": "./assets/img/el_pollo_loco_preview.png",
       "description": "Join is a modern web application for task and project management that I developed as part of a team project during my software development training. The application helps organize tasks through features such as drag-and-drop functionality, status management, and contact assignment. The project was built using HTML, CSS, JavaScript and Firebase.",
-      "liveUrl": "daniel-bumbuc.com/join/index.html",
+      "liveUrl": "./join/index.html",
       "githubUrl": "https://github.com/danielbumbuc/join"
     },
     {
@@ -45,7 +45,7 @@
       ],
       "image": "./assets/img/el_pollo_loco_preview.png",
       "description": "Jump and run game with object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-      "liveUrl": "daniel-bumbuc.com/el_pollo_loco/index.html",
+      "liveUrl": "./el_pollo_loco/index.html",
       "githubUrl": "https://github.com/danielbumbuc/el-pollo-loco"
     }
   ],
@@ -73,7 +73,7 @@
       ],
       "image": "./assets/img/el_pollo_loco_preview.png",
       "description": "Join ist eine moderne Webanwendung zur Aufgaben- und Projektverwaltung, die ich im Rahmen einer Teamarbeit während meiner Weiterbildung entwickelt habe. Die App unterstützt die Organisation von Aufgaben durch Funktionen wie Drag-and-Drop, Statusverwaltung und Kontaktzuordnung. Entwickelt wurde das Projekt mit HTML, CSS, JavaScript und Firebase.",
-      "liveUrl": "daniel-bumbuc.com/join/index.html",
+      "liveUrl": "./join/index.html",
       "githubUrl": "https://github.com/danielbumbuc/join"
     },
     {
@@ -95,7 +95,7 @@
       ],
       "image": "./assets/img/el_pollo_loco_preview.png",
       "description": "Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
-      "liveUrl": "daniel-bumbuc.com/el_pollo_loco/index.html",
+      "liveUrl": "./el_pollo_loco/index.html",
       "githubUrl": "https://github.com/danielbumbuc/el-pollo-loco"
     }
   ]
