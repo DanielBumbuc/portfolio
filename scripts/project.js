@@ -96,7 +96,7 @@ function addProjectEventListeners() {
                         </div>
                     <div class="modal-right-side">
                         <img class="close-btn" src="./assets/img/icons/default_icon.svg" alt="close icon" onclick="closeModal()" onmouseenter="this.src='./assets/img/icons/default_hover_icon.svg'" onmouseleave="this.src='./assets/img/icons/default_icon.svg'">
-                        <img class="modal-preview-img" src="assets/img/el_pollo_loco_preview_modal.png" alt="preview image">
+                        <img class="modal-preview-img" src="${projects[index].modalImg}" alt="${projects[index].name} Preview">
                         <span class="next-project" onclick="nextProject(${index})">${translate ? translate('projects.modal.nextProject') : 'Next project'}<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
                     </div>
 
@@ -163,7 +163,7 @@ function nextProject(index) {
                         </div>
                     <div class="modal-right-side">
                         <img class="close-btn" src="./assets/img/icons/default_icon.svg" alt="close icon" onclick="closeModal()" onmouseenter="this.src='./assets/img/icons/default_hover_icon.svg'" onmouseleave="this.src='./assets/img/icons/default_icon.svg'">
-                        <img class="modal-preview-img" src="assets/img/el_pollo_loco_preview_modal.png" alt="preview image">
+                        <img class="modal-preview-img" src="${projects[nextIndex].modalImg}" alt="${projects[nextIndex].name} Preview">
                         <span class="next-project" onclick="nextProject(${nextIndex})">${translate ? translate('projects.modal.nextProject') : 'Next project'}<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
                     </div>
 

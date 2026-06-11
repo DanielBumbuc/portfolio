@@ -135,8 +135,10 @@
 
 .modal-preview-img {
     width: 600px;
-    height: auto;
+    height: 530px;
     border-radius: 40px;
+    object-fit: cover;
+    object-position: left;
 }
 
 .next-project {
@@ -271,7 +273,7 @@
     }
 
     .used-technologies {
-        width: 340px;  
+        width: 340px;
     }
 }
 
@@ -293,6 +295,6 @@
     }
 
     .used-technologies {
-        width: 340px;  
+        width: 340px;
     }
 }
