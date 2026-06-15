@@ -104,8 +104,6 @@ body {
     margin: 4px 0;
 }
 
-@media (max-width: 1660px) {}
-
 @media (max-width: 1350px) {
     .legal-notice-container {
         padding: 140px 96px 0;

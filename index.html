@@ -26,9 +26,8 @@
     <script src="./scripts/includeHTML.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-        // EmailJS initialisieren (nach Registrierung erhalten)
         (function () {
-            emailjs.init("A9E5cKxmNVDxC9HoY"); // Später ersetzen
+            emailjs.init("A9E5cKxmNVDxC9HoY");
         })();
     </script>
     <title>Daniel Bumbuc</title>
@@ -37,287 +36,230 @@
 <body onload="init()">
     <div id="overlay" class="modal-overlay d-none" onclick="closeModal(), closeBurgerMenu()"></div>
     <div class="page-wrapper">
-    <header class="landing-page">
-        <nav>
-            <div w3-include-html="./navbar.html" class="navbar"></div>
+        <header class="landing-page">
+            <nav>
+                <div w3-include-html="./navbar.html" class="navbar"></div>
 
-        </nav>
-
-
-        <div class="headline-container">
-            <h2 class="second-headline">Frontend Developer</h2>
-            <h1 class="first-headline">Daniel Bumbuc</h1>
-            <div class="nav-btn-container">
-                <a href="#projects_section" class="nav-btn"><span class="marquee-btn-content">Check my work</span></a>
-                <a href="#contact_section" class="nav-btn"><span class="marquee-btn-content">Contact me</span></a>
-            </div>
-        </div>
-
-        <div class="marquee">
-            <div id="marquee_container" class="marquee-container">
-                <!-- <span>
-                    Available for remote work
-                    <span class="separator">•</span>
-                    Frontend Developer
-                    <span class="separator">•</span>
-                    Based in Sindelfingen
-                    <span class="separator">•</span>
-                    Open to relocate
-                    <span class="separator">•</span>
-                </span> -->
-            </div>
-        </div>
-
-
-        <div class="left-side-container">
-            <span class="arrow-container"><img class="vector" src="./assets/img/vector.svg" alt=""></span>
-            <span class="left-line "></span>
-        </div>
-        <div class="right-side-container">
-            <span class="contact-links">
-                <a class="mailto-link" href="mailto:bumbucd@icloud.com">bumbucd@icloud.com</a>
-                 <div class="mailto-icon" onclick="window.location.href='mailto:bumbucd@icloud.com'">
-                    <span class="icon-highlighter">•</span>
-                 </div>
-                <a class="github-icon" href="https://github.com/DanielBumbuc" target="_blank" rel="noopener noreferrer">
-                    <span class="icon-highlighter">•</span>
-                </a>
-                <a class="linkedin-icon" href="https://www.linkedin.com/in/daniel-bumbuc-558288249/" target="_blank"
-                    rel="noopener noreferrer">
-                    <span class="icon-highlighter">•</span>
-                </a>
-            </span>
-            <span class="right-line "></span>
-        </div>
-
-    </header>
-
-    <main class="main-container ">
-
-        <section id="about_section" class="about-me">
-            <div class="about-img-container">
-
-                <img class="about-img" src="./assets/img/daniel-bumbuc-portrait.jpg" alt="Daniel Bumbuc Image">
-                <img class="about-bg-img d-none" src="./assets/img/about_bg_img.svg" alt="">
-
-
-            </div>
-
-            <div id="about_section" class="about-info">
-                <h3 class="about-title">Who I Am</h3>
-                <div class="about-content">
-                    <h2>About me</h2>
-                    <p class="main-about-info">
-                        <!-- Hey there, I'm Lukas! Write some information about yourself that is IT
-                        related. Why are you
-                        passionate about coding? What is your source of inspiration for improving your programming
-                        skills? -->
-                    </p>
-                    <span class="single-info">
-                        <img class="about-icons" src="./assets/img/location_icon.svg" alt="location icon">
-                        <p class="info-text">
-                            <!-- Where are you based? Would you be open to working remotely or potentially relocating? -->
-                        </p>
-                    </span>
-                    <span class="single-info">
-                        <img class="about-icons" src="./assets/img/mind_icon.svg" alt="mind icon">
-                        <p class="info-text">
-                            <!-- Show that you are open-minded. Are you enthusiastic about learning new technologies and
-                            continually improving your skills? -->
-                        </p>
-                    </span>
-                    <span class="single-info">
-                        <img class="about-icons" src="./assets/img/check_icon.svg" alt="check icon">
-                        <p class="info-text">
-                            <!-- A brief description of your problem-solving approach.
-                            Do you learn from each challenge as you search for the most efficient or elegant solution?
-                            You can include some keywords like: analytical thinking, creativity, persistence and
-                            collaboration. -->
-                        </p>
-                    </span>
+            </nav>
+            <div class="headline-container">
+                <h2 class="second-headline">Frontend Developer</h2>
+                <h1 class="first-headline">Daniel Bumbuc</h1>
+                <div class="nav-btn-container">
+                    <a href="#projects_section" class="nav-btn"><span class="marquee-btn-content">Check my
+                            work</span></a>
+                    <a href="#contact_section" class="nav-btn"><span class="marquee-btn-content">Contact me</span></a>
                 </div>
             </div>
-        </section>
+            <div class="marquee">
+                <div id="marquee_container" class="marquee-container"></div>
+            </div>
+            <div class="left-side-container">
+                <span class="arrow-container"><img class="vector" src="./assets/img/vector.svg" alt=""></span>
+                <span class="left-line "></span>
+            </div>
+            <div class="right-side-container">
+                <span class="contact-links">
+                    <a class="mailto-link" href="mailto:bumbucd@icloud.com">bumbucd@icloud.com</a>
+                    <div class="mailto-icon" onclick="window.location.href='mailto:bumbucd@icloud.com'">
+                        <span class="icon-highlighter">•</span>
+                    </div>
+                    <a class="github-icon" href="https://github.com/DanielBumbuc" target="_blank"
+                        rel="noopener noreferrer">
+                        <span class="icon-highlighter">•</span>
+                    </a>
+                    <a class="linkedin-icon" href="https://www.linkedin.com/in/daniel-bumbuc-558288249/" target="_blank"
+                        rel="noopener noreferrer">
+                        <span class="icon-highlighter">•</span>
+                    </a>
+                </span>
+                <span class="right-line "></span>
+            </div>
+        </header>
 
-        <section id="skills_section" class="skills">
-            <div class="skill-container">
-                <span class="mid-background"></span>
-
-                <div class="left-skill-container">
-                    <h3 class="skills-title">Technologies</h3>
-                    <div class="skill-content">
-                        <div class="upper-skill-content">
-                            <h2>Skill Set</h2>
-                            <p class="main-skill-info">
-                                A short introduction of your skills. Highlight your experience of using different
-                                front-end
-                                technologies and emphasise your openness to learning and adapting to new
-                                technologies.
-                                Show
-                                how
-                                important it is for you to keep up with the rapid changes in web development.
-                            </p>
-                            <span class="contact-request-container">
-                                <h3 class="contact-headline">You need another skill?</h3>
-                                <p class="contact-text">
-                                    Feel free to contact me. I look forward to expanding on my previous knowledge
-                                </p>
-
-                            </span>
-                        </div>
-                        <a href="#contact_section" class="nav-btn contact-request-btn"><span
-                                class="marquee-btn-content">Let's Talk</span></a>
+        <main class="main-container ">
+            <section id="about_section" class="about-me">
+                <div class="about-img-container">
+                    <img class="about-img" src="./assets/img/daniel-bumbuc-portrait.jpg" alt="Daniel Bumbuc Image">
+                    <img class="about-bg-img d-none" src="./assets/img/about_bg_img.svg" alt="">
+                </div>
+                <div id="about_section" class="about-info">
+                    <h3 class="about-title">Who I Am</h3>
+                    <div class="about-content">
+                        <h2>About me</h2>
+                        <p class="main-about-info"></p>
+                        <span class="single-info">
+                            <img class="about-icons" src="./assets/img/location_icon.svg" alt="location icon">
+                            <p class="info-text"></p>
+                        </span>
+                        <span class="single-info">
+                            <img class="about-icons" src="./assets/img/mind_icon.svg" alt="mind icon">
+                            <p class="info-text"></p>
+                        </span>
+                        <span class="single-info">
+                            <img class="about-icons" src="./assets/img/check_icon.svg" alt="check icon">
+                            <p class="info-text"></p>
+                        </span>
                     </div>
                 </div>
+            </section>
 
+            <section id="skills_section" class="skills">
+                <div class="skill-container">
+                    <span class="mid-background"></span>
+                    <div class="left-skill-container">
+                        <h3 class="skills-title">Technologies</h3>
+                        <div class="skill-content">
+                            <div class="upper-skill-content">
+                                <h2>Skill Set</h2>
+                                <p class="main-skill-info">
+                                    A short introduction of your skills. Highlight your experience of using different
+                                    front-end
+                                    technologies and emphasise your openness to learning and adapting to new
+                                    technologies.
+                                    Show
+                                    how
+                                    important it is for you to keep up with the rapid changes in web development.
+                                </p>
+                                <span class="contact-request-container">
+                                    <h3 class="contact-headline">You need another skill?</h3>
+                                    <p class="contact-text">
+                                        Feel free to contact me. I look forward to expanding on my previous knowledge
+                                    </p>
+                                </span>
+                            </div>
+                            <a href="#contact_section" class="nav-btn contact-request-btn"><span
+                                    class="marquee-btn-content">Let's Talk</span></a>
+                        </div>
+                    </div>
+                    <div class="skill-collection">
+                        <span class="skill-box">
+                            <img class="skill-icons" src="./assets/img/html_icon.svg" alt="HTML icon">
+                            <p>HTML</p>
+                        </span>
+                        <span class="skill-box">
+                            <img class="skill-icons" src="./assets/img/css_icon.svg" alt="CSS icon">
+                            <p>CSS</p>
+                        </span>
+                        <span class="skill-box">
+                            <img class="skill-icons" src="./assets/img/js_icon.svg" alt="JavaScript icon">
+                            <p>JavaScript</p>
+                        </span>
+                        <span class="skill-box">
+                            <img class="skill-icons" src="./assets/img/md_icon.svg" alt="Material Design icon">
+                            <p>Material Design</p>
+                        </span>
+                        <span class="skill-box">
+                            <img class="skill-icons" src="./assets/img/ts_icon.svg" alt="TypeScript icon">
+                            <p>TypeScript</p>
+                        </span>
+                        <span class="skill-box">
+                            <img class="skill-icons" src="./assets/img/angular_icon.svg" alt="Angular icon">
+                            <p>Angular</p>
+                        </span>
+                        <span class="skill-box">
+                            <img class="skill-icons" src="./assets/img/firebase_icon.svg" alt="Firebase icon">
+                            <p>Firebase</p>
+                        </span>
+                        <span class="skill-box">
+                            <img class="skill-icons" src="./assets/img/git_icon.svg" alt="Git icon">
+                            <p>Git</p>
+                        </span>
+                        <span class="skill-box">
+                            <img class="skill-icons" src="./assets/img/rest-api_icon.svg" alt="REST API icon">
+                            <p>REST-API</p>
+                        </span>
+                        <span class="skill-box">
+                            <img class="skill-icons" src="./assets/img/scrum_icon.svg" alt="Scrum icon">
+                            <p>Scrum</p>
+                        </span>
+                        <span class="skill-box growth-skill">
+                            <img class="growth-info" src="./assets/img/icons/growth-info.svg" alt="">
+                            <img class="skill-icons growth-icon" src="./assets/img/growth-mindset_icon.svg"
+                                alt="Growth Mindset icon">
+                            <p class="green-skill-text">Growth Mindset</p>
+                        </span>
+                    </div>
+            </section>
 
-                <div class="skill-collection">
-                    <span class="skill-box">
-                        <img class="skill-icons" src="./assets/img/html_icon.svg" alt="HTML icon">
-                        <p>HTML</p>
-                    </span>
-                    <span class="skill-box">
-                        <img class="skill-icons" src="./assets/img/css_icon.svg" alt="CSS icon">
-                        <p>CSS</p>
-                    </span>
-                    <span class="skill-box">
-                        <img class="skill-icons" src="./assets/img/js_icon.svg" alt="JavaScript icon">
-                        <p>JavaScript</p>
-                    </span>
-                    <span class="skill-box">
-                        <img class="skill-icons" src="./assets/img/md_icon.svg" alt="Material Design icon">
-                        <p>Material Design</p>
-                    </span>
-                    <span class="skill-box">
-                        <img class="skill-icons" src="./assets/img/ts_icon.svg" alt="TypeScript icon">
-                        <p>TypeScript</p>
-                    </span>
-                    <span class="skill-box">
-                        <img class="skill-icons" src="./assets/img/angular_icon.svg" alt="Angular icon">
-                        <p>Angular</p>
-                    </span>
-                    <span class="skill-box">
-                        <img class="skill-icons" src="./assets/img/firebase_icon.svg" alt="Firebase icon">
-                        <p>Firebase</p>
-                    </span>
-                    <span class="skill-box">
-                        <img class="skill-icons" src="./assets/img/git_icon.svg" alt="Git icon">
-                        <p>Git</p>
-                    </span>
-                    <span class="skill-box">
-                        <img class="skill-icons" src="./assets/img/rest-api_icon.svg" alt="REST API icon">
-                        <p>REST-API</p>
-                    </span>
-                    <span class="skill-box">
-                        <img class="skill-icons" src="./assets/img/scrum_icon.svg" alt="Scrum icon">
-                        <p>Scrum</p>
-                    </span>
-                    <span class="skill-box growth-skill">
-                        <img class="growth-info" src="./assets/img/icons/growth-info.svg" alt="">
-                        <img class="skill-icons growth-icon" src="./assets/img/growth-mindset_icon.svg"
-                            alt="Growth Mindset icon">
-                        <p class="green-skill-text">Growth Mindset</p>
-                    </span>
+            <section id="projects_section" class="projects">
+                <div class="project-container">
+                    <h3 class="project-title">Portfolio</h3>
+                    <div class="project-content">
+                        <h2>Featured Projects</h2>
+                        <p class="main-project-info">
+                            Explore a selection of my work here - Interact with projects to see my skills in action.
+                        </p>
+                        <div class="project-collection"></div>
+                    </div>
                 </div>
-        </section>
+            </section>
 
-        <section id="projects_section" class="projects">
-            <div class="project-container">
-                <h3 class="project-title">Portfolio</h3>
-                <div class="project-content">
-                    <h2>Featured Projects</h2>
-                    <p class="main-project-info">
-                        Explore a selection of my work here - Interact with projects to see my skills in action.
-                    </p>
-
-                    <div class="project-collection"></div>
-
-
+            <section id="references_section" class="references">
+                <h2 class="reference-title">What my colleagues say about me</h2>
+                <div class="reference-collection"></div>
+                <div class="content-slider">
+                    <img class="prev-slider" onclick="prevReference()" src="./assets/img/icons/left_arrow.svg"
+                        alt="prev slider">
+                    <span id="slider_indicator" class="slider-indicator">
+                    </span>
+                    <img class="next-slider" onclick="nextReference()" src="./assets/img/icons/right_arrow.svg"
+                        alt="next slider">
                 </div>
-            </div>
+            </section>
 
-        </section>
-
-        <section id="references_section" class="references">
-            <h2 class="reference-title">What my colleagues say about me</h2>
-
-
-            <div class="reference-collection">
-
-            </div>
-
-            <div class="content-slider">
-                <img class="prev-slider" onclick="prevReference()" src="./assets/img/icons/left_arrow.svg"
-                    alt="prev slider">
-                <span id="slider_indicator" class="slider-indicator">
-                </span>
-                <img class="next-slider" onclick="nextReference()" src="./assets/img/icons/right_arrow.svg"
-                    alt="next slider">
-            </div>
-        </section>
-
-        <section id="contact_section" class="contact">
-            <div class="contact-container">
-                <h3 class="contact-title">Contact me</h3>
-                <div class="contact-content">
-                    <h2>Let´s work together</h2>
-                    <h3 class="main-contact-headline">Got a problem to solve?</h3>
-                    <p class="main-contact-info">
-                        Encourage people to contact you and describe what role you are interested in. Show that you will
-                        add value to their projects through your work. <span class="green-text">Let´s talk!</span>
-                    </p>
+            <section id="contact_section" class="contact">
+                <div class="contact-container">
+                    <h3 class="contact-title">Contact me</h3>
+                    <div class="contact-content">
+                        <h2>Let´s work together</h2>
+                        <h3 class="main-contact-headline">Got a problem to solve?</h3>
+                        <p class="main-contact-info">
+                            Encourage people to contact you and describe what role you are interested in. Show that you
+                            will
+                            add value to their projects through your work. <span class="green-text">Let´s talk!</span>
+                        </p>
+                    </div>
                 </div>
-            </div>
+                <form class="contact-form" action="" onsubmit="return validateForm(event)">
+                    <div class="form-group border-style">
+                        <label class="main-label" for="name">What's your name?</label>
+                        <input class="main-input" type="text" id="name_input" name="name"
+                            placeholder="Your name goes here" onfocus="this.placeholder=''; clearError(this)"
+                            onblur="handleBlurWithError(this, 'Your name goes here', 'nameRequired')"
+                            oninput="clearError(this)">
+                    </div>
+                    <div class="form-group border-style">
+                        <label class="main-label" for="email">What's your e-mail?</label>
+                        <input class="main-input" type="email" novalidate id="email_input" name="email"
+                            placeholder="yourmail@mail.com" onfocus="this.placeholder=''; clearError(this)"
+                            onblur="isValidEmail(this, 'yourmail@mail.com')" oninput="clearError(this)" rows="5">
+                    </div>
+                    <div class="form-group border-style">
+                        <label class="main-label" for="message">How can I help you?</label>
+                        <input class="main-input" type="text" id="message_input" name="message"
+                            placeholder="Hi Daniel, I am interested in..."
+                            onfocus="this.placeholder=''; clearError(this)"
+                            onblur="handleBlurWithError(this, 'Hi Daniel, I am interested in...', 'messageRequired')"
+                            oninput="clearError(this)" rows="5">
+                    </div>
+                    <div class="form-group checkbox-container">
+                        <input type="checkbox" id="privacy_checkbox" name="privacy" onclick="clearErrorCheckbox()">
+                        <label class="checkbox-text" for="privacy_checkbox"></label>
+                    </div>
+                    <span class="unchecked-error"></span>
+                    <div class="btn-container">
+                        <button type="submit" class="contact-btn nav-btn"><span
+                                class="marquee-btn-content"></span></button>
+                    </div>
+                    <div id="message_container" class="message-container slide-right-animation ">
+                    </div>
+                </form>
+            </section>
+        </main>
 
-            <form class="contact-form" action="" onsubmit="return validateForm(event)">
-                <div class="form-group border-style">
-                    <label class="main-label" for="name">What's your name?</label>
-                    <input class="main-input" type="text" id="name_input" name="name" placeholder="Your name goes here"
-                        onfocus="this.placeholder=''; clearError(this)"
-                        onblur="handleBlurWithError(this, 'Your name goes here', 'nameRequired')"
-                        oninput="clearError(this)">
-                </div>
-
-                <div class="form-group border-style">
-                    <label class="main-label" for="email">What's your e-mail?</label>
-                    <input class="main-input" type="email" novalidate id="email_input" name="email"
-                        placeholder="yourmail@mail.com" onfocus="this.placeholder=''; clearError(this)"
-                        onblur="isValidEmail(this, 'yourmail@mail.com')" oninput="clearError(this)" rows="5">
-                </div>
-
-                <div class="form-group border-style">
-                    <label class="main-label" for="message">How can I help you?</label>
-                    <input class="main-input" type="text" id="message_input" name="message"
-                        placeholder="Hi Daniel, I am interested in..." onfocus="this.placeholder=''; clearError(this)"
-                        onblur="handleBlurWithError(this, 'Hi Daniel, I am interested in...', 'messageRequired')"
-                        oninput="clearError(this)" rows="5">
-                </div>
-
-                <div class="form-group checkbox-container">
-                    <input type="checkbox" id="privacy_checkbox" name="privacy" onclick="clearErrorCheckbox()">
-                    <label class="checkbox-text" for="privacy_checkbox"></label>
-                </div>
-
-                <span class="unchecked-error"></span>
-                <div class="btn-container">
-                    <button type="submit" class="contact-btn nav-btn" ><span class="marquee-btn-content"></span></button>
-                </div>
-
-                <div id="message_container" class="message-container slide-right-animation ">
-                </div>
-
-            </form>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <div w3-include-html="./footer.html" class="footer-container"></div>
-    </footer>
+        <footer>
+            <div w3-include-html="./footer.html" class="footer-container"></div>
+        </footer>
     </div>
-
-
 </body>
-
 </html>

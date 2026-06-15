@@ -20,14 +20,10 @@
 
 .about-bg-img {
     position: absolute;
-    /* hinzufügen */
     top: 4%;
-    /* statt margin-top: -8% */
     left: -4%;
-    /* statt margin-left: -8% */
     width: 720px;
     height: 720px;
-    /* margin-bottom und order entfernen — werden nicht mehr gebraucht */
     z-index: 1;
     border-radius: 40px;
 }
@@ -106,8 +102,6 @@
     .about-content {
         width: 620px;
     }
-
-
 }
 
 @media (max-width: 1660px) {
@@ -166,8 +160,6 @@
 }
 
 @media (max-width: 648px) {
-
-
     .about-img-container {
         width: 420px;
         height: 420px;
@@ -204,8 +196,6 @@
 }
 
 @media (max-width: 520px) {
-
-
     .about-img-container {
         width: 320px;
         height: 320px;

@@ -111,8 +111,6 @@
     color: rgba(236, 123, 123, 0.8);
 }
 
-
-/* Verstecke die Standard-Checkbox */
 .checkbox-container input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
@@ -123,7 +121,6 @@
     position: relative;
 }
 
-/* Standard Checkbox (nicht aktiviert) */
 .checkbox-container input[type="checkbox"]::before {
     content: '';
     position: absolute;
@@ -138,17 +135,14 @@
     transition: background-image 0.2s ease;
 }
 
-/* Hover-Zustand (nicht aktiviert) */
 .checkbox-container input[type="checkbox"]:hover::before {
     background-image: url('../assets/img/icons/checkbox_hover.svg');
 }
 
-/* Aktivierte Checkbox */
 .checkbox-container input[type="checkbox"]:checked::before {
     background-image: url('../assets/img/icons/checkbox_checked.svg');
 }
 
-/* Aktivierte Checkbox + Hover */
 .checkbox-container input[type="checkbox"]:checked:hover::before {
     background-image: url('../assets/img/icons/checkbox_checked_hover.svg');
 }
@@ -213,31 +207,24 @@
 }
 
 @keyframes slideRight {
-
-    /* Schneller Einstieg */
     0% {
         transform: translateX(-150px);
         opacity: 0;
         animation-timing-function: ease-out;
-        /* Schnell starten, langsam enden */
     }
 
     10% {
         transform: translateX(0);
         opacity: 1;
         animation-timing-function: linear;
-        /* Konstant während Wartezeit */
     }
 
-    /* Wartezeit */
     90% {
         transform: translateX(0);
         opacity: 1;
         animation-timing-function: ease-out;
-        /* Schnell starten, langsam enden */
     }
 
-    /* Schneller Ausgang */
     100% {
         transform: translateX(150px);
         opacity: 0;

@@ -20,7 +20,6 @@
 
 .mid-background {
     position: absolute;
-    /* Background ohne Halbkreis oder vereinfacht */
 }
 
 .mid-background::before {

@@ -55,8 +55,6 @@
     color: #3DCFB6;
 }
 
-@media (max-width: 1660px) {}
-
 @media (max-width: 1350px) {
     .footer-container {
         padding: 48px 96px;
@@ -74,19 +72,19 @@
 .footer-container > *:nth-child(1) {
     grid-column: 1;
     grid-row: 1;
-    justify-self: start; /* Logo links ausrichten */
+    justify-self: start;
 }
 
 .footer-container > *:nth-child(2) {
     grid-column: 1 / -1;
     grid-row: 2;
-    justify-self: center; /* Inhalt zentrieren */
+    justify-self: center;
 }
 
 .footer-container > *:nth-child(3) {
     grid-column: 2 / -1;
     grid-row: 1;
-    justify-self: end; /* Links rechts ausrichten */
+    justify-self: end;
 }
 
 }
@@ -106,32 +104,30 @@
     }
 }
 
-@media (max-width: 520px) {}
-
 @media (max-width: 400px) {
     .footer-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto; /* 3 Rows statt 2 */
-        row-gap: 48px; /* Kleinerer Gap für 3 Rows */
+        grid-template-rows: auto auto auto;
+        row-gap: 48px;
     }
 
     .footer-container > *:nth-child(1) {
         grid-column: 1 / -1;
-        grid-row: 1; /* Bleibt in Row 1 */
+        grid-row: 1;
         justify-self: center;
     }
 
     .footer-container > *:nth-child(2) {
         grid-column: 1 / -1;
-        grid-row: 3; /* Wird zu Row 3 */
+        grid-row: 3;
         justify-self: center;
     }
 
     .footer-container > *:nth-child(3) {
-        grid-column: 1 / -1; /* Oder 2 / -1, je nach Wunsch */
-        grid-row: 2; /* Neue Row 2 (zwischen 1 und ursprünglich 2) */
-        justify-self: center; /* Oder start/end */
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-self: center;
     }
 
     .left-footer-container {

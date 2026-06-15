@@ -1,6 +1,6 @@
 html {
-    scrollbar-width: thin; /* Firefox: thin, auto, none */
-    scrollbar-color: #094339 #1F2E2C; /* Firefox: thumb track */
+    scrollbar-width: thin;
+    scrollbar-color: #094339 #1F2E2C;
 }
 
 ::-webkit-scrollbar {
@@ -21,15 +21,12 @@ html {
     background-color: #1F2E2C;
 }
 
-/* Nur für das Project Modal */
 .project-modal {
-    scrollbar-width: none;    /* Scrollbar verstecken */
+    scrollbar-width: none;
 }
 
-/* Fallback mit @supports für bessere Kontrolle */
-/* Nur Firefox */
 @supports (-moz-appearance: none) {
     html {
-        scrollbar-color: #3DCFB6 #2A2A2A; /* Firefox-spezifische Farben */
+        scrollbar-color: #3DCFB6 #2A2A2A;
     }
 }
