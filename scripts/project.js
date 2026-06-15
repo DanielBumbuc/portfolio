@@ -18,24 +18,9 @@ function renderProjects() {
     if (!projectCollection) return;
     projectCollection.innerHTML = '';
     projects.forEach((project, index) => {
-        const projectHTML = `
-            <span class="single-project-container" data-project="${index}">
-                <div class="left-project-side">
-                    <p class="project-name">${project.name} 
-                        <img class="arrow-icon d-none" src="./assets/img/arrow_outward.svg" alt="">
-                    </p>
-                    <p class="project-info">
-                        ${project.technologies.map(tech => tech.name).join(' | ')}
-                    </p>
-                </div>
-                <img class="project-preview-img d-none" src="${project.image}" alt="${project.name} Preview">
-                <img class="preview-img-bg d-none" src="./assets/img/preview-img_bg.svg" alt="">
-            </span>
-        `;
+        const projectHTML = projectCardTemplate(project, index);
         projectCollection.innerHTML += projectHTML;
     });
-
-
     addProjectEventListeners();
 }
 
@@ -47,63 +32,24 @@ function addProjectEventListeners() {
         const bgImg = container.querySelector('.preview-img-bg');
         const projectSection = document.querySelector('.projects');
         const modalOverlay = document.querySelector('.modal-overlay');
+        defineEventListeners(projectSide, previewImg, bgImg, projectSection, modalOverlay, index);
+    });
+}
 
-        projectSide.addEventListener('mouseenter', () => {
-            previewImg.classList.remove('d-none');
-            bgImg.classList.remove('d-none');
-        });
-
-        projectSide.addEventListener('mouseleave', () => {
-            previewImg.classList.add('d-none');
-            bgImg.classList.add('d-none');
-        });
-
-        projectSide.addEventListener('click', () => {
-            document.body.classList.add('modal-open');
-            const projectHTML = `
-            <div class="project-modal">
-                <div class="left-modal-side">
-                            <h2 class="project-index">0${index + 1}</h2>
-                            <h3 class="project-modal-name">${projects[index].name}</h3>
-                            <span class="modal-project-info">
-                                <h3 class="title">${translate ? translate('projects.modal.about') : 'What is this project about?'}</h3>
-                                <p class="description">
-                                    ${projects[index].description}
-                                </p>
-                            </span>
-                            <span class="used-technologies">
-                                ${projects[index].technologies.map(tech => `
-                                    <span class="technologie-container">
-                                        <img class="technologie-icon" src="${tech.icon}" alt="${tech.name}">
-                                        <p class="technologie-name">${tech.name}</p>
-                                    </span>
-                                `).join('')}
-                            </span>
-                            <div class="project-btn-container">
-                                <a href="${projects[index].githubUrl}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
-                                    <span class="project-btn">${translate ? translate('projects.modal.github') : 'GitHub'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="GitHub">
-                                    </span>
-                                </a>
-
-                                <a href="${projects[index].liveUrl}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
-                                    <span class="project-btn">
-                                ${translate ? translate('projects.modal.liveTest') : 'Live Test'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="Live Test">
-                                    </span>
-                                </a>
-                                
-                            </div>
-                            <span class="next-project-responsive d-none" onclick="nextProject(${index})">${translate ? translate('projects.modal.nextProject') : 'Next project'}<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
-                        </div>
-                    <div class="modal-right-side">
-                        <img class="close-btn" src="./assets/img/icons/default_icon.svg" alt="close icon" onclick="closeModal()" onmouseenter="this.src='./assets/img/icons/default_hover_icon.svg'" onmouseleave="this.src='./assets/img/icons/default_icon.svg'">
-                        <img class="modal-preview-img" src="${projects[index].modalImg}" alt="${projects[index].name} Preview">
-                        <span class="next-project" onclick="nextProject(${index})">${translate ? translate('projects.modal.nextProject') : 'Next project'}<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
-                    </div>
-
-                </div>`;
-            projectSection.innerHTML += projectHTML;
-            modalOverlay.classList.remove('d-none');
-        });
+function defineEventListeners(projectSide, previewImg, bgImg, projectSection, modalOverlay, index) {
+    projectSide.addEventListener('mouseenter', () => {
+        previewImg.classList.remove('d-none');
+        bgImg.classList.remove('d-none');
+    });
+    projectSide.addEventListener('mouseleave', () => {
+        previewImg.classList.add('d-none');
+        bgImg.classList.add('d-none');
+    });
+    projectSide.addEventListener('click', () => {
+        document.body.classList.add('modal-open');
+        const projectHTML = projectModalTemplate(projects[index], index);
+        projectSection.innerHTML += projectHTML;
+        modalOverlay.classList.remove('d-none');
     });
 }
 
@@ -130,46 +76,8 @@ function nextProject(index) {
     if (nextIndex >= projects.length) {
         nextIndex = 0;
     }
-    const projectHTML = `
-            <div class="project-modal">
-                <div class="left-modal-side">
-                            <h2 class="project-index">0${nextIndex + 1}</h2>
-                            <h3 class="project-modal-name">${projects[nextIndex].name}</h3>
-                            <span class="modal-project-info">
-                                <h3 class="title">${translate ? translate('projects.modal.about') : 'What is this project about?'}</h3>
-                                <p class="description">
-                                    ${projects[nextIndex].description}
-                                </p>
-                            </span>
-                            <span class="used-technologies">
-                                ${projects[nextIndex].technologies.map(tech => `
-                                    <span class="technologie-container">
-                                        <img class="technologie-icon" src="${tech.icon}" alt="${tech.name}">
-                                        <p class="technologie-name">${tech.name}</p>
-                                    </span>
-                                `).join('')}
-                            </span>
-                            <div class="project-btn-container">
-                                <a href="${projects[nextIndex].githubUrl}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
-                                    <span class="project-btn">${translate ? translate('projects.modal.github') : 'GitHub'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="GitHub">
-                                    </span>
-                                </a>
-                                <a href="${projects[nextIndex].liveUrl}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
-                                    <span class="project-btn">${translate ? translate('projects.modal.liveTest') : 'Live Test'}<img class="arrow-icon" src="./assets/img/icons/arrow_outward_green.svg" alt="Live Test">    
-                                    </span>
-                                </a>
-                            </div>
-                            <span class="next-project-responsive d-none" onclick="nextProject(${nextIndex})">${translate ? translate('projects.modal.nextProject') : 'Next project'}<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
-                        </div>
-                    <div class="modal-right-side">
-                        <img class="close-btn" src="./assets/img/icons/default_icon.svg" alt="close icon" onclick="closeModal()" onmouseenter="this.src='./assets/img/icons/default_hover_icon.svg'" onmouseleave="this.src='./assets/img/icons/default_icon.svg'">
-                        <img class="modal-preview-img" src="${projects[nextIndex].modalImg}" alt="${projects[nextIndex].name} Preview">
-                        <span class="next-project" onclick="nextProject(${nextIndex})">${translate ? translate('projects.modal.nextProject') : 'Next project'}<img class="next-icon" src="./assets/img/icons/right_arrow_green.svg" alt="arrow icon"></span>
-                    </div>
-
-                </div>`;
+    const projectHTML = projectModalTemplate(projects[nextIndex], nextIndex);
     modal.innerHTML = '';
-    // modal.innerHTML = projectHTML;
     modal.outerHTML = projectHTML;
 }
 
@@ -187,10 +95,6 @@ function deletePreviewImages() {
         renderProjects();
     }
 }
-
-
-
-
 
 document.addEventListener('DOMContentLoaded', loadProjects);
 window.addEventListener('resize', deletePreviewImages);

@@ -3,82 +3,59 @@ let references = [];
 let currentReferenceIndex = 0;
 
 async function loadReferences() {
-
     try {
         const response = await fetch('./data/reference.json');
         const data = await response.json();
         references = data[currentLanguage];
-
         renderReferences();
         renderIndicators();
-
     } catch (error) {
         console.error('Error loading references:', error);
     }
 }
 
-
 function renderReferences() {
     const referenceCollection = document.querySelector('.reference-collection');
-    // const visibleReferences = getVisibleReferences();
     if (!referenceCollection) return;
-
-    // Zeige 3 Elemente für den Slider an
-    const allRefs = getReferencePosititon(); //getExtendedReferences(); // 3 Elemente
     referenceCollection.innerHTML = '';
-
-    allRefs.forEach((reference, index) => {
-        let position;
-        let isActive = false;
-
-        switch (index) {
-            case 0: position = 'outer-left'; break;
-            case 1: position = 'left'; break;
-            case 2: position = 'center'; isActive = true; break;
-            case 3: position = 'right'; break;
-            case 4: position = 'outer-right'; break;
-        }
-
-
-        const referenceHTML = `
-            <div class="single-reference ${position} ${isActive ? 'active' : ''}">
-                ${isActive ? '<img class="quotes-icon" src="./assets/img/icons/quotes.svg" alt="">' : ''}
-                <p class="reference-text">${reference.reference}</p>
-                <div class="reference-info">
-                    <span class="horizontal-line"></span>
-                    <p class="reference-name">${reference.name} - ${reference.role}</p>
-                </div>
-            </div>
-        `;
-        referenceCollection.innerHTML += referenceHTML;
+    getReferencePosititon().forEach((reference, index) => {
+        const { position, isActive } = getPositionData(index);
+        referenceCollection.innerHTML += referenceCardTemplate(reference, position, isActive);
     });
+}
+
+function getPositionData(index) {
+    let position;
+    let isActive = false;
+    switch (index) {
+        case 0: position = 'outer-left'; break;
+        case 1: position = 'left'; break;
+        case 2: position = 'center'; isActive = true; break;
+        case 3: position = 'right'; break;
+        case 4: position = 'outer-right'; break;
+    }
+    return { position, isActive };
 }
 
 function getReferencePosititon() {
     const extendedRefs = [];
     const totalRefs = references.length;
-    
-    // Berechne die 5 Positionen basierend auf currentReferenceIndex
-    // Position 2 (center) sollte immer der currentReferenceIndex sein
     for (let i = 0; i < 5; i++) {
-        // -2, -1, 0, +1, +2 relativ zum currentReferenceIndex
-        let relativeIndex = i - 2; // Das macht aus [0,1,2,3,4] -> [-2,-1,0,1,2]
+        let relativeIndex = i - 2;
         let actualIndex = (currentReferenceIndex + relativeIndex + totalRefs) % totalRefs;
         extendedRefs.push({
             ...references[actualIndex],
-            id: actualIndex // Original-Index für Debugging
+            id: actualIndex
         });
     }
-    
     return extendedRefs;
 }
 
 function renderIndicators() {
     const sliderIndicator = document.getElementById('slider_indicator');
-
     let indicatorsHTML = '';
     references.forEach((reference, index) => {
-        indicatorsHTML += `<span class="indicator ${index === currentReferenceIndex ? 'active' : ''}">•</span>`;
+        indicatorsHTML += indicatorTemplate(index, currentReferenceIndex);
     });
     sliderIndicator.innerHTML = indicatorsHTML;
 }
@@ -94,7 +71,6 @@ function nextReference() {
     animateIndividualReferences(currentElements, 'next');
     setTimeout(() => {
         currentReferenceIndex = currentReferenceIndex === references.length - 1 ? 0 : currentReferenceIndex + 1;
-        
         renderReferences();
         updateSliderIndicators();
     }, 350);
@@ -123,98 +99,47 @@ function updateSliderIndicators() {
     });
 }
 
+function setElementStyle(element, translateX, height, opacity) {
+    element.style.transform = `translateX(${translateX}px)`;
+    element.style.height = height;
+    element.style.opacity = opacity;
+}
+
+function getElementRects(elements) {
+    return {
+        active: elements.active.getBoundingClientRect(),
+        left: elements.left.getBoundingClientRect(),
+        right: elements.right.getBoundingClientRect(),
+        outerLeft: elements.outerLeft.getBoundingClientRect(),
+        outerRight: elements.outerRight.getBoundingClientRect()
+    };
+}
+
+function animateNext(elements, r) {
+    elements.right.innerHTML += '<img class="quotes-icon" src="./assets/img/icons/quotes.svg" alt="">';
+    setElementStyle(elements.outerLeft, r.outerLeft.right - r.left.right, '300px', '0');
+    setElementStyle(elements.outerRight, r.right.left - r.outerRight.left, '300px', '0.7');
+    setElementStyle(elements.right, r.active.left - r.right.left, '350px', '1');
+    setElementStyle(elements.active, r.left.right - r.active.right, '300px', '0.7');
+    setElementStyle(elements.left, r.left.right - r.active.right, '300px', '0.7');
+}
+
+function animatePrev(elements, r) {
+    elements.left.innerHTML += '<img class="quotes-icon" src="./assets/img/icons/quotes.svg" alt="">';
+    setElementStyle(elements.outerRight, r.outerRight.right - r.right.left, '300px', '0');
+    setElementStyle(elements.outerLeft, r.left.right - r.outerLeft.right, '300px', '0.7');
+    setElementStyle(elements.left, r.active.right - r.left.right, '350px', '1');
+    setElementStyle(elements.active, r.right.right - r.active.right, '300px', '0.7');
+    setElementStyle(elements.right, r.right.right - r.active.right, '300px', '0.7');
+}
+
 function animateIndividualReferences(elements, direction) {
-    // Aktuelle Positionen ermitteln
-    const activeRect = elements.active.getBoundingClientRect();
-    const leftRect = elements.left.getBoundingClientRect();
-    const rightRect = elements.right.getBoundingClientRect();
-    const outerLeftRect = elements.outerLeft.getBoundingClientRect();
-    const outerRightRect = elements.outerRight.getBoundingClientRect();
-    const quotesIcon = elements.active.querySelector('.quotes-icon');
-    quotesIcon.remove();
-
-
+    const rects = getElementRects(elements);
+    elements.active.querySelector('.quotes-icon').remove();
     if (direction === 'next') {
-        elements.right.innerHTML += '<img class="quotes-icon" src="./assets/img/icons/quotes.svg" alt="">';
-
-        // Präzise Berechnung der Bewegungsdistanzen
-        const rightToActiveDistance = activeRect.left - rightRect.left;
-        const activeToLeftDistance = leftRect.right - activeRect.right;
-        const outerRightToRightDistance = rightRect.left - outerRightRect.left;
-        const leftToOuterLeftDistance = outerLeftRect.right - leftRect.right;
-
-
-        if (elements.outerLeft) {
-            elements.outerLeft.style.transform = `translateX(${leftToOuterLeftDistance}px)`;
-            elements.outerLeft.style.height = '300px';
-            elements.outerLeft.style.opacity = '0';
-        }
-
-        if (elements.outerRight) {
-            elements.outerRight.style.transform = `translateX(${outerRightToRightDistance}px)`;
-            elements.outerRight.style.height = '300px';
-            elements.outerRight.style.opacity = '0.7';
-        }
-
-        if (elements.right) {
-            elements.right.style.transform = `translateX(${rightToActiveDistance}px)`;
-            elements.right.style.height = '350px';
-            elements.right.style.opacity = '1';
-        }
-
-        if (elements.active) {
-
-            elements.active.style.transform = `translateX(${activeToLeftDistance}px)`;
-            elements.active.style.height = '300px';
-            elements.active.style.opacity = '0.7';
-        }
-
-        if (elements.left) {
-            elements.left.style.transform = `translateX(${activeToLeftDistance}px)`;
-            elements.left.style.height = '300px';
-            elements.left.style.opacity = '0.7';
-        }
-    } else { // prev
-        // Präzise Berechnung der Bewegungsdistanzen
-        elements.left.innerHTML += '<img class="quotes-icon" src="./assets/img/icons/quotes.svg" alt="">';
-
-        const leftToActiveDistance = activeRect.right - leftRect.right;
-        const activeToRightDistance = rightRect.right - activeRect.right;
-        const rightToOuterRightDistance = outerRightRect.right - rightRect.left;
-        const outerLeftToLeftDistance = leftRect.right - outerLeftRect.right;
-
-        if (elements.outerRight) {
-            elements.outerRight.style.transform = `translateX(${rightToOuterRightDistance}px)`;
-            elements.outerRight.style.height = '300px';
-            elements.outerRight.style.opacity = '0';
-        }
-
-        if (elements.outerLeft) {
-            elements.outerLeft.style.transform = `translateX(${outerLeftToLeftDistance}px)`;
-            elements.outerLeft.style.height = '300px';
-            elements.outerLeft.style.opacity = '0.7';
-        }
-
-        // Left → Active
-        if (elements.left) {
-            elements.left.style.transform = `translateX(${leftToActiveDistance}px)`;
-            elements.left.style.height = '350px';
-            elements.left.style.opacity = '1';
-        }
-
-        // Active → Right  
-        if (elements.active) {
-            elements.active.style.transform = `translateX(${activeToRightDistance}px)`;
-            elements.active.style.height = '300px';
-            elements.active.style.opacity = '0.7';
-        }
-
-        // Right → Out
-        if (elements.right) {
-            elements.right.style.transform = `translateX(${activeToRightDistance}px)`;
-            elements.right.style.height = '300px';
-            elements.right.style.opacity = '0.7';
-        }
+        animateNext(elements, rects);
+    } else {
+        animatePrev(elements, rects);
     }
 }
 

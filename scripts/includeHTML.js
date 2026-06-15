@@ -32,6 +32,6 @@ function includeHTML() {
         });
     });
 
-    if (total === 0) resolve(); // sofort fertig, wenn nichts zu laden
+    if (total === 0) resolve();
   });
 }
