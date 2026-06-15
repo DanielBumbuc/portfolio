@@ -64,6 +64,7 @@
 
 .project-btn-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
 }
 
@@ -138,7 +139,7 @@
     height: 530px;
     border-radius: 40px;
     object-fit: cover;
-    object-position: left;
+    object-position: center;
 }
 
 .next-project {
@@ -235,6 +236,7 @@
 
     .modal-preview-img {
         width: 460px;
+        height: 525px;
     }
 
     .used-technologies {
@@ -270,11 +272,17 @@
 
     .modal-preview-img {
         width: 340px;
+        height: 425px;
     }
 
     .used-technologies {
         width: 340px;
     }
+
+    /* .project-btn-container {
+        align-items: center;
+        justify-content: center;
+    } */
 }
 
 @media (max-width: 400px) {
@@ -288,6 +296,7 @@
 
     .modal-preview-img {
         width: 270px;
+        height: 325px;
     }
 
     .project-btn-container {
@@ -295,6 +304,6 @@
     }
 
     .used-technologies {
-        width: 340px;
+        width: 270px;
     }
 }

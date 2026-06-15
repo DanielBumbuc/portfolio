@@ -215,6 +215,7 @@
     .about-img {
         width: 320px;
         height: 320px;
+        object-position: 0px -36px;
     }
 
     .about-bg-img {

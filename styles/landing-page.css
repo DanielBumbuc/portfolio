@@ -586,11 +586,14 @@ a {
     }
 
     .nav-btn-container {
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 16px;
+        /* margin: 0 24px; */
     }
 
     .nav-btn {
-        width: 150px;
+        /* width: 150px; */
         height: 44px;
         padding: 8px 14px;
         font-size: 18px;
@@ -611,7 +614,7 @@ a {
     }
 
     .nav-btn {
-        width: 144px;
+        /* width: 144px; */
         height: 40px;
         padding: 8px 14px;
         font-size: 16px;
