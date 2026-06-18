@@ -59,6 +59,7 @@ function initMarquee() {
         marqueeFrameId = null;
     }
     marqueeArr = [];
+    if (!marqueeContainer) return;
     marqueeContainer.innerHTML = '';
     for (let index = 0; index < marqueeLength; index++) {
         pushMarqueeContent();
@@ -133,9 +134,6 @@ function translate(key) {
     }
     return value || key;
 }
-
-
-
 
 function setBurgerMenu() {
     const burgerMenuIcon = document.querySelector('.burger-menu-icon');

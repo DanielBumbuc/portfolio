@@ -5,14 +5,6 @@ function updateElementText(selector, translationKey) {
     }
 }
 
-// function updatePlaceholder(selector, translationKey) {
-//     const element = document.querySelector(selector);
-//     if (element) {
-//         element.placeholder = translate(translationKey);
-//         element.setAttribute('data-placeholder', translate(translationKey));
-//     }
-// }
-
 function updatePlaceholder(selector, translationKey) {
     const element = document.querySelector(selector);
     if (!element) return;
