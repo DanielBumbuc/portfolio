@@ -1,6 +1,7 @@
 
 let references = [];
 let currentReferenceIndex = 0;
+let isAnimating = false;
 
 /**
  * Fetches the references data from the JSON file, filters it by the current language,
@@ -85,42 +86,48 @@ function renderIndicators() {
 }
 
 /**
- * Advances the slider to the next reference by animating the current elements,
- * then re-rendering after the animation completes.
+ * Queries and returns all five currently rendered slider card elements.
+ * @returns {{ outerLeft: HTMLElement, left: HTMLElement, active: HTMLElement, right: HTMLElement, outerRight: HTMLElement }}
  */
-function nextReference() {
-    const currentElements = {
+function getCurrentSliderElements() {
+    return {
         outerLeft: document.querySelector('.single-reference.outer-left'),
         left: document.querySelector('.single-reference.left'),
         active: document.querySelector('.single-reference.active'),
         right: document.querySelector('.single-reference.right'),
         outerRight: document.querySelector('.single-reference.outer-right')
     };
-    animateIndividualReferences(currentElements, 'next');
+}
+
+/**
+ * Advances the slider to the next reference by animating the current elements,
+ * then re-rendering after the animation completes. Blocked while animating.
+ */
+function nextReference() {
+    if (isAnimating) return;
+    isAnimating = true;
+    animateIndividualReferences(getCurrentSliderElements(), 'next');
     setTimeout(() => {
         currentReferenceIndex = currentReferenceIndex === references.length - 1 ? 0 : currentReferenceIndex + 1;
         renderReferences();
         updateSliderIndicators();
+        isAnimating = false;
     }, 350);
 }
 
 /**
  * Moves the slider to the previous reference by animating the current elements,
- * then re-rendering after the animation completes.
+ * then re-rendering after the animation completes. Blocked while animating.
  */
 function prevReference() {
-    const currentElements = {
-        outerLeft: document.querySelector('.single-reference.outer-left'),
-        left: document.querySelector('.single-reference.left'),
-        active: document.querySelector('.single-reference.active'),
-        right: document.querySelector('.single-reference.right'),
-        outerRight: document.querySelector('.single-reference.outer-right')
-    };
-    animateIndividualReferences(currentElements, 'prev');
+    if (isAnimating) return;
+    isAnimating = true;
+    animateIndividualReferences(getCurrentSliderElements(), 'prev');
     setTimeout(() => {
         currentReferenceIndex = currentReferenceIndex === 0 ? references.length - 1 : currentReferenceIndex - 1;
         renderReferences();
         updateSliderIndicators();
+        isAnimating = false;
     }, 350);
 }
 
