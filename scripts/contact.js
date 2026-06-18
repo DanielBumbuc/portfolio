@@ -31,44 +31,42 @@ async function validateForm(event) {
 function checkFormValidation(name, message) {
     if (!name || emailState !== 'valid' || !message) {
         if (!name) {
-            showFieldError('name_input', translate('contact.validation.nameRequired'));
+            showFieldError('name_input', 'contact.validation.nameRequired');
         }
         if (emailState === null || emailState === 'empty') {
-            showFieldError('email_input', translate('contact.validation.emailRequired'));
+            showFieldError('email_input', 'contact.validation.emailRequired');
         } else if (emailState === 'invalid') {
-            showFieldError('email_input', translate('contact.validation.emailInvalid'));
+            showFieldError('email_input', 'contact.validation.emailInvalid');
         }
         if (!message) {
-            showFieldError('message_input', translate('contact.validation.messageRequired'));
+            showFieldError('message_input', 'contact.validation.messageRequired');
         }
         emailState = null;
         return false;
     }
 }
 
-function handleBlurWithError(input, defaultPlaceholder, errorKey) {
-    let errorMessage;
-    if (errorKey === 'nameRequired') {
-        errorMessage = translate('contact.validation.nameRequired') || 'Please enter your name';
-    } else if (errorKey === 'messageRequired') {
-        errorMessage = translate('contact.validation.messageRequired') || 'Please enter your message';
-    } else {
-        errorMessage = errorKey;
-    }
-    styleError(input, errorMessage, defaultPlaceholder);
+function handleBlurWithError(input, placeholderKey, errorKey) {
+    const defaultPlaceholder = translate(placeholderKey);
+    const fullKey = 'contact.validation.' + errorKey;
+    styleError(input, translate(fullKey), defaultPlaceholder, fullKey);
 }
 
-function styleError(input, errorMessage, defaultPlaceholder) {
+
+
+function styleError(input, errorMessage, defaultPlaceholder, translationKey) {
     if (!input.value.trim()) {
         input.placeholder = errorMessage;
         input.style.color = "rgba(236, 123, 123, 0.8)";
         input.style.borderColor = "#ec7b7b";
         input.classList.add('error-state');
+        input.setAttribute('data-error-key', translationKey);  // ← jetzt gesetzt
     } else {
         input.placeholder = defaultPlaceholder;
         input.style.color = "#FFFFFF";
         input.style.borderColor = "#3DCFB6";
         input.classList.remove('error-state');
+        input.removeAttribute('data-error-key');
     }
 }
 
@@ -76,6 +74,7 @@ function clearError(input) {
     input.style.color = "#FFFFFF";
     input.style.borderColor = "#3DCFB6";
     input.classList.remove('error-state');
+    input.removeAttribute('data-error-key');
 }
 
 function isValidEmail(email) {
@@ -83,21 +82,22 @@ function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email.value.trim() === '') {
         emailState = 'empty';
-        showFieldError('email_input', translate('contact.validation.emailRequired'));
+        showFieldError('email_input', 'contact.validation.emailRequired');
         return false;
     } else if (!emailRegex.test(email.value.trim())) {
         emailState = 'invalid';
-        showFieldError('email_input', translate('contact.validation.emailInvalid'));
+        showFieldError('email_input', 'contact.validation.emailInvalid');
         return false;
     }
     emailState = 'valid';
     validMail = true;
 }
 
-function showFieldError(inputId, errorMessage) {
+function showFieldError(inputId, translationKey) {
     const input = document.getElementById(inputId);
     input.classList.add('error-state');
-    input.placeholder = errorMessage;
+    input.placeholder = translate(translationKey);
+    input.setAttribute('data-error-key', translationKey);
     input.value = '';
 }
 

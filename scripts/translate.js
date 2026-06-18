@@ -5,12 +5,24 @@ function updateElementText(selector, translationKey) {
     }
 }
 
+// function updatePlaceholder(selector, translationKey) {
+//     const element = document.querySelector(selector);
+//     if (element) {
+//         element.placeholder = translate(translationKey);
+//         element.setAttribute('data-placeholder', translate(translationKey));
+//     }
+// }
+
 function updatePlaceholder(selector, translationKey) {
     const element = document.querySelector(selector);
-    if (element) {
+    if (!element) return;
+    const errorKey = element.getAttribute('data-error-key');
+    if (element.classList.contains('error-state') && errorKey) {
+        element.placeholder = translate(errorKey);
+    } else {
         element.placeholder = translate(translationKey);
-        element.setAttribute('data-placeholder', translate(translationKey));
     }
+    element.setAttribute('data-placeholder', translate(translationKey));
 }
 
 function updatePrivacyText(selector) {
