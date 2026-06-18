@@ -73,3 +73,28 @@ function referenceCardTemplate(reference, position, isActive) {
 function indicatorTemplate(index, currentIndex) {
     return `<span class="indicator ${index === currentIndex ? 'active' : ''}">•</span>`;
 }
+
+function marqueeTemplate(language) {
+    if (language === 'DE') {
+        return `<span class="marquee-content">
+                    Verfügbar für Remote-Arbeit
+                    <span class="separator">•</span>
+                    Frontend Entwickler
+                    <span class="separator">•</span>
+                    Ansässig in Sindelfingen
+                    <span class="separator">•</span>
+                    Offen für Umzug
+                    <span class="separator">•</span>
+                </span>`;
+    }
+    return `<span class="marquee-content">
+                    Available for remote work
+                    <span class="separator">•</span>
+                    Frontend Developer
+                    <span class="separator">•</span>
+                    Based in Sindelfingen
+                    <span class="separator">•</span>
+                    Open to relocate
+                    <span class="separator">•</span>
+                </span>`;
+}
