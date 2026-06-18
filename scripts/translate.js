@@ -1,3 +1,9 @@
+/**
+ * Finds a DOM element by CSS selector and sets its text content
+ * to the translated value of the given key.
+ * @param {string} selector - A CSS selector for the target element.
+ * @param {string} translationKey - A dot-notation translation key.
+ */
 function updateElementText(selector, translationKey) {
     const element = document.querySelector(selector);
     if (element) {
@@ -5,6 +11,14 @@ function updateElementText(selector, translationKey) {
     }
 }
 
+/**
+ * Updates the placeholder of an input element. If the element currently
+ * has an error state with a stored error key, the error message is re-translated
+ * instead of the default placeholder, ensuring language switches preserve errors.
+ * Also updates the data-placeholder attribute with the default translated value.
+ * @param {string} selector - A CSS selector for the target input element.
+ * @param {string} translationKey - A dot-notation translation key for the default placeholder.
+ */
 function updatePlaceholder(selector, translationKey) {
     const element = document.querySelector(selector);
     if (!element) return;
@@ -17,6 +31,11 @@ function updatePlaceholder(selector, translationKey) {
     element.setAttribute('data-placeholder', translate(translationKey));
 }
 
+/**
+ * Renders the privacy policy checkbox label as HTML, embedding a translated
+ * anchor link for the privacy policy page.
+ * @param {string} selector - A CSS selector for the label element.
+ */
 function updatePrivacyText(selector) {
     const element = document.querySelector(selector);
     if (element) {
@@ -28,6 +47,10 @@ function updatePrivacyText(selector) {
     }
 }
 
+/**
+ * Updates all translatable text content on the main index page,
+ * including navigation, sections, the contact form, placeholders, and footer.
+ */
 function updatePageTexts() {
     updateElementText('.nav-links li:nth-child(1) a', 'navigation.about');
     updateElementText('.nav-links li:nth-child(2) a', 'navigation.skills');
@@ -74,6 +97,9 @@ function updatePageTexts() {
     updateElementText('.footer-links li:nth-child(4) a', 'footer.links.legal');
 }
 
+/**
+ * Updates all translatable text content on the legal (imprint) page.
+ */
 function updateLegalPageTexts() {
     updateElementText('.imprint-headline', 'legal.title');
     updateElementText('.privacy-headline', 'legal.privacyPolicy.title');

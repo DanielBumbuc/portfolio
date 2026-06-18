@@ -1,3 +1,12 @@
+/**
+ * Returns the HTML string for a single project card in the project list.
+ * @param {Object} project - The project data object.
+ * @param {string} project.name - The project name.
+ * @param {string} project.image - The URL of the preview image.
+ * @param {Array<{name: string}>} project.technologies - The list of technologies used.
+ * @param {number} index - The index of the project in the projects array.
+ * @returns {string} The HTML string for the project card.
+ */
 function projectCardTemplate(project, index) {
     return `
         <span class="single-project-container" data-project="${index}">
@@ -15,6 +24,18 @@ function projectCardTemplate(project, index) {
     `;
 }
 
+/**
+ * Returns the HTML string for the full project detail modal.
+ * @param {Object} project - The project data object.
+ * @param {string} project.name - The project name.
+ * @param {string} project.description - The project description.
+ * @param {string} project.modalImg - The URL of the modal preview image.
+ * @param {string} project.githubUrl - The GitHub repository URL.
+ * @param {string} project.liveUrl - The live demo URL.
+ * @param {Array<{name: string, icon: string}>} project.technologies - The list of technologies used.
+ * @param {number} index - The index of the project, used for navigation and display.
+ * @returns {string} The HTML string for the project modal.
+ */
 function projectModalTemplate(project, index) {
     return `
         <div class="project-modal">
@@ -57,6 +78,16 @@ function projectModalTemplate(project, index) {
     `;
 }
 
+/**
+ * Returns the HTML string for a single reference card in the slider.
+ * @param {Object} reference - The reference data object.
+ * @param {string} reference.reference - The reference quote text.
+ * @param {string} reference.name - The name of the person giving the reference.
+ * @param {string} reference.role - The role/title of the person.
+ * @param {string} position - The CSS position class, e.g. 'center', 'left', 'outer-right'.
+ * @param {boolean} isActive - Whether this card is the currently active (center) card.
+ * @returns {string} The HTML string for the reference card.
+ */
 function referenceCardTemplate(reference, position, isActive) {
     return `
         <div class="single-reference ${position} ${isActive ? 'active' : ''}">
@@ -70,10 +101,22 @@ function referenceCardTemplate(reference, position, isActive) {
     `;
 }
 
+/**
+ * Returns the HTML string for a single slider dot indicator.
+ * @param {number} index - The index of this indicator.
+ * @param {number} currentIndex - The index of the currently active reference.
+ * @returns {string} The HTML string for the indicator span.
+ */
 function indicatorTemplate(index, currentIndex) {
     return `<span class="indicator ${index === currentIndex ? 'active' : ''}">•</span>`;
 }
 
+/**
+ * Returns the HTML string for a single marquee content span
+ * in the given language.
+ * @param {'EN'|'DE'} language - The language code to render content for.
+ * @returns {string} The HTML string for the marquee content span.
+ */
 function marqueeTemplate(language) {
     if (language === 'DE') {
         return `<span class="marquee-content">

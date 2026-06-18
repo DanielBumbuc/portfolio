@@ -1,3 +1,8 @@
+/**
+ * Initializes the legal page by loading HTML partials, translations,
+ * setting the language state, and updating all legal page texts.
+ * @returns {Promise<void>}
+ */
 async function initLegal() {
     await includeHTML();
     await loadTranslations();
@@ -6,6 +11,10 @@ async function initLegal() {
     updatePrivacyPolicyTexts();
 }
 
+/**
+ * Shows the privacy policy in the current language and hides the other.
+ * Does nothing if either policy element is not found in the DOM.
+ */
 function updatePrivacyPolicyTexts() {
     let germanPrivacyPolicy = document.getElementById('german_privacy_policy');
     let englishPrivacyPolicy = document.getElementById('english_privacy_policy');
