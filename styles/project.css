@@ -139,8 +139,40 @@
     }
 }
 
+@media (max-width: 1350px) {
+    .project-title {
+        margin: 48px 0 0 0;
+    }
+
+    .project-content {
+        margin: 24px 0 0 0;
+    }
+}
+
 @media (max-width: 648px) {
     .main-project-info {
         font-size: 16px;
+    }
+
+    .projects {
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .project-container {
+        width: 420px;
+    }
+}
+
+@media (max-width: 520px) {
+    .project-container {
+        width: 320px;
+    }
+}
+
+@media (max-width: 400px) {
+    .project-container {
+        width: 280px;
     }
 }

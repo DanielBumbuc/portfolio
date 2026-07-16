@@ -269,16 +269,24 @@ input:-webkit-autofill:focus {
         flex-direction: column;
     }
 
+    .contact-title {
+        margin: 48px 0 0 0;
+    }
+
     .contact-container {
         height: auto;
         margin: 0;
     }
 
     .contact-content {
-        margin-bottom: 48px;
+        margin: 24px 0;
     }
 
     .contact-form {
+        margin: 0;
+    }
+
+    .contact-btn {
         margin: 0;
     }
 }

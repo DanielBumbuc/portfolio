@@ -134,7 +134,7 @@
     }
 
     .about-content {
-        margin: 24px 0 96px 0;
+        margin: 24px 0 0 0;
         margin-left: 0;
     }
 
@@ -151,7 +151,7 @@
     }
 
     .about-info {
-        margin-top: 48px;
+        margin: 48px 0 0 0;
     }
 
     .about-title {
@@ -177,8 +177,6 @@
 
     .about-content {
         width: 420px;
-        margin: 24px 0 96px 0;
-
     }
 
     .main-about-info {
@@ -215,8 +213,6 @@
 
     .about-content {
         width: 320px;
-        margin: 24px 0 96px 0;
-
     }
 }
 
@@ -238,7 +234,5 @@
 
     .about-content {
         width: 280px;
-        margin: 24px 0 96px 0;
-
     }
 }

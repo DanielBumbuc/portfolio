@@ -152,6 +152,11 @@
 
     .reference-title {
         font-size: 48px;
+        margin: 0 24px;
+    }
+
+    .references {
+        margin: 48px 0 0 0;
     }
 }
 
@@ -185,6 +190,7 @@
 @media (max-width: 648px) {
     .reference-collection {
         gap: 24px;
+        margin: 48px 0;
     }
 
     .single-reference.right,
@@ -241,5 +247,11 @@
     .single-reference.left,
     .single-reference.center {
         flex-basis: 280px;
+    }
+
+    .quotes-icon {
+        width: 42px;
+        top: -10px;
+        left: -10px;
     }
 }

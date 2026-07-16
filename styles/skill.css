@@ -170,11 +170,12 @@
 
     .skill-collection {
         justify-content: center;
-        margin: 80px 0 0 0;
+        margin: 48px 0 0 0;
+        padding: 0;
     }
 
     .skills-title {
-        margin: 96px 0 0 0;
+        margin: 48px 0 0 0;
     }
 
     .skill-content {
@@ -218,7 +219,6 @@
 
     .skill-collection {
         width: 320px;
-        padding: 48px 0 0 0;
     }
 
     .skill-icons {
