@@ -76,9 +76,11 @@
             },
             "validation": {
                 "nameRequired": "Please enter your name",
+                "nameTooShort": "Name must be at least 3 characters long",
                 "emailRequired": "Please enter your email address",
                 "emailInvalid": "Please enter a valid email address",
                 "messageRequired": "Please enter your message",
+                "messageTooShort": "Your message must be at least 10 characters long",
                 "privacyRequired": "Please accept the privacy policy."
             }
         },
@@ -207,9 +209,11 @@
             },
             "validation": {
                 "nameRequired": "Bitte geben Sie Ihren Namen ein",
+                "nameTooShort": "Der Name muss mindestens 3 Zeichen lang sein",
                 "emailRequired": "Bitte geben Sie Ihre E-Mail ein",
                 "emailInvalid": "Bitte geben Sie eine gültige E-Mail ein",
                 "messageRequired": "Bitte geben Sie Ihre Nachricht ein",
+                "messageTooShort": "Ihre Nachricht muss mindestens 10 Zeichen lang sein",
                 "privacyRequired": "Bitte akzeptieren Sie die Datenschutzerklärung"
             }
         },

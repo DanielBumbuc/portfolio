@@ -41,40 +41,71 @@ async function validateForm(event) {
 /**
  * Checks whether name, email, and message fields are valid and shows
  * field-level errors for any that are not. Resets emailState on failure.
+ * Name must be at least 3 characters, message at least 10 characters.
  * @param {string} name - The trimmed value of the name field.
  * @param {string} message - The trimmed value of the message field.
- * @returns {false|undefined} Returns false if validation fails, undefined if valid.
+ * @returns {true|undefined} Returns true if validation fails (errors present), undefined if valid.
  */
 function checkFormValidation(name, message) {
-    if (!name || emailState !== 'valid' || !message) {
-        if (!name) {
-            showFieldError('name_input', 'contact.validation.nameRequired');
-        }
-        if (emailState === null || emailState === 'empty') {
-            showFieldError('email_input', 'contact.validation.emailRequired');
-        } else if (emailState === 'invalid') {
-            showFieldError('email_input', 'contact.validation.emailInvalid');
-        }
-        if (!message) {
-            showFieldError('message_input', 'contact.validation.messageRequired');
-        }
+    const nameInvalid = !name || name.length < 3;
+    const messageInvalid = !message || message.length < 10;
+    if (nameInvalid || emailState !== 'valid' || messageInvalid) {
+        showFieldErrors(name, message);
         emailState = null;
-        return false;
+        return true;
+    }
+}
+
+/**
+ * Shows field-level error messages for name, email, and message inputs
+ * based on their current values and the global emailState.
+ * @param {string} name - The trimmed value of the name field.
+ * @param {string} message - The trimmed value of the message field.
+ */
+function showFieldErrors(name, message) {
+    if (!name) {
+        showFieldError('name_input', 'contact.validation.nameRequired');
+    } else if (name.length < 3) {
+        showFieldError('name_input', 'contact.validation.nameTooShort');
+    }
+    if (emailState === null || emailState === 'empty') {
+        showFieldError('email_input', 'contact.validation.emailRequired');
+    } else if (emailState === 'invalid') {
+        showFieldError('email_input', 'contact.validation.emailInvalid');
+    }
+    if (!message) {
+        showFieldError('message_input', 'contact.validation.messageRequired');
+    } else if (message.length < 10) {
+        showFieldError('message_input', 'contact.validation.messageTooShort');
     }
 }
 
 /**
  * Handles the blur event on a form input. Shows a translated error message
- * if the field is empty, or restores the translated default placeholder if filled.
+ * if the field is empty or below the minimum length, or restores the default placeholder if valid.
  * Stores the translation key as a data attribute for later re-translation on language change.
+ * The tooShort translation key is derived by replacing 'Required' with 'TooShort' in the fullKey.
  * @param {HTMLInputElement} input - The input element that lost focus.
  * @param {string} placeholderKey - Translation key for the default placeholder text.
  * @param {string} errorKey - Short error key, e.g. 'nameRequired', appended to 'contact.validation.'.
+ * @param {number} [minLength=0] - Optional minimum character length. Shows a tooShort error if not met.
  */
-function handleBlurWithError(input, placeholderKey, errorKey) {
+function handleBlurWithError(input, placeholderKey, errorKey, minLength = 0) {
     const defaultPlaceholder = translate(placeholderKey);
     const fullKey = 'contact.validation.' + errorKey;
-    styleError(input, translate(fullKey), defaultPlaceholder, fullKey);
+    const tooShortKey = fullKey.replace('Required', 'TooShort');
+    if (!input.value.trim()) {
+        styleError(input, translate(fullKey), defaultPlaceholder, fullKey);
+    } else if (minLength > 0 && input.value.trim().length < minLength) {
+        input.placeholder = translate(tooShortKey);
+        input.style.color = 'rgba(236, 123, 123, 0.8)';
+        input.style.borderColor = '#ec7b7b';
+        input.classList.add('error-state');
+        input.setAttribute('data-error-key', tooShortKey);
+        input.value = '';
+    } else {
+        styleError(input, translate(fullKey), defaultPlaceholder, fullKey);
+    }
 }
 
 
@@ -182,9 +213,9 @@ async function submitContactForm(form) {
     } catch (error) {
         console.error('Error sending email:', error);
         showMessageStatus('Sorry, there was an error sending your message. Please try again later.', 'error');
+        submitBtn.disabled = false;
     } finally {
         btnContent.textContent = originalText || 'Say Hello ;)';
-        submitBtn.disabled = false;
     }
 }
 
@@ -251,6 +282,7 @@ function styleMessageStatus(successDiv) {
 function resetContactForm() {
     document.getElementById('name_input').value = '';
     document.getElementById('email_input').value = '';
+    document.getElementById('email_input').placeholder = translate('contact.form.emailPlaceholder');
     document.getElementById('message_input').value = '';
     document.getElementById('privacy_checkbox').checked = false;
     emailState = null;
@@ -259,4 +291,5 @@ function resetContactForm() {
     inputs.forEach(input => clearError(input));
     const uncheckedError = document.querySelector('.unchecked-error');
     if (uncheckedError) uncheckedError.style.opacity = 0;
+    checkContactBtn();
 }

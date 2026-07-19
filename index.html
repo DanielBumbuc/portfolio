@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./styles/contact.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/scrollbar.css">
+    <link rel="stylesheet" href="./assets/aos/aos.css">
     <script src="script.js"></script>
     <script src="./scripts/translate.js"></script>
     <script src="./scripts/template.js"></script>
@@ -25,7 +26,9 @@
     <script src="./scripts/contact.js"></script>
     <script src="./scripts/legal.js"></script>
     <script src="./scripts/includeHTML.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="./assets/aos/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script>
         (function () {
             emailjs.init("A9E5cKxmNVDxC9HoY");
@@ -39,7 +42,29 @@
     <div class="page-wrapper">
         <header class="landing-page">
             <nav>
-                <div w3-include-html="./navbar.html" class="navbar"></div>
+
+
+                <div class="navbar">
+                    <span class="burger-menu-icon d-none" onclick="openBurgerMenu()"></span>
+                    <div id="left_container" class="left-container">
+                        <div class="language-switcher" onclick="setLanguage()">
+                            <span id="english-btn" class="language-btn active-language">EN</span>
+                            <span id="german-btn" class="language-btn">DE</span>
+                        </div>
+                        <ul class="nav-links">
+                            <li><a href="#about_section" onclick="closeBurgerMenu()">About me</a><span
+                                    class="highlighter">•</span></li>
+                            <li><a href="#skills_section" onclick="closeBurgerMenu()">Skills</a><span
+                                    class="highlighter">•</span></li>
+                            <li><a href="#projects_section" onclick="closeBurgerMenu()">Projects</a><span
+                                    class="highlighter">•</span></li>
+                        </ul>
+                    </div>
+                    <a href="./index.html" class="logo logo-responsive" title="Daniel Bumbuc Logo"></a>
+                </div>
+
+                <!-- <div w3-include-html="./navbar.html" class="navbar"></div> -->
+
 
             </nav>
             <div class="headline-container">
@@ -78,7 +103,7 @@
         </header>
 
         <main class="main-container ">
-            <section id="about_section" class="about-me">
+            <section data-aos="fade-up" id="about_section" class="about-me">
                 <div class="about-img-container">
                     <img class="about-img" src="./assets/img/daniel-bumbuc-portrait.jpg" alt="Daniel Bumbuc Image">
                     <img class="about-bg-img d-none" src="./assets/img/about_bg_img.svg" alt="">
@@ -104,7 +129,7 @@
                 </div>
             </section>
 
-            <section id="skills_section" class="skills">
+            <section data-aos="fade-up" id="skills_section" class="skills">
                 <div class="skill-container">
                     <span class="mid-background"></span>
                     <div class="left-skill-container">
@@ -182,7 +207,7 @@
                     </div>
             </section>
 
-            <section id="projects_section" class="projects">
+            <section data-aos="fade-up" id="projects_section" class="projects">
                 <div class="project-container">
                     <h3 class="project-title">Portfolio</h3>
                     <div class="project-content">
@@ -195,7 +220,7 @@
                 </div>
             </section>
 
-            <section id="references_section" class="references">
+            <section data-aos="fade-up" id="references_section" class="references">
                 <h2 class="reference-title">What my colleagues say about me</h2>
                 <div class="reference-collection"></div>
                 <div class="content-slider">
@@ -208,7 +233,7 @@
                 </div>
             </section>
 
-            <section id="contact_section" class="contact">
+            <section data-aos="fade-up" id="contact_section" class="contact">
                 <div class="contact-container">
                     <h3 class="contact-title">Contact me</h3>
                     <div class="contact-content">
@@ -226,8 +251,7 @@
                         <label class="main-label" for="name">What's your name?</label>
                         <input class="main-input" type="text" id="name_input" name="name"
                             placeholder="Your name goes here" onfocus="this.placeholder=''; clearError(this)"
-                            
-                            onblur="handleBlurWithError(this, 'contact.form.namePlaceholder', 'nameRequired')"
+                            onblur="handleBlurWithError(this, 'contact.form.namePlaceholder', 'nameRequired', 3)"
                             oninput="clearError(this)">
                     </div>
                     <div class="form-group border-style">
@@ -241,8 +265,7 @@
                         <input class="main-input" type="text" id="message_input" name="message"
                             placeholder="Hi Daniel, I am interested in..."
                             onfocus="this.placeholder=''; clearError(this)"
-                            
-                            onblur="handleBlurWithError(this, 'contact.form.messagePlaceholder', 'messageRequired')"
+                            onblur="handleBlurWithError(this, 'contact.form.messagePlaceholder', 'messageRequired', 10)"
                             oninput="clearError(this)" rows="5">
                     </div>
                     <div class="form-group checkbox-container">
@@ -265,4 +288,5 @@
         </footer>
     </div>
 </body>
+
 </html>

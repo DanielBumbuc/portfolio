@@ -18,6 +18,8 @@ async function init() {
     initMarquee();
     setBurgerMenu();
     checkContactBtn();
+    AOS.init();
+
 }
 
 /**
