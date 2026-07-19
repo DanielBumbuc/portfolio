@@ -1,15 +1,8 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
+.bg-img {
     background-color: grey;
     background-image: url('../assets/img/background.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
-    font-family: var(--font-karla), sans-serif;
 }
 
 .legal-footer {

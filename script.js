@@ -6,12 +6,11 @@ let marqueeFrameId = null;
 
 
 /**
- * Initializes the application by loading HTML partials, translations,
+ * Initializes the application by loading translations,
  * setting the language state, loading content, and setting up the UI.
  * @returns {Promise<void>}
  */
 async function init() {
-    await includeHTML();
     await loadTranslations();
     setInitialLanguageState();
     loadCurrentLanguage();

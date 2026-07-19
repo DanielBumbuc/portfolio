@@ -293,3 +293,16 @@ function resetContactForm() {
     if (uncheckedError) uncheckedError.style.opacity = 0;
     checkContactBtn();
 }
+
+function initSubmitBtnFeedback() {
+    const btnContainer = document.querySelector('.btn-container');
+    const submitBtn = btnContainer.querySelector('.contact-btn');
+    btnContainer.addEventListener('click', () => {
+        if (submitBtn.disabled) {
+            const uncheckedError = document.querySelector('.unchecked-error');
+            uncheckedError.style.opacity = 1;
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initSubmitBtnFeedback);

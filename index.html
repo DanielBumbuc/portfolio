@@ -25,7 +25,6 @@
     <script src="./scripts/reference.js"></script>
     <script src="./scripts/contact.js"></script>
     <script src="./scripts/legal.js"></script>
-    <script src="./scripts/includeHTML.js"></script>
     <script src="./assets/aos/aos.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -62,9 +61,6 @@
                     </div>
                     <a href="./index.html" class="logo logo-responsive" title="Daniel Bumbuc Logo"></a>
                 </div>
-
-                <!-- <div w3-include-html="./navbar.html" class="navbar"></div> -->
-
 
             </nav>
             <div class="headline-container">
@@ -284,7 +280,24 @@
         </main>
 
         <footer>
-            <div w3-include-html="./footer.html" class="footer-container"></div>
+            <div class="footer-container">
+                <div class="left-footer-container">
+                    <div class="logo-footer" title="Daniel Bumbuc Logo" onclick="scrollToTop()"></div>
+                    <span class="footer-info">
+                        <p>Web Developer</p>
+                        <p>Sindelfingen Germany</p>
+                    </span>
+                </div>
+                <p class="copy-right">&copy; Daniel Bumbuc 2026</p>
+                <div class="right-footer-container">
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/DanielBumbuc" target="_blank" rel="noopener noreferrer">Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/daniel-bumbuc-558288249/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="mailto:bumbucd@icloud.com">Email</a></li>
+                        <li><a href="./imprint.html">Legal Notice</a></li>
+                    </ul>
+                </div>
+            </div>
         </footer>
     </div>
 </body>

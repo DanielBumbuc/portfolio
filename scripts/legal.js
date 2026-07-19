@@ -1,10 +1,9 @@
 /**
- * Initializes the legal page by loading HTML partials, translations,
+ * Initializes the legal page by loading translations,
  * setting the language state, and updating all legal page texts.
  * @returns {Promise<void>}
  */
 async function initLegal() {
-    await includeHTML();
     await loadTranslations();
     setInitialLanguageState();
     updateLegalPageTexts();
