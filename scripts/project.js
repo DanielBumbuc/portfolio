@@ -1,5 +1,6 @@
 
 let projects = [];
+let scrollY = window.scrollY;
 
 /**
  * Fetches the projects data from the JSON file, filters it by the current language,
@@ -70,9 +71,9 @@ function defineEventListeners(projectSide, previewImg, bgImg, projectSection, mo
     });
     projectSide.addEventListener('click', () => {
         document.body.classList.add('modal-open');
-        const projectHTML = projectModalTemplate(projects[index], index);
-        projectSection.innerHTML += projectHTML;
-        modalOverlay.classList.remove('d-none');
+    const projectHTML = projectModalTemplate(projects[index], index);
+    document.body.insertAdjacentHTML('beforeend', projectHTML);  // ← Fix
+    modalOverlay.classList.remove('d-none');
     });
 }
 
@@ -94,7 +95,6 @@ function closeModal() {
         modalOverlay.classList.add('d-none');
     }
     document.body.classList.remove('modal-open');
-    addProjectEventListeners();
 }
 
 /**

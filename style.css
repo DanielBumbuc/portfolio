@@ -26,7 +26,6 @@ body {
 
 body.modal-open {
     overflow: hidden;
-    height: 100vh;
 }
 
 .fira-code-font {
@@ -81,6 +80,14 @@ footer {
 
 .content-width {
     max-width: 1920px;
+}
+
+#about_section,
+#skills_section,
+#projects_section,
+#references_section,
+#contact_section {
+    scroll-margin-top: 96px; /* gewünschter Abstand */
 }
 
 @media (max-width: 1350px) {

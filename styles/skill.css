@@ -98,7 +98,7 @@
 
 .skill-box {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     width: 120px;
@@ -199,7 +199,7 @@
     }
 
     .growth-skill {
-        margin-top: 48px;
+        margin-top: 12px;
     }
 
     .main-skill-info {
@@ -208,6 +208,18 @@
 
     .contact-text {
         font-size: 16px;
+    }
+
+    .skill-icons {
+        width: 64px;
+    }
+
+    .skill-name {
+        font-size: 20px;
+    }
+
+    .green-skill-text {
+        font-size: 20px;
     }
 }
 
@@ -222,7 +234,15 @@
     }
 
     .skill-icons {
-        width: 72px;
+        width: 60px;
+    }
+
+    .skill-name {
+        font-size: 18px;
+    }
+
+    .green-skill-text {
+        font-size: 18px;
     }
 }
 
@@ -238,6 +258,14 @@
     .skill-box {
         width: 80px;
         height: 70px;
+        margin: 12px 0 0 0;
+    }
+
+    .skill-name {
+        font-size: 16px;
+    }
+
+    .green-skill-text {
         font-size: 16px;
     }
 
