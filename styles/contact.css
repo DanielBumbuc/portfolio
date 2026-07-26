@@ -102,7 +102,7 @@
 .checkbox-text {
     font-size: 16px;
     padding: 0 16px;
-    color: #3DCFB6;
+    color: #D9D9D9;
 }
 
 .unchecked-error {
@@ -205,6 +205,17 @@
 
 .slide-right-animation {
     animation: slideRight 5s ease-in-out forwards;
+}
+
+.privacy-link {
+    color: #3DCFB6;
+    text-decoration: none;
+    font-family: var(--font-karla), sans-serif;
+}
+
+.privacy-link:hover {
+    color: #D9D9D9;
+    text-decoration: underline #3DCFB6;
 }
 
 @keyframes slideRight {

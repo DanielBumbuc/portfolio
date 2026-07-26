@@ -557,13 +557,13 @@ a {
         border: 1px solid #3DCFB6;
     }
 
-    .marquee-btn-content {
+    .nav-btn--auto .marquee-btn-content {
         animation: buttonMarquee 2.5s linear infinite;
         color: #3DCFB6;
         transition: color 0.2s ease-in;
     }
 
-    .nav-btn:hover .marquee-btn-content {
+    .nav-btn--auto:hover .marquee-btn-content {
         animation: none;
         color: #D9D9D9;
     }

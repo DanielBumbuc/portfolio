@@ -43,7 +43,7 @@ function updatePrivacyText(selector) {
         const linkText = translate('contact.form.privacyLinkText');
         const linkUrl = translate('contact.form.privacyLinkUrl');
         const after = translate('contact.form.privacyAfter');
-        element.innerHTML = `${before}<a href="${linkUrl}" target="_blank" rel="noopener noreferrer">${linkText}</a>${after}`;
+        element.innerHTML = `${before}<a href="${linkUrl}" class="privacy-link" target="_blank" rel="noopener noreferrer">${linkText}</a>${after}`;
     }
 }
 
@@ -101,6 +101,16 @@ function updatePageTexts() {
  * Updates all translatable text content on the legal (imprint) page.
  */
 function updateLegalPageTexts() {
+    updateElementText('.nav-links li:nth-child(1) a', 'navigation.about');
+    updateElementText('.nav-links li:nth-child(2) a', 'navigation.skills');
+    updateElementText('.nav-links li:nth-child(3) a', 'navigation.projects');
+    updateElementText('.footer-info p:nth-child(1)', 'footer.role');
+    updateElementText('.footer-info p:nth-child(2)', 'footer.location');
+    updateElementText('.copy-right', 'footer.copyright');
+    updateElementText('.footer-links li:nth-child(1) a', 'footer.links.github');
+    updateElementText('.footer-links li:nth-child(2) a', 'footer.links.linkedin');
+    updateElementText('.footer-links li:nth-child(3) a', 'footer.links.email');
+    updateElementText('.footer-links li:nth-child(4) a', 'footer.links.legal');
     updateElementText('.imprint-headline', 'legal.title');
     updateElementText('.privacy-headline', 'legal.privacyPolicy.title');
     updateElementText('.imprint-section h2', 'legal.imprint.title');
