@@ -61,9 +61,13 @@ function checkCurrentLanguage(englishBtn, germanBtn) {
  */
 function loadCurrentLanguage() {
     localStorage.setItem('language', currentLanguage);
-    loadProjects();
-    loadReferences();
-    updatePageTexts();
+    if (window.location.pathname.includes('imprint.html') || window.location.pathname.includes('privacy.html')) {
+        return;
+    } else {
+        loadProjects();
+        loadReferences();
+        updatePageTexts();
+    }
 }
 
 /**
@@ -238,6 +242,7 @@ function closeBurgerMenu() {
     const overlay = document.getElementById('overlay');
     const leftContainer = document.getElementById('left_container');
     const burgerMenuIcon = document.querySelector('.burger-menu-icon');
+    
     overlay.classList.remove('overlay');
     overlay.classList.add('modal-overlay');
     overlay.classList.add('d-none');

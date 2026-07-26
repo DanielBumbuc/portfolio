@@ -485,8 +485,6 @@ a {
     }
 }
 
-@media (max-width: 1660px) {}
-
 @media (max-width: 1350px) {
     .first-headline {
         font-size: 72px;
@@ -654,5 +652,19 @@ a {
         height: 40px;
         padding: 8px 14px;
         font-size: 16px;
+    }
+}
+
+@media (max-height: 660px) {
+    .headline-container {
+        margin: 96px 0;
+    }
+
+    .left-line {
+        height: 186px;
+    }
+
+    .right-line {
+        height: 124px;
     }
 }

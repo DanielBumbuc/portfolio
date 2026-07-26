@@ -17,10 +17,17 @@
     flex-direction: column;
     width: 100%;
     padding: 140px 140px 0 140px;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .legal-section {
     margin: 24px 0;
+    width: 100%;
+}
+
+.legal-notice-container a {
+    word-break: break-all;
 }
 
 .legal-main-headline {
@@ -35,6 +42,9 @@
     font-weight: 800;
     color: white;
     font-family: var(--font-karla), sans-serif;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    align-self: stretch;      
 }
 
 .imprint {
@@ -60,6 +70,7 @@
     font-weight: 800;
     color: white;
     font-family: var(--font-karla), sans-serif;
+    width: 100%;
 }
 
 .legal-notice-container h3 {
@@ -68,6 +79,7 @@
     font-weight: 700;
     color: white;
     font-family: var(--font-karla), sans-serif;
+    width: 100%;
 }
 
 .legal-notice-container h4 {
@@ -76,6 +88,7 @@
     font-weight: 700;
     color: white;
     font-family: var(--font-karla), sans-serif;
+    width: 100%;
 }
 
 .legal-notice-container p {
