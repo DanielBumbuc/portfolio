@@ -242,11 +242,11 @@ a {
     transition: color 0.2s ease-in;
 }
 
-.nav-btn:not(:hover) .marquee-btn-content {
+/* .nav-btn:not(:hover) .marquee-btn-content {
     animation: none;
     transform: translateX(0);
     transition: transform 2s ease-out;
-}
+} */
 
 .marquee {
     position: absolute;
@@ -435,6 +435,24 @@ a {
     }
 }
 
+@keyframes buttonMarqueeResponsive {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-150%);
+    }
+
+    50.1% {
+        transform: translateX(150%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 @keyframes marqueeScroll {
     from {
         transform: translateX(0);
@@ -483,6 +501,14 @@ a {
     }
 }
 
+@media (min-width: 901px) {
+    .nav-btn:not(:hover) .marquee-btn-content {
+        animation: none;
+        transform: translateX(0);
+        transition: transform 2s ease-out;
+    }
+}
+
 @media (max-width: 900px) {
     .first-headline {
         font-size: 60px;
@@ -525,6 +551,21 @@ a {
     .logo-responsive:hover {
         background-image: url('../assets/img/logo_responsive_hover.svg');
         transition: background-image 0.2s ease;
+    }
+
+    .nav-btn {
+        border: 1px solid #3DCFB6;
+    }
+
+    .marquee-btn-content {
+        animation: buttonMarquee 2.5s linear infinite;
+        color: #3DCFB6;
+        transition: color 0.2s ease-in;
+    }
+
+    .nav-btn:hover .marquee-btn-content {
+        animation: none;
+        color: #D9D9D9;
     }
 }
 
