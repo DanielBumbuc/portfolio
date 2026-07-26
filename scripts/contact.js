@@ -28,9 +28,9 @@ async function validateForm(event) {
     const privacyCheckbox = document.getElementById('privacy_checkbox');
     const uncheckedError = document.querySelector('.unchecked-error');
     event.preventDefault();
+    isValidEmail(document.getElementById('email_input'));
     if (!privacyCheckbox.checked) {
         uncheckedError.style.opacity = 1;
-        event.preventDefault();
         return false;
     }
     if (checkFormValidation(name, message)) return false;
@@ -153,7 +153,7 @@ function clearError(input) {
  */
 function isValidEmail(email) {
     validMail = false;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^(?!.*\.\.)[^\s@:]+@[^\s@:]+\.[^\s@:]+$/;
     if (email.value.trim() === '') {
         emailState = 'empty';
         showFieldError('email_input', 'contact.validation.emailRequired');
@@ -204,18 +204,18 @@ async function submitContactForm(form) {
     const submitBtn = form.querySelector('.contact-btn');
     const btnContent = submitBtn.querySelector('.marquee-btn-content');
     const originalText = btnContent.textContent;
-    btnContent.textContent = 'Sending...';
+    btnContent.textContent = translate('contact.form.sending');
     submitBtn.disabled = true;
     try {
         await getContactParams(form);
-        showMessageStatus('Thank you! Your message has been sent successfully.', 'success');
+        showMessageStatus(translate('contact.messages.success'), 'success');
         resetContactForm();
     } catch (error) {
         console.error('Error sending email:', error);
-        showMessageStatus('Sorry, there was an error sending your message. Please try again later.', 'error');
+        showMessageStatus(translate('contact.messages.error'), 'error');
         submitBtn.disabled = false;
     } finally {
-        btnContent.textContent = originalText || 'Say Hello ;)';
+        btnContent.textContent = originalText || translate('contact.form.submit');
     }
 }
 

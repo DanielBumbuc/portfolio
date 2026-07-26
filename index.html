@@ -247,7 +247,7 @@
                         </p>
                     </div>
                 </div>
-                <form class="contact-form" action="" onsubmit="return validateForm(event)">
+                <form class="contact-form" action="" onsubmit="return validateForm(event)" novalidate>
                     <div class="form-group border-style">
                         <label class="main-label" for="name">What's your name?</label>
                         <input class="main-input" type="text" id="name_input" name="name"
@@ -259,7 +259,7 @@
                         <label class="main-label" for="email">What's your e-mail?</label>
                         <input class="main-input" type="email" novalidate id="email_input" name="email"
                             placeholder="yourmail@mail.com" onfocus="this.placeholder=''; clearError(this)"
-                            onblur="isValidEmail(this, 'yourmail@mail.com')" oninput="clearError(this)" rows="5">
+                             oninput="clearError(this)" rows="5">
                     </div>
                     <div class="form-group border-style">
                         <label class="main-label" for="message">How can I help you?</label>
