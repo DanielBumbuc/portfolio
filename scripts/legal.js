@@ -8,6 +8,7 @@ async function initLegal() {
     setInitialLanguageState();
     updateLegalPageTexts();
     updatePrivacyPolicyTexts();
+    setBurgerMenu();
 }
 
 /**

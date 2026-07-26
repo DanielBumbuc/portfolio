@@ -37,20 +37,20 @@
 </head>
 
 <body onload="init()">
-    <div id="overlay" class="modal-overlay d-none" onclick="closeModal(), closeBurgerMenu()"></div>
-    <div class="page-wrapper">
+    <div id="overlay" class="modal-overlay d-none flex-center" onclick="closeModal(), closeBurgerMenu()"></div>
+    
         <header class="landing-page">
             <nav>
 
 
-                <div class="navbar">
+                <div class="navbar flex-between">
                     <span class="burger-menu-icon d-none" onclick="openBurgerMenu()"></span>
-                    <div id="left_container" class="left-container">
-                        <div class="language-switcher" onclick="setLanguage()">
-                            <span id="english-btn" class="language-btn active-language">EN</span>
-                            <span id="german-btn" class="language-btn">DE</span>
+                    <div id="left_container" class="left-container flex-center">
+                        <div class="language-switcher flex-center" onclick="setLanguage()">
+                            <span id="english-btn" class="language-btn flex-center active-language">EN</span>
+                            <span id="german-btn" class="language-btn flex-center">DE</span>
                         </div>
-                        <ul class="nav-links">
+                        <ul class="nav-links flex-center">
                             <li><a href="#about_section" onclick="closeBurgerMenu()">About me</a><span
                                     class="highlighter">•</span></li>
                             <li><a href="#skills_section" onclick="closeBurgerMenu()">Skills</a><span
@@ -63,33 +63,33 @@
                 </div>
 
             </nav>
-            <div class="headline-container">
+            <div class="headline-container flex-col-center">
                 <h2 class="second-headline">Frontend Developer</h2>
                 <h1 class="first-headline">Daniel Bumbuc</h1>
                 <div class="nav-btn-container">
-                    <a href="#projects_section" class="nav-btn"><span class="marquee-btn-content">Check my
+                    <a href="#projects_section" class="nav-btn"><span class="marquee-btn-content flex-center">Check my
                             work</span></a>
-                    <a href="#contact_section" class="nav-btn"><span class="marquee-btn-content">Contact me</span></a>
+                    <a href="#contact_section" class="nav-btn"><span class="marquee-btn-content flex-center">Contact me</span></a>
                 </div>
             </div>
-            <div class="marquee">
+            <!-- <div class="marquee">
                 <div id="marquee_container" class="marquee-container"></div>
-            </div>
+            </div> -->
             <div class="left-side-container">
-                <span class="arrow-container"><img class="vector" src="./assets/img/vector.svg" alt=""></span>
+                <span class="arrow-container flex-center"><img class="vector" src="./assets/img/vector.svg" alt=""></span>
                 <span class="left-line "></span>
             </div>
             <div class="right-side-container">
-                <span class="contact-links">
+                <span class="contact-links flex-col-center">
                     <a class="mailto-link" href="mailto:bumbucd@icloud.com">bumbucd@icloud.com</a>
                     <div class="mailto-icon" onclick="window.location.href='mailto:bumbucd@icloud.com'">
                         <span class="icon-highlighter">•</span>
                     </div>
-                    <a class="github-icon" href="https://github.com/DanielBumbuc" target="_blank"
+                    <a class="github-icon flex-center" href="https://github.com/DanielBumbuc" target="_blank"
                         rel="noopener noreferrer">
                         <span class="icon-highlighter">•</span>
                     </a>
-                    <a class="linkedin-icon" href="https://www.linkedin.com/in/daniel-bumbuc-558288249/" target="_blank"
+                    <a class="linkedin-icon flex-center" href="https://www.linkedin.com/in/daniel-bumbuc-558288249/" target="_blank"
                         rel="noopener noreferrer">
                         <span class="icon-highlighter">•</span>
                     </a>
@@ -97,10 +97,15 @@
                 <span class="right-line "></span>
             </div>
         </header>
+        <div class="bg-image"></div>
 
+        <div class="marquee">
+                <div id="marquee_container" class="marquee-container"></div>
+            </div>
+<div class="page-wrapper">
         <main class="main-container ">
             <section data-aos="fade-up" id="about_section" class="about-me">
-                <div class="about-img-container">
+                <div class="about-img-container flex-col-center">
                     <img class="about-img" src="./assets/img/daniel-bumbuc-portrait.jpg" alt="Daniel Bumbuc Image">
                     <img class="about-bg-img d-none" src="./assets/img/about_bg_img.svg" alt="">
                 </div>
@@ -125,7 +130,7 @@
                 </div>
             </section>
 
-            <section data-aos="fade-up" id="skills_section" class="skills">
+            <section data-aos="fade-up" id="skills_section" class="skills flex-between">
                 <div class="skill-container">
                     <span class="mid-background"></span>
                     <div class="left-skill-container">
@@ -149,7 +154,7 @@
                                     </p>
                                 </span>
                             </div>
-                            <a href="#contact_section" class="nav-btn contact-request-btn"><span
+                            <a href="#contact_section" class="nav-btn contact-request-btn flex-center"><span
                                     class="marquee-btn-content">Let's Talk</span></a>
                         </div>
                     </div>
@@ -216,20 +221,20 @@
                 </div>
             </section>
 
-            <section data-aos="fade-up" id="references_section" class="references">
+            <section data-aos="fade-up" id="references_section" class="references flex-col-center">
                 <h2 class="reference-title">What my colleagues say about me</h2>
-                <div class="reference-collection"></div>
-                <div class="content-slider">
+                <div class="reference-collection flex-center"></div>
+                <div class="content-slider flex-center">
                     <img class="prev-slider" onclick="prevReference()" src="./assets/img/icons/left_arrow.svg"
                         alt="prev slider">
-                    <span id="slider_indicator" class="slider-indicator">
+                    <span id="slider_indicator" class="slider-indicator flex-center">
                     </span>
                     <img class="next-slider" onclick="nextReference()" src="./assets/img/icons/right_arrow.svg"
                         alt="next slider">
                 </div>
             </section>
 
-            <section data-aos="fade-up" id="contact_section" class="contact">
+            <section data-aos="fade-up" id="contact_section" class="contact flex-between">
                 <div class="contact-container">
                     <h3 class="contact-title">Contact me</h3>
                     <div class="contact-content">
@@ -270,17 +275,17 @@
                     </div>
                     <span class="unchecked-error"></span>
                     <div class="btn-container">
-                        <button type="submit" class="contact-btn nav-btn"><span
+                        <button type="submit" class="contact-btn nav-btn flex-center"><span
                                 class="marquee-btn-content"></span></button>
                     </div>
-                    <div id="message_container" class="message-container slide-right-animation ">
+                    <div id="message_container" class="message-container slide-right-animation flex-center">
                     </div>
                 </form>
             </section>
         </main>
 
         <footer>
-            <div class="footer-container">
+            <div class="footer-container flex-between">
                 <div class="left-footer-container">
                     <div class="logo-footer" title="Daniel Bumbuc Logo" onclick="scrollToTop()"></div>
                     <span class="footer-info">

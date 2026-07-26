@@ -81,7 +81,7 @@ function scrollToTop() {
  */
 function initMarquee() {
     const marqueeContainer = document.getElementById('marquee_container');
-    let marqueeLength = 3;
+    let marqueeLength = 8;
     if (marqueeFrameId) {
         cancelAnimationFrame(marqueeFrameId);
         marqueeFrameId = null;

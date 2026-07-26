@@ -1,20 +1,15 @@
-html {
-    scrollbar-width: thin;
-    scrollbar-color: #094339 #1F2E2C;
-}
-
 ::-webkit-scrollbar {
-    width: 14px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 100vw;
     border: 2px solid #1F2E2C;
-    background-color: #094339;
+    background-color: #3DCFB6;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #3DCFB6;
+    background-color: #42ffe0;
 }
 
 ::-webkit-scrollbar-track {
@@ -27,6 +22,7 @@ html {
 
 @supports (-moz-appearance: none) {
     html {
+        scrollbar-width: thin;
         scrollbar-color: #3DCFB6 #2A2A2A;
     }
 }
