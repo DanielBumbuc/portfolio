@@ -361,6 +361,10 @@ input:-webkit-autofill:focus {
     .main-input {
         margin: 0 16px;
     }
+
+    .error-field {
+        padding: 0 0 48px 16px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -383,5 +387,9 @@ input:-webkit-autofill:focus {
 
     .main-input {
         margin: 0;
+    }
+
+    .error-field {
+        padding: 0 0 48px 0;
     }
 }
