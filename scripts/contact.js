@@ -49,9 +49,11 @@ async function validateForm(event) {
 function checkFormValidation(name, message) {
     const nameInvalid = !name || name.length < 3;
     const messageInvalid = !message || message.length < 10;
+    const errorFields = document.querySelectorAll('.error-field');
     if (nameInvalid || emailState !== 'valid' || messageInvalid) {
         showFieldErrors(name, message);
         emailState = null;
+        errorFields.forEach(field => field.textContent = '');
         return true;
     }
 }
@@ -94,20 +96,35 @@ function handleBlurWithError(input, placeholderKey, errorKey, minLength = 0) {
     const defaultPlaceholder = translate(placeholderKey);
     const fullKey = 'contact.validation.' + errorKey;
     const tooShortKey = fullKey.replace('Required', 'TooShort');
+    const errorField = input.parentElement.querySelector('.error-field');
     if (!input.value.trim()) {
         styleError(input, translate(fullKey), defaultPlaceholder, fullKey);
-    } else if (minLength > 0 && input.value.trim().length < minLength) {
-        input.placeholder = translate(tooShortKey);
-        input.style.color = 'rgba(236, 123, 123, 0.8)';
-        input.style.borderColor = '#ec7b7b';
-        input.classList.add('error-state');
-        input.setAttribute('data-error-key', tooShortKey);
-        input.value = '';
-    } else {
-        styleError(input, translate(fullKey), defaultPlaceholder, fullKey);
-    }
+        errorField.textContent = '';
+    }  
 }
 
+/**
+ * Validates an input field on every keystroke and displays a translated error
+ * message in the sibling .error-field element. Shows a "required" error when
+ * the field is empty, a "too short" error when below minLength, and clears
+ * both the error field and input styling when the value is valid.
+ * @param {HTMLInputElement} input - The input element to validate.
+ * @param {string} errorKey - The suffix of the translation key, e.g. 'nameRequired'.
+ * @param {number} [minLength=0] - Minimum required character count.
+ */
+function handleOnInputError(input, errorKey, minLength = 0) {
+    const errorField = input.parentElement.querySelector('.error-field');
+    const fullKey = 'contact.validation.' + errorKey;
+    const tooShortKey = fullKey.replace('Required', 'TooShort');
+    if (!input.value.trim()) {
+        errorField.textContent = translate(fullKey);
+    } else if (minLength > 0 && input.value.trim().length < minLength) {
+        errorField.textContent = translate(tooShortKey);
+    } else {
+        clearError(input);
+        errorField.textContent = '';
+    }
+}
 
 
 /**
@@ -153,7 +170,7 @@ function clearError(input) {
  */
 function isValidEmail(email) {
     validMail = false;
-    const emailRegex = /^(?!.*\.\.)[^\s@:]+@[^\s@:]+\.[^\s@:]+$/;
+    const emailRegex = /^(?!.*\.\.)[^\s@:]+@[^\s@:]+\.[^\s@:]{2,}$/;
     if (email.value.trim() === '') {
         emailState = 'empty';
         showFieldError('email_input', 'contact.validation.emailRequired');
@@ -165,6 +182,29 @@ function isValidEmail(email) {
     }
     emailState = 'valid';
     validMail = true;
+}
+
+/**
+ * Validates the email input on every keystroke using a regex pattern that
+ * requires a valid format and a TLD of at least 2 characters. Displays a
+ * translated error message in the sibling .error-field element when invalid,
+ * and clears it when the value is empty or valid.
+ * @param {HTMLInputElement} email - The email input element.
+ */
+function validateEmail(email) {
+    const emailRegex = /^(?!.*\.\.)[^\s@:]+@[^\s@:]+\.[^\s@:]{2,}$/;
+    const mailInput = document.getElementById('email_input');
+    const errorField = email.parentElement.querySelector('.error-field');
+    email.value = email.value.replace(/\s/g, '');
+    if (!email.value.trim()) {
+        mailInput.style.color = '#FFFFFF';
+        errorField.textContent = '';
+    } else if (!emailRegex.test(email.value.trim())) {
+        errorField.textContent = translate('contact.validation.emailInvalid');
+    } else {
+        mailInput.style.color = '#FFFFFF';
+        errorField.textContent = '';
+    }
 }
 
 /**
@@ -281,9 +321,11 @@ function styleMessageStatus(successDiv) {
  */
 function resetContactForm() {
     document.getElementById('name_input').value = '';
+    document.getElementById('name_input').placeholder = translate('contact.form.namePlaceholder');
     document.getElementById('email_input').value = '';
     document.getElementById('email_input').placeholder = translate('contact.form.emailPlaceholder');
     document.getElementById('message_input').value = '';
+    document.getElementById('message_input').placeholder = translate('contact.form.messagePlaceholder');
     document.getElementById('privacy_checkbox').checked = false;
     emailState = null;
     validMail = false;
