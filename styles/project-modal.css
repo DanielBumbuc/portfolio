@@ -220,16 +220,16 @@
     .title {
         font-size: 24px;
     }
+
+    .left-modal-side {
+        width: 100%;
+    }
 }
 
 @media (max-width: 900px) {
     .project-modal {
         width: 600px;
         padding: 12px 19px;
-    }
-
-    .left-modal-side {
-        width: 560px;
     }
 
     .modal-preview-img {
@@ -240,10 +240,6 @@
 @media (max-width: 648px) {
     .project-modal {
         width: 500px;
-    }
-
-    .left-modal-side {
-        width: 460px;
     }
 
     .modal-preview-img {
@@ -278,10 +274,6 @@
         width: 380px;
     }
 
-    .left-modal-side {
-        width: 340px;
-    }
-
     .modal-preview-img {
         width: 340px;
         height: 200px;
@@ -295,10 +287,6 @@
 @media (max-width: 400px) {
     .project-modal {
         width: 300px;
-    }
-
-    .left-modal-side {
-        width: 270px;
     }
 
     .modal-preview-img {
