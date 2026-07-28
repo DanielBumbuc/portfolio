@@ -51,7 +51,7 @@ function projectModalTemplate(project, index) {
                 <span class="used-technologies">
                     ${project.technologies.map(tech => `
                         <span class="technologie-container">
-                            <img class="technologie-icon" src="${tech.icon}" alt="${tech.name}">
+                            <img class="technologie-icon ${tech.firebase}" src="${tech.icon}" alt="${tech.name}">
                             <p class="technologie-name">${tech.name}</p>
                         </span>
                     `).join('')}

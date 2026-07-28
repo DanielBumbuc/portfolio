@@ -18,7 +18,8 @@
         },
         {
           "name": "Firebase",
-          "icon": "./assets/img/icons/firebase_green.svg"
+          "icon": "./assets/img/icons/firebase_green.svg",
+          "firebase": "firebase-filter"
         }
       ],
       "image": "./assets/img/join_preview.png",
@@ -70,7 +71,8 @@
         },
         {
           "name": "Firebase",
-          "icon": "./assets/img/icons/firebase_green.svg"
+          "icon": "./assets/img/icons/firebase_green.svg",
+          "firebase": "firebase-filter"
         }
       ],
       "image": "./assets/img/join_preview.png",
